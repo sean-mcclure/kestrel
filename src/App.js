@@ -2,6 +2,7 @@ import './App.css';
 import logo from "./logo.png";
 import {load_messages} from './load_messages.js';
 
+
 function App() {
   return (
     <div className="App">
