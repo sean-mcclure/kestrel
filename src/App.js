@@ -1,12 +1,23 @@
 import './App.css';
 import logo from "./logo.png";
 import {load_messages} from './load_messages.js';
-import {pull_refresh} from './pull_refresh.js';
+import './pull_refresh.js';
+import {pop_message} from './modal.js';
+import {
+  FaFeatherAlt
+} from "react-icons/fa";
+const az = window.az;
 
 
 function App() {
   return (
          <>
+         <div className="hold_modal"></div>
+         <FaFeatherAlt color="white" size="2em" className="add_message" onClick={(event) => {
+                    event.preventDefault();
+                    pop_message()
+         }}
+                    />
          <div class="spinner">
         <div class="bounce1"></div>
         <div class="bounce2"></div>
@@ -36,6 +47,7 @@ function App() {
         </div>
       
     </div>
+    
     </>
   );
 }

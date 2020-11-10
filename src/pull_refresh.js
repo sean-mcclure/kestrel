@@ -32,14 +32,14 @@ function swipeCheck(){
         document.getElementsByClassName("spinner")[0].style.display = "block";
         setTimeout(() => {
         document.getElementsByClassName("spinner")[0].style.display = "none"; 
-        }, 2000);
+        }, 4000);
     }
 }
 
 function isPullDown(dY, dX) {
     // methods of checking slope, length, direction of line created by swipe action 
     return dY < 0 && (
-        (Math.abs(dX) <= 100 && Math.abs(dY) >= 300)
+        (Math.abs(dX) <= 100 && Math.abs(dY) >= 80)
         || (Math.abs(dX)/Math.abs(dY) <= 0.3 && dY >= 60)
     );
 }
