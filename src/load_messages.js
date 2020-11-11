@@ -1,4 +1,6 @@
 export function load_messages(e) {
+
+    document.getElementsByClassName("col")[1].innerHTML = ""
     
     const messages = [
         "This is some text that represents a message in Kestrel.",
