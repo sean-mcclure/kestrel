@@ -1,5 +1,4 @@
-const az = window.az
-const $ = window.$
+
 var modal_cnt = 0
 export function pop_message() {
     modal_cnt++
@@ -70,9 +69,11 @@ export function pop_message() {
                     modal_cnt = 0
                 }, 900)
             } else {
+                /*
                 az.animate_element("text_area", 1, {
                     "type": "rubberBand"
                 })
+                */
             }
         }
         document.getElementsByClassName("hold_modal")[0].append(modal);
@@ -92,6 +93,7 @@ export function pop_message() {
         document.body.style.position = "relative";
         document.body.style.overflowY = "scroll";
     }
+    /*
     az.add_layout("modal_main", 1, {
         "this_class": "modal_icons_layout",
         "row_class": "modal_icons_layout_rows",
@@ -137,7 +139,8 @@ export function pop_message() {
     az.style_icon("modal_icons", 2, {
         "font-size": "20px"
     })
-    $(".modal_icons_layout_cells").eq(3).append(button);
+    */
+    //$(".modal_icons_layout_cells").eq(3).append(button);
 }
 
 function write(msg) {
@@ -176,11 +179,13 @@ function create_message(msg) {
     message.style.textAlign = "left"
     message.innerHTML = msg
     var new_img = document.createElement("img");
+    /*
     if (!az.hold_value.uploaded_image) {
         new_img.src = "https://i.redd.it/tk46u5nrkxm21.png"
     } else {
         new_img.src = az.hold_value.uploaded_image
     }
+    */
     new_img.style.width = "100%"
     var likes = document.createElement("div");
     likes.style.width = "100%"
@@ -191,6 +196,7 @@ function create_message(msg) {
     document.getElementsByClassName("col")[1].prepend(likes)
     document.getElementsByClassName("col")[1].prepend(new_img)
     document.getElementsByClassName("col")[1].prepend(message)
+    /*
     az.add_layout("hold_icons", 1, {
         "this_class": "icon_layout",
         "row_class": "icon_layout_rows",
@@ -236,6 +242,18 @@ function create_message(msg) {
         "padding": "10px",
         "cursor": "pointer"
     })
+    */
     document.getElementsByClassName("flex_grid_banner")[0].style.zIndex = 9999999
     window.scrollTo({top: 0, left: 0, behavior: 'smooth' });
+}
+
+function create_comment(msg) {
+    var comment = document.createElement("div");
+    comment.style.width = "95%"
+    comment.style.height = "auto"
+    comment.style.padding = "5px"
+    comment.style.background = "#5A2E49"
+    comment.style.textAlign = "left"
+    comment.innerHTML = msg
+    document.getElementsByClassName("hold_modal")[0].append(comment);
 }

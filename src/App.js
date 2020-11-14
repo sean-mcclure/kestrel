@@ -3,7 +3,9 @@ import logo from "./logo.png";
 import {load_messages} from './load_messages.js';
 import './pull_refresh.js';
 import {pop_message} from './modal.js';
-import {image_upload} from './upload_image.js';
+
+import Messages from "./Messages"
+
 
 import {
   FaFeatherAlt
@@ -12,13 +14,11 @@ import {
 function App() {
   return (
          <>
+        
          <div className="hold_modal"></div>
          <FaFeatherAlt color="white" size="2em" className="add_message" onClick={(event) => {
                     event.preventDefault();
                     pop_message()
-                    setTimeout(function() {
-                    image_upload()
-                    }, 400)
          }}
                     />
          <div className="spinner">
@@ -28,7 +28,9 @@ function App() {
         </div>
         <div className="App">
         <div className="flex_grid_banner">
-        <div className="header_col"><img src={logo} className="logo" alt="logo" onClick={load_messages}/></div>
+        <div className="header_col"><img src={logo} className="logo" alt="logo"/>
+          
+        </div>
         <div className="header_col"><input className="search" placeholder="search..."></input></div>
         </div>
 
@@ -40,6 +42,7 @@ function App() {
             <p>This is some stuff!!!</p>
         </div>
         <div className="col">
+             <Messages />
         </div>
         <div className="col">
             <p>This is some stuff!!!</p>
