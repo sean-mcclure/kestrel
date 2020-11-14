@@ -50,7 +50,11 @@ export function pop_message() {
         button.style.marginBottom = "-5px"
         button.style.cursor = "pointer"
         button.onclick = (e) => {
-            button.classList.add("koko");
+            modal.classList.add("koko");
+            setTimeout(function() {
+                document.getElementsByClassName("hold_modal")[0].innerHTML = "";
+                modal_cnt = 0
+            }, 900)
         }
         modal.append(button);
         document.getElementsByClassName("hold_modal")[0].append(modal);
