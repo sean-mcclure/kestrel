@@ -32,7 +32,7 @@ function swipeCheck(){
         document.getElementsByClassName("spinner")[0].style.display = "block";
         setTimeout(() => {
         document.getElementsByClassName("spinner")[0].style.display = "none"; 
-        }, 4000);
+        }, 2000);
     }
 }
 
