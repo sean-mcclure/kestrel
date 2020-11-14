@@ -3,6 +3,8 @@ import logo from "./logo.png";
 import {load_messages} from './load_messages.js';
 import './pull_refresh.js';
 import {pop_message} from './modal.js';
+import {image_upload} from './upload_image.js';
+
 import {
   FaFeatherAlt
 } from "react-icons/fa";
@@ -14,6 +16,9 @@ function App() {
          <FaFeatherAlt color="white" size="2em" className="add_message" onClick={(event) => {
                     event.preventDefault();
                     pop_message()
+                    setTimeout(function() {
+                    image_upload()
+                    }, 400)
          }}
                     />
          <div className="spinner">

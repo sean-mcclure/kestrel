@@ -221,4 +221,5 @@ textarea {
   40% {background:rgba(243,179,43, 0); left:100px; top:50px;}
   40% {box-shadow:transparent;}
   40% {border:none;}
+  40% {color:transparent;}
 }

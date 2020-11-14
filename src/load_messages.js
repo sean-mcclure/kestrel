@@ -35,25 +35,56 @@ export function load_messages(e) {
         likes.style.height = "auto"
         likes.style.background = "#3D3D3D"
         likes.style.marginTop = "-5px"
-        likes.innerHTML = "<div class='hold_icon'></div>"
+        likes.innerHTML = "<div class='hold_icons'></div>"
         document.getElementsByClassName("col")[1].append(message)
         document.getElementsByClassName("col")[1].append(new_img)
         document.getElementsByClassName("col")[1].append(likes)
         if(i === 6) {
+        
         az.call_multiple({
             "iterations" : 6,
             "function" : function(elem, i) {
-                            az.add_icon("hold_icon", i + 1, {
+                az.add_layout("hold_icons", i + 1, {
+            "this_class": "icon_layout",
+            "row_class": "icon_layout_rows",
+            "cell_class": "icon_layout_cells",
+            "number_of_rows": 1,
+            "number_of_columns": 3
+        })
+        az.style_layout("icon_layout", i + 1, {
+            "width" : "100%",
+            "height" : "auto",
+            "border" : 0
+        })
+                            az.add_icon("icon_layout_cells", (i*3) + 1, {
             "this_class" : "comment_icon",
             "icon_class" : "fa-comment"
         })
         az.style_icon("comment_icon", i + 1, {
             "color" : "whitesmoke",
-            "align" : "left",
             "font-size" : "26px",
-            "margin-top" : "10px",
-            "margin-bottom" : "10px",
-            "margin-left" : "10px"
+            "align" : "center",
+            "padding" : "10px"
+        })
+        az.add_icon("icon_layout_cells", (i*3) + 2, {
+            "this_class" : "retweet_icon",
+            "icon_class" : "fa-retweet"
+        })
+        az.style_icon("retweet_icon", i + 1, {
+            "color" : "whitesmoke",
+            "font-size" : "26px",
+            "align" : "center",
+            "padding" : "10px"
+        })
+        az.add_icon("icon_layout_cells", (i*3) + 3, {
+            "this_class" : "like_icon",
+            "icon_class" : "fa-heart"
+        })
+        az.style_icon("like_icon", i + 1, {
+            "color" : "whitesmoke",
+            "font-size" : "26px",
+            "align" : "center",
+            "padding" : "10px"
         })
     }
 })
