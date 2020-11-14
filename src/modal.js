@@ -51,8 +51,11 @@ export function pop_message() {
         button.style.cursor = "pointer"
         button.onclick = (e) => {
             modal.classList.add("koko");
+            textarea.classList.add("koko");
             setTimeout(function() {
                 document.getElementsByClassName("hold_modal")[0].innerHTML = "";
+                document.body.style.position = "relative";
+                document.body.style.overflowY = "scroll";
                 modal_cnt = 0
             }, 900)
         }

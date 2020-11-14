@@ -213,10 +213,12 @@ textarea {
 
 .koko {
   animation-name: swoosh;
-  animation-duration: 2s;
+  animation-duration: 3s;
   animation-delay: 0s;
 }
 
 @keyframes swoosh {
-  40% {background:rgba(243,179,43, 0.4); left:100px; top:50px;}
+  40% {background:rgba(243,179,43, 0); left:100px; top:50px;}
+  40% {box-shadow:transparent;}
+  40% {border:none;}
 }
