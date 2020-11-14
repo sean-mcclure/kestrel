@@ -1,24 +1,28 @@
 import './App.css';
 import logo from "./logo.png";
-import {load_messages} from './load_messages.js';
 import './pull_refresh.js';
-import {pop_message} from './modal.js';
 
+import {visible} from "./visible.js"
 import Messages from "./Messages"
+import Modal from "./Modal"
 
 
 import {
   FaFeatherAlt
 } from "react-icons/fa";
 
+
+
 function App() {
+   
   return (
+
          <>
         
-         <div className="hold_modal"></div>
+         <Modal/>
          <FaFeatherAlt color="white" size="2em" className="add_message" onClick={(event) => {
                     event.preventDefault();
-                    pop_message()
+                    visible("modal")
          }}
                     />
          <div className="spinner">
@@ -28,7 +32,7 @@ function App() {
         </div>
         <div className="App">
         <div className="flex_grid_banner">
-        <div className="header_col"><img src={logo} className="logo" alt="logo"/>
+        <div className="header_col" unselectable="on"><img src={logo} className="logo" alt="logo"/>
           
         </div>
         <div className="header_col"><input className="search" placeholder="search..."></input></div>
@@ -42,7 +46,7 @@ function App() {
             <p>This is some stuff!!!</p>
         </div>
         <div className="col">
-             <Messages />
+             <Messages/>
         </div>
         <div className="col">
             <p>This is some stuff!!!</p>
