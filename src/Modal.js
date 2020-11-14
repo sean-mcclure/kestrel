@@ -1,8 +1,11 @@
+import {character_counter} from "./counter.js";
+
 export function Modal() {
     return (
          <>
          <div id="modal" className="modal">
-             <textarea id="textarea" className="textarea" autoFocus></textarea>
+             <div className="show_count"></div>
+             <textarea id="textarea" className="textarea" onChange={character_counter()}></textarea>
          </div>
          </>
   );

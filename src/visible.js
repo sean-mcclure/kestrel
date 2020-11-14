@@ -9,9 +9,8 @@ export function visible(type) {
         } else {
             document.getElementById("modal").style.display = "block";
             document.getElementById("textarea").focus();
-            const check = is_mobile()
-            console.log(check)
-            if (check) {
+            const mobile_check = is_mobile()
+            if (mobile_check) {
                 document.body.style.position = "fixed";
                 document.body.style.overflowY = "hidden";
                 document.getElementsByClassName("flex-grid")[0].style.background = "";
