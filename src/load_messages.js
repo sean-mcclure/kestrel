@@ -64,7 +64,8 @@ export function load_messages(e) {
             "color" : "whitesmoke",
             "font-size" : "26px",
             "align" : "center",
-            "padding" : "10px"
+            "padding" : "10px",
+            "cursor" : "pointer"
         })
         az.add_icon("icon_layout_cells", (i*3) + 2, {
             "this_class" : "retweet_icon",
@@ -74,7 +75,8 @@ export function load_messages(e) {
             "color" : "whitesmoke",
             "font-size" : "26px",
             "align" : "center",
-            "padding" : "10px"
+            "padding" : "10px",
+            "cursor" : "pointer"
         })
         az.add_icon("icon_layout_cells", (i*3) + 3, {
             "this_class" : "like_icon",
@@ -84,7 +86,8 @@ export function load_messages(e) {
             "color" : "whitesmoke",
             "font-size" : "26px",
             "align" : "center",
-            "padding" : "10px"
+            "padding" : "10px",
+            "cursor" : "pointer"
         })
     }
 })

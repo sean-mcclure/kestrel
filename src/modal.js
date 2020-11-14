@@ -1,6 +1,5 @@
 const az = window.az
 const $ = window.$
-
 var modal_cnt = 0
 export function pop_message() {
     modal_cnt++
@@ -8,7 +7,9 @@ export function pop_message() {
         document.getElementsByClassName("hold_modal")[0].innerHTML = "";
         document.body.style.position = "relative";
         document.body.style.overflowY = "scroll";
+        document.getElementsByClassName("flex_grid_banner")[0].style.zIndex = 9999999
     } else {
+        document.getElementsByClassName("flex_grid_banner")[0].style.zIndex = -1
         document.getElementsByClassName("hold_modal")[0].innerHTML = "";
         var modal = document.createElement("div");
         modal.className = "modal_main"
@@ -58,21 +59,21 @@ export function pop_message() {
         button.style.marginBottom = "10px"
         button.onclick = (e) => {
             var typed_msg = document.getElementById("text_area").value
-            if(typed_msg !== "") {
-            modal.classList.add("koko");
-            textarea.classList.add("koko");
-            create_message(typed_msg)
-            setTimeout(function() {
-                document.getElementsByClassName("hold_modal")[0].innerHTML = "";
-                document.body.style.position = "relative";
-                document.body.style.overflowY = "scroll";
-                modal_cnt = 0
-            }, 900)
-        } else {
-            az.animate_element("text_area", 1, {
-                "type" : "rubberBand"
-            })
-        }
+            if (typed_msg !== "") {
+                modal.classList.add("koko");
+                textarea.classList.add("koko");
+                create_message(typed_msg)
+                setTimeout(function() {
+                    document.getElementsByClassName("hold_modal")[0].innerHTML = "";
+                    document.body.style.position = "relative";
+                    document.body.style.overflowY = "scroll";
+                    modal_cnt = 0
+                }, 900)
+            } else {
+                az.animate_element("text_area", 1, {
+                    "type": "rubberBand"
+                })
+            }
         }
         document.getElementsByClassName("hold_modal")[0].append(modal);
         document.getElementById("text_area").focus();
@@ -101,7 +102,7 @@ export function pop_message() {
     az.style_layout("modal_icons_layout", 1, {
         "width": "100%",
         "height": "auto",
-        "margin-bottom" : "-10px",
+        "margin-bottom": "-10px",
         "border": 0
     })
     az.add_icon("modal_icons_layout_cells", 1, {
@@ -109,11 +110,11 @@ export function pop_message() {
         "icon_class": "fa-camera-retro"
     })
     az.add_event("modal_icons", 1, {
-    "type": "click",
-    "function": function() {
-        az.click_element("upload_photo", 1)
-    }
-})
+        "type": "click",
+        "function": function() {
+            az.click_element("upload_photo", 1)
+        }
+    })
     az.add_html("modal_icons_layout_cells", 2, {
         "html": "<div class='modal_icons'>GIF</div>"
     })
@@ -131,13 +132,12 @@ export function pop_message() {
         "color": "whitesmoke",
         "font-size": "26px",
         "align": "center",
-        "cursor" : "pointer"
+        "cursor": "pointer"
     })
     az.style_icon("modal_icons", 2, {
-        "font-size" : "20px"
+        "font-size": "20px"
     })
     $(".modal_icons_layout_cells").eq(3).append(button);
-   
 }
 
 function write(msg) {
@@ -176,7 +176,11 @@ function create_message(msg) {
     message.style.textAlign = "left"
     message.innerHTML = msg
     var new_img = document.createElement("img");
-    new_img.src = "https://i.redd.it/tk46u5nrkxm21.png"
+    if (!az.hold_value.uploaded_image) {
+        new_img.src = "https://i.redd.it/tk46u5nrkxm21.png"
+    } else {
+        new_img.src = az.hold_value.uploaded_image
+    }
     new_img.style.width = "100%"
     var likes = document.createElement("div");
     likes.style.width = "100%"
@@ -187,48 +191,51 @@ function create_message(msg) {
     document.getElementsByClassName("col")[1].prepend(likes)
     document.getElementsByClassName("col")[1].prepend(new_img)
     document.getElementsByClassName("col")[1].prepend(message)
-
-            az.add_layout("hold_icons", 1, {
-                "this_class": "icon_layout",
-                "row_class": "icon_layout_rows",
-                "cell_class": "icon_layout_cells",
-                "number_of_rows": 1,
-                "number_of_columns": 3
-            })
-            az.style_layout("icon_layout", 1, {
-                "width": "100%",
-                "height": "auto",
-                "border": 0
-            })
-            az.add_icon("icon_layout_cells", 1, {
-                "this_class": "comment_icon",
-                "icon_class": "fa-comment"
-            })
-            az.style_icon("comment_icon", 1, {
-                "color": "whitesmoke",
-                "font-size": "26px",
-                "align": "center",
-                "padding": "10px"
-            })
-            az.add_icon("icon_layout_cells", 2, {
-                "this_class": "retweet_icon",
-                "icon_class": "fa-retweet"
-            })
-            az.style_icon("retweet_icon", 1, {
-                "color": "whitesmoke",
-                "font-size": "26px",
-                "align": "center",
-                "padding": "10px"
-            })
-            az.add_icon("icon_layout_cells", 3, {
-                "this_class": "like_icon",
-                "icon_class": "fa-heart"
-            })
-            az.style_icon("like_icon", 1, {
-                "color": "whitesmoke",
-                "font-size": "26px",
-                "align": "center",
-                "padding": "10px"
-            })
-        }
- 
+    az.add_layout("hold_icons", 1, {
+        "this_class": "icon_layout",
+        "row_class": "icon_layout_rows",
+        "cell_class": "icon_layout_cells",
+        "number_of_rows": 1,
+        "number_of_columns": 3
+    })
+    az.style_layout("icon_layout", 1, {
+        "width": "100%",
+        "height": "auto",
+        "border": 0
+    })
+    az.add_icon("icon_layout_cells", 1, {
+        "this_class": "comment_icon",
+        "icon_class": "fa-comment"
+    })
+    az.style_icon("comment_icon", 1, {
+        "color": "whitesmoke",
+        "font-size": "26px",
+        "align": "center",
+        "padding": "10px",
+        "cursor": "pointer"
+    })
+    az.add_icon("icon_layout_cells", 2, {
+        "this_class": "retweet_icon",
+        "icon_class": "fa-retweet"
+    })
+    az.style_icon("retweet_icon", 1, {
+        "color": "whitesmoke",
+        "font-size": "26px",
+        "align": "center",
+        "padding": "10px",
+        "cursor": "pointer"
+    })
+    az.add_icon("icon_layout_cells", 3, {
+        "this_class": "like_icon",
+        "icon_class": "fa-heart"
+    })
+    az.style_icon("like_icon", 1, {
+        "color": "whitesmoke",
+        "font-size": "26px",
+        "align": "center",
+        "padding": "10px",
+        "cursor": "pointer"
+    })
+    document.getElementsByClassName("flex_grid_banner")[0].style.zIndex = 9999999
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth' });
+}

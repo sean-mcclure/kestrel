@@ -21,5 +21,15 @@
    setTimeout(function() {
        document.getElementsByClassName("logo")[0].click();
    }, 400)
+   az.add_top_button({
+       "this_class": "to_top_button",
+       "text": "TOP",
+       "side": "left",
+       "bottom" : true
+   })
+   az.style_button("to_top_button", 1, {
+       "background" : "#F3B32B",
+       "color" : "#141414"
+    })
   </script>
 </html>
