@@ -1,34 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import {list_of_messages} from "./Messages.js"
 
-var messages = window.messages
 
 export function post() {
-  
-  messages[0] = "hoho"
 
-  console.log(messages)
+    var msg = document.getElementById("textarea").value
+    var post_id = Math.round(Math.random()*10000000000000, 1)
 
-  const list_of_messages = messages.map((msg, i) => 
-      <div className="msg_wrapper" key={i.toString()}>{msg}<img className="msg_img" src="https://i.redd.it/tk46u5nrkxm21.png" alt="kestrel_img"></img></div>
-  );
+    list_of_messages.unshift(<div className="msg_wrapper" key={post_id}>{msg}<img className="msg_img" src="https://i.redd.it/tk46u5nrkxm21.png" alt="kestrel_img"></img></div>)
 
-  ReactDOM.render(
-     <App />,
-    list_of_messages,
-    document.getElementById('root')
-  );
- /*
   return (
          <>
          {list_of_messages}
          </>
   );
-  */
 
 }
-
-
 
 export default post;

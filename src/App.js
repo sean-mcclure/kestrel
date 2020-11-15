@@ -1,7 +1,7 @@
 import './App.css';
 import logo from "./logo.png";
 import './pull_refresh.js';
-import clock from './clock.js';
+import Clock from './clock.js';
 
 import {visible} from "./visible.js"
 import Messages from "./Messages"
@@ -19,7 +19,7 @@ function App() {
   return (
 
          <>
-        <clock/>
+      
          <Modal/>
          <FaFeatherAlt color="white" size="2em" className="add_message" onClick={(event) => {
                     event.preventDefault();
@@ -58,7 +58,7 @@ function App() {
         </div>
       
     </div>
-    
+      <Clock/>
     </>
   );
 }
