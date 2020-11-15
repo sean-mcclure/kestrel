@@ -213,9 +213,9 @@ textarea {
 		margin-right: 8px;
 		margin-top: 22px;
 	}
-	.hold_modal {
-		width: 90%;
-	}
+    .modal {
+    width: 90% !important;
+    }
 }
 
 .koko {
@@ -242,10 +242,6 @@ textarea {
 }
 
 .msg_wrapper {
-	width: 100%;
-}
-
-.msg_wrapper {
 	width: 95%;
 	height: auto;
 	padding: 5px;
@@ -264,7 +260,7 @@ textarea {
 
 .modal {
     height : auto;
-    width: 700px;
+    width: 50%;
     padding : 0px;
     padding-top : 10px;
     border-radius : 4px;
@@ -278,6 +274,7 @@ textarea {
 	transform: translate(-50%, -50%);
 	-webkit-appearance: none;
     display: none;
+    z-index: 9999999999;
 }
 
 .textarea {
@@ -288,7 +285,51 @@ textarea {
     padding : 10px;
     background : #4f4434;
     border : none;
-    margin-top : 24px;
-    margin-bottom : 30px;
     font-size : 20px;
+}
+
+.icon_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.icon_wrapper > div {
+        flex-grow: 1;
+}
+
+.show_count {
+    color: whitesmoke;
+    margin-bottom: 10px;
+    -webkit-user-select: none;       
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.icons {
+    margin: 10px;
+    cursor: pointer;
+}
+
+.like_count {
+   position: absolute;
+   margin-top: 18px;
+   color: whitesmoke;
+   -webkit-user-select: none;       
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.post {
+    margin-top: 15px;
+    color: whitesmoke;
+    cursor: pointer;
+    font-weight : bold;
+    height: 10px;
+    width: 20px;
+    font-size: 20px;
+    color: #F3B32B;
 }
