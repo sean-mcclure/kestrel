@@ -5,7 +5,7 @@ export function Modal() {
          <>
          <div id="modal" className="modal">
              <div className="show_count"></div>
-             <textarea id="textarea" className="textarea" onChange={character_counter()}></textarea>
+             <textarea id="textarea" className="textarea" onChange={character_counter}></textarea>
          </div>
          </>
   );
