@@ -332,4 +332,9 @@ textarea {
     width: 20px;
     font-size: 20px;
     color: #F3B32B;
+    -webkit-user-select: none;       
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 }

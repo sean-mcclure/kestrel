@@ -1,5 +1,6 @@
 import {character_counter} from "./counter.js";
 import {like} from "./like.js";
+import {post} from "./post.js";
 
 import {
   FaComment,
@@ -17,7 +18,7 @@ export function Modal() {
                 <div><FaComment className="icons" color="whitesmoke" size="1.6em"/></div>
                 <div><FaRetweet className="icons" color="whitesmoke" size="2em"/></div>
                 <div><FaThumbsUp className="icons" color="whitesmoke" size="1.6em" onClick={like}/><span className="like_count">24</span></div>
-                <div className="post">POST</div>
+                <div className="post" onClick={post}>POST</div>
             </div>
          </div>
          </>
