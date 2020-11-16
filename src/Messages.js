@@ -1,9 +1,22 @@
 import React from 'react';
+import {like} from "./like.js";
+
+import {
+  FaComment,
+  FaRetweet,
+  FaThumbsUp
+} from "react-icons/fa";
 
 const messages = ["This is some text that represents a message in Kestrel.", "This is some text that represents a message in Kestrel.", "This is some text that represents a message in Kestrel.", "This is some text that represents a message in Kestrel.", "This is some text that represents a message in Kestrel.", "This is some text that represents a message in Kestrel.", "This is some text that represents a message in Kestrel."]
 
 export var list_of_messages = messages.map((msg, i) => 
-      <div className="msg_wrapper" key={i.toString()}>{msg}<img className="msg_img" src="https://i.redd.it/tk46u5nrkxm21.png" alt="kestrel_img"></img></div>
+      <div className="msg_wrapper" key={i.toString()}>{msg}<img className="msg_img" src="https://i.redd.it/tk46u5nrkxm21.png" alt="kestrel_img"></img>
+      <div className="icon_wrapper_post">
+                <div><FaComment className="icons_post" color="#3D3D3D" size="1.6em"/></div>
+                <div><FaRetweet className="icons_post" color="#3D3D3D" size="2em"/></div>
+                <div><FaThumbsUp className="icons_post" color="#3D3D3D" size="1.6em" onClick={like}/><span className="like_count">24</span></div>
+            </div>
+      </div>    
 );
 
 class Messages extends React.Component {
@@ -41,25 +54,4 @@ class Messages extends React.Component {
   }
 }
 
-export default Messages; 
- 
- 
- 
- /*
- var messages = ["This is some text that represents a message in Kestrel.", "This is some text that represents a message in Kestrel.", "This is some text that represents a message in Kestrel.", "This is some text that represents a message in Kestrel.", "This is some text that represents a message in Kestrel.", "This is some text that represents a message in Kestrel.", "This is some text that represents a message in Kestrel."]
- window.messages = messages
-
-  const list_of_messages = messages.map((msg, i) => 
-      <div className="msg_wrapper" key={i.toString()}>{msg}<img className="msg_img" src="https://i.redd.it/tk46u5nrkxm21.png" alt="kestrel_img"></img></div>
-  );
-
-export function Messages() {
-  return (
-         <>
-         {list_of_messages}
-         </>
-  );
-}
-
-export default Messages;
-*/
+export default Messages

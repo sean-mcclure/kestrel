@@ -12,6 +12,7 @@ body {
 	position: sticky;
 	top: 0px;
 	background: #3D3D3D;
+    z-index: 99999999999999999;
 }
 
 .header_col:nth-child(1) {
@@ -252,10 +253,12 @@ textarea {
 	margin: 10px;
 	border-radius: 4px;
 	text-align: left;
+    white-space: pre-wrap;
 }
 
 .msg_img {
 	width: 100%;
+    margin-top: 10px;
 }
 
 .modal {
@@ -297,6 +300,18 @@ textarea {
         flex-grow: 1;
 }
 
+.icon_wrapper_post {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon_wrapper_post > div {
+        flex-grow: 1;
+        text-align: center;
+}
+
 .show_count {
     color: whitesmoke;
     margin-bottom: 10px;
@@ -312,10 +327,15 @@ textarea {
     cursor: pointer;
 }
 
+.icons_post {
+    margin: 10px;
+    cursor: pointer;
+}
+
 .like_count {
    position: absolute;
    margin-top: 18px;
-   color: whitesmoke;
+   color: #3D3D3D;
    -webkit-user-select: none;       
     -moz-user-select: none;
     -ms-user-select: none;
@@ -337,4 +357,52 @@ textarea {
     -ms-user-select: none;
     -o-user-select: none;
     user-select: none;
+}
+
+.shake_it {
+    animation: shake 0.5s;
+	animation-iteration-count: 1;
+	font-weight: normal !important;
+}
+
+@keyframes shake {
+	0% {
+		transform: translate(1px, 1px) rotate(0deg);
+	}
+	10% {
+		transform: translate(-1px, -2px) rotate(-1deg);
+	}
+	20% {
+		transform: translate(-3px, 0px) rotate(1deg);
+	}
+	30% {
+		transform: translate(3px, 2px) rotate(0deg);
+	}
+	40% {
+		transform: translate(1px, -1px) rotate(1deg);
+	}
+	50% {
+		transform: translate(-1px, 2px) rotate(-1deg);
+	}
+	60% {
+		transform: translate(-3px, 1px) rotate(0deg);
+	}
+	70% {
+		transform: translate(3px, 1px) rotate(-1deg);
+	}
+	80% {
+		transform: translate(-1px, -1px) rotate(1deg);
+	}
+	90% {
+		transform: translate(1px, 2px) rotate(0deg);
+	}
+	100% {
+		transform: translate(1px, -2px) rotate(-1deg);
+	}
+}
+
+.gif_text {
+    color: whitesmoke;
+    font-size: 20px;
+    margin-top: 14px;
 }
