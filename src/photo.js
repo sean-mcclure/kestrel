@@ -26,12 +26,13 @@ class Photo extends React.Component {
         return (
             <ImageUploader
                 withIcon={false}
-                buttonText=""
+                buttonText="PHOTO"
                 onChange={this.onDrop}
                 imgExtension={['.jpg', '.png', '.gif']}
                 maxFileSize={5242880}
-                buttonClassName="photo_uoload_button"
+                buttonClassName="photo_upload_button"
                 withLabel={false}
+                buttonStyles={{background:"#F3B32B", color:"#141414", fontWeight:'bold', position:'absolute'}}
             />
         );
     }
