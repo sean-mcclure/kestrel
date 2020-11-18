@@ -24,6 +24,7 @@ function App() {
          <FaFeatherAlt color="white" size="2em" className="add_message" onClick={(event) => {
                     event.preventDefault();
                     visible("modal")
+                    document.getElementsByClassName("flex_grid_banner")[0].style.zIndex = -1
          }}
                     />
          <div className="spinner">
