@@ -13,9 +13,10 @@ export function Modal() {
          <div id="modal" className="modal">
              <div className="show_count">280</div>
              <textarea id="textarea" className="textarea" onChange={character_counter}></textarea>
+             <div className="hold_uploaded_img"></div>
              <div className="icon_wrapper">
-                <div><FaCameraRetro className="icons" color="whitesmoke" size="2em"/></div>
-                <Photo/>
+                
+                <div><Photo/></div>
                 <div className="gif_text">GIF</div>
                 <div><FaPoll className="icons" color="whitesmoke" size="2em"/></div>
                 <div className="post" onClick={post}>POST</div>
@@ -24,5 +25,5 @@ export function Modal() {
          </>
   );
 }
-
+document.getElementsByClassName("photo_uoload_button")[0].innerHTML = "<img src='camera_icon.png'/>"
 export default Modal;
