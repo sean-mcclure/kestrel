@@ -10,7 +10,7 @@ export function Modal() {
          <>
          <div id="modal" className="modal">
              <div className="show_count">280</div>
-             <div className="close_modal" onClick={(event) => {event.preventDefault(); visible("modal")}}>X</div>
+             <div className="close_modal" onClick={(event) => {event.preventDefault(); visible("modal"); document.getElementsByClassName("flex_grid_banner")[0].style.zIndex = 999999999999}}>X</div>
              <textarea id="textarea" className="textarea" onChange={character_counter}></textarea>
              <div id="hold_uploaded_img" className="hold_uploaded_img"></div>
              <table className="table">

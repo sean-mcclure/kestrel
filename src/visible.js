@@ -6,11 +6,13 @@ export function visible(type) {
     if(type === "modal") {
         if((viz_cnt%2 === 0)) {
                 document.getElementById("modal").style.display = "none";
+                document.getElementsByClassName("add_message")[0].style.visibility = "visible";
                 document.body.style.position = "relative";
                 document.body.style.overflowY = "scroll";
         } else {
             document.getElementById("modal").style.display = "block";
             document.getElementById("textarea").focus();
+            document.getElementsByClassName("add_message")[0].style.visibility = "hidden";
             const mobile_check = is_mobile()
             if (mobile_check) {
                 document.body.style.position = "fixed";
