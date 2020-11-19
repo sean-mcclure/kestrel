@@ -36,7 +36,7 @@ class Photo extends React.Component {
                 maxFileSize={5242880}
                 buttonClassName="photo_upload_button"
                 withLabel={false}
-                buttonStyles={{background:"#F3B32B", color:"#141414", fontWeight:'bold', position:'absolute', marginLeft:'-500px'}}
+                buttonStyles={{background:"#F3B32B", color:"#141414", fontWeight:'bold'}}
             />
         );
     }

@@ -9,12 +9,16 @@ export function Modal() {
              <div className="show_count">280</div>
              <textarea id="textarea" className="textarea" onChange={character_counter}></textarea>
              <div id="hold_uploaded_img" className="hold_uploaded_img"></div>
-             <div className="icon_wrapper">
-                 <div><Photo/></div>
-                <div className="gif">GIF</div>
-                <div className="poll">POLL</div>
-                <div className="post" onClick={post}>POST</div>
-            </div>
+             <table className="table">
+                 <tbody>
+                 <tr>
+                     <td><Photo/></td>
+                     <td><div className="gif">GIF</div></td>
+                     <td><div className="poll">POLL</div></td>
+                     <td><div className="post" onClick={post}>POST</div></td>
+                 </tr>
+                 </tbody>
+             </table>
          </div>
          </>
   );

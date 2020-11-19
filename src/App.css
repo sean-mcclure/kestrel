@@ -292,15 +292,12 @@ textarea {
     font-size : 20px;
 }
 
-.icon_wrapper {
+.icon_wrapper_post {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
 }
-
-.icon_wrapper > div {
-    flex-grow: 1;
-}
-
 
 .show_count {
     color: whitesmoke;
@@ -312,15 +309,23 @@ textarea {
     user-select: none;
 }
 
+.table {
+    border: 0px solid black;
+    width: 100%;
+    table-layout: fixed;
+}
+
+td {
+    border : 0px solid black;
+}
+
 
 .gif {
     cursor: pointer;
-    margin-top: 16px; 
     background: #F3B32B;
     width: 200px;
     max-width: 100px !important;
     height: 20px;
-    margin-left: -170px;
     border-radius: 20px;
     font-weight: bold;
     padding-top: 4px;
@@ -330,16 +335,14 @@ textarea {
     -ms-user-select: none;
     -o-user-select: none;
     user-select: none;
-    position: absolute;
+    margin: 0 auto;
 }
 
 .poll {
     cursor: pointer;
-    margin-top: 16px; 
     background: #F3B32B;
     width: 200px;
     max-width: 100px !important;
-    margin-left: 170px;
     font-weight: bold;
     height: 20px;
     border-radius: 20px;
@@ -350,18 +353,16 @@ textarea {
     -ms-user-select: none;
     -o-user-select: none;
     user-select: none;
-    position: absolute;
+    margin: 0 auto;
 }
 
 .post {
     cursor: pointer;
-    margin-top: 16px; 
-    background: #F3B32B;
+    background: #f7f1e3;
     width: 200px;
     max-width: 100px !important;
     font-weight: bold;
     height: 20px;
-    margin-right: -500px;
     border-radius: 20px;
     padding-top: 4px;
     padding-bottom: 4px;
@@ -370,7 +371,7 @@ textarea {
     -ms-user-select: none;
     -o-user-select: none;
     user-select: none;
-    position: absolute;
+    margin: 0 auto;
 }
 
 .like_count {
