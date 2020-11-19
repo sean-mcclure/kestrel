@@ -1,6 +1,6 @@
 import {character_counter} from "./counter.js";
 import {post} from "./post.js";
-import Photo from "./photo.js"
+import {register_photo_upload} from "./photo.js"
 import {visible} from "./visible.js"
 
 
@@ -16,7 +16,7 @@ export function Modal() {
              <table className="table">
                  <tbody>
                  <tr>
-                     <td><Photo/></td>
+                     <td><div className="gif"><input className="upload_input" type="file"></input><button className="upload_image" onClick={register_photo_upload}>UPLOAD</button></div></td>
                      <td><div className="gif">GIF</div></td>
                      <td><div className="poll">POLL</div></td>
                      <td><div className="post" onClick={post}>POST</div></td>
