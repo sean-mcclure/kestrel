@@ -2,6 +2,11 @@ body {
 	background: #3D3D3D;
 	padding: 10px;
 	height: 100%;
+    min-height: 1000px;
+}
+
+html {
+     min-height: 1000px;
 }
 
 .flex_grid_banner {
@@ -13,6 +18,9 @@ body {
 	top: 0px;
 	background: #3D3D3D;
     z-index: 99999999999999999;
+    width:100%;
+    align-items: center;
+  justify-content: center;
 }
 
 .header_col:nth-child(1) {
@@ -21,6 +29,10 @@ body {
 
 .header_col:nth-child(2) {
 	flex: 0 0 50%;
+}
+
+.header_col:nth-child(3) {
+	flex: 0 0 33%;
 }
 
 .logo {
@@ -176,13 +188,10 @@ input {
 	width: 50px;
 	height: 50px;
 	fill: #F3B32B;
-	position: fixed;
-	right: 0;
-	top: 80%;
 	z-index: 9999999999;
-	margin-right: 50px;
 	filter: drop-shadow(4px 4px 2px black);
 	cursor: pointer;
+    float: right;
 }
 
 textarea {
@@ -225,6 +234,7 @@ textarea {
 		margin-right: 8px;
 		margin-top: 22px;
 	}
+
     .modal {
     width: 90% !important;
     z-index: 999999999999999999999;
@@ -289,7 +299,17 @@ textarea {
 	transform: translate(-50%, -50%);
 	-webkit-appearance: none;
     display: none;
-    z-index: 9999999999;
+    z-index: 999999999999999999999;
+}
+
+.close_modal {
+    color: whitesmoke;
+    float: right;
+    margin-top: -30px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 .textarea {
