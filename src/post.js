@@ -1,6 +1,7 @@
 import {list_of_messages} from "./Messages.js"
 import {visible} from "./visible.js"
 import {like} from "./like.js";
+import avatar from "./avatar.png";
 
 import {
   FaComment,
@@ -17,15 +18,11 @@ export function post() {
 
     var msg = document.getElementById("textarea").value
     var image_src = window.recent_img_upload_url
-
-    
-
-    
     
     var post_id = Math.round(Math.random()*10000000000000, 1)
 
     if(typeof(image_src) !== "undefined") {
-        list_of_messages.unshift(<div className="msg_wrapper" key={post_id}>{msg}<img className="msg_img" src={image_src} alt="kestrel_img"></img>
+        list_of_messages.unshift(<div className="msg_wrapper" key={post_id}><div><img className="avatar" src={avatar} alt="avatar_img"></img></div><div className="user">John Smith</div><div className="hold_msg">{msg}</div><img className="msg_img" src={image_src} alt="kestrel_img"></img>
             <div className="icon_wrapper_post">
                 <div><FaComment className="icons_post" color="#3D3D3D" size="1.6em"/></div>
                 <div><FaRetweet className="icons_post" color="#3D3D3D" size="2em"/></div>
@@ -34,7 +31,7 @@ export function post() {
         </div>
         )
     } else {
-        list_of_messages.unshift(<div className="msg_wrapper" key={post_id}>{msg}
+        list_of_messages.unshift(<div className="msg_wrapper" key={post_id}><div><img className="avatar" src={avatar} alt="avatar_img"></img></div><div className="user">John Smith</div><div className="hold_msg">{msg}</div>
             <div className="icon_wrapper_post">
                 <div><FaComment className="icons_post" color="#3D3D3D" size="1.6em"/></div>
                 <div><FaRetweet className="icons_post" color="#3D3D3D" size="2em"/></div>

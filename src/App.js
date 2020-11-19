@@ -1,7 +1,6 @@
 import './App.css';
 import logo from "./logo.png";
 import './pull_refresh.js';
-import Clock from './clock.js';
 
 import {visible} from "./visible.js"
 import Messages from "./Messages"
@@ -59,7 +58,6 @@ function App() {
         </div>
       
     </div>
-      <Clock/>
     </>
   );
 }
