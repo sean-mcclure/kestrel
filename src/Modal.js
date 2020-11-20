@@ -2,6 +2,10 @@ import {character_counter} from "./counter.js";
 import {post} from "./post.js";
 import {visible} from "./visible.js"
 
+import {
+  FaTimes
+} from "react-icons/fa";
+
 
 export function Modal() {
 
@@ -23,7 +27,7 @@ export function Modal() {
                  document.getElementsByClassName("flex_grid_banner")[0].style.zIndex = 999999999999;
                  document.getElementsByClassName("hold_uploaded_img")[0].src = ""
                  document.getElementsByClassName("hold_uploaded_img")[0].style.visibility = "hidden"
-                 }}>X</div>
+                 }}><FaTimes size="1.3em"/></div>
              <textarea id="textarea" className="textarea" onChange={character_counter}></textarea>
              <img id="hold_uploaded_img" className="hold_uploaded_img" alt="uploaded_img_preview" style={img_styles}></img>
              <table className="table">
@@ -32,7 +36,7 @@ export function Modal() {
                      <td>
                      <div className="gif">
                      <input id="upload_input" className="upload_input" type="file" style={input_styles}></input>
-                     <button className="upload_image" onClick={(e) => {
+                     <div className="upload_image" onClick={(e) => {
                             function handle_img(event) {
                                 var file_types = ["png", "jpg", "jpeg", "gif"]
                                 var extension = event.target.files[0].name.split(".")[1]
@@ -47,6 +51,8 @@ export function Modal() {
                                             document.getElementsByClassName("hold_uploaded_img")[0].src = file_upload_data_f678sdfa
                                             window.recent_img_upload_url = file_upload_data_f678sdfa
                                             document.getElementsByClassName("hold_uploaded_img")[0].style.visibility = "visible"
+                                            document.getElementsByClassName("hold_uploaded_img")[0].style.marginTop = "10px"
+                                            document.getElementsByClassName("hold_uploaded_img")[0].style.marginBottom = "10px"
                                         } else {
                                             alert("Wrong extension. Only JPG, JPEG and GIF accepted.")
                                         }
@@ -58,9 +64,9 @@ export function Modal() {
                             document.getElementsByClassName("upload_input")[0].removeEventListener("change", handle_img)
                             document.getElementsByClassName("upload_input")[0].addEventListener("change", handle_img)
                             
-                     }}>UPLOAD</button></div></td>
-                     <td><div className="gif">GIF</div></td>
+                     }}>IMAGE</div></div></td>
                      <td><div className="poll">POLL</div></td>
+                     <td><div className="thread">THREAD</div></td>
                      <td><div className="post" onClick={post}>POST</div></td>
                  </tr>
                  </tbody>

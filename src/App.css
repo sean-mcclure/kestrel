@@ -332,6 +332,20 @@ textarea {
     padding: 10px;
 }
 
+.icons_post {
+    cursor: pointer;
+}
+
+.icon_thread {
+    margin-top: 3px;
+    opacity: 0.2 !important;
+    pointer-events: none;
+}
+
+.icon_retweet {
+    margin-top: -2px;
+}
+
 .show_count {
     color: whitesmoke;
     margin-bottom: 10px;
@@ -346,16 +360,20 @@ textarea {
     border: 0px solid black;
     width: 100%;
     table-layout: fixed;
-    margin-bottom: 20px;
+     border-collapse: collapse;
 }
 
 td {
     border : 0px solid black;
+    background: #F3B32B;
+    height: 40px;
+}
+
+td:nth-child(4) {
+    background: #D1CCC0;
 }
 
 .hold_uploaded_img {
-    margin-bottom: 10px;
-    margin-top: 10px;
     border-radius: 5px;
 }
 
@@ -368,16 +386,9 @@ td {
     cursor: pointer;
 }
 
-.gif {
-    cursor: pointer;
-    background: #F3B32B;
-    width: 200px;
-    max-width: 100px !important;
-    height: 20px;
-    border-radius: 20px;
+.thread {
+    background: transparent;
     font-weight: bold;
-    padding-top: 4px;
-    padding-bottom: 4px;
     -webkit-user-select: none;       
     -moz-user-select: none;
     -ms-user-select: none;
@@ -388,15 +399,8 @@ td {
 }
 
 .poll {
-    cursor: pointer;
-    background: #F3B32B;
-    width: 200px;
-    max-width: 100px !important;
+    background: transparent;
     font-weight: bold;
-    height: 20px;
-    border-radius: 20px;
-    padding-top: 4px;
-    padding-bottom: 4px;
     -webkit-user-select: none;       
     -moz-user-select: none;
     -ms-user-select: none;
@@ -407,15 +411,8 @@ td {
 }
 
 .post {
-    cursor: pointer;
-    background: #f7f1e3;
-    width: 200px;
-    max-width: 100px !important;
+    background: transparent;
     font-weight: bold;
-    height: 20px;
-    border-radius: 20px;
-    padding-top: 4px;
-    padding-bottom: 4px;
     -webkit-user-select: none;       
     -moz-user-select: none;
     -ms-user-select: none;
@@ -426,9 +423,10 @@ td {
 }
 
 .like_count {
-   position: absolute;
-   margin-top: 18px;
-   color: #3D3D3D;
+    position: absolute;
+    margin-top: 8px;
+    margin-left: 8px;
+    color: #3D3D3D;
    -webkit-user-select: none;       
     -moz-user-select: none;
     -ms-user-select: none;
