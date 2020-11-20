@@ -1,6 +1,7 @@
 import {character_counter} from "./counter.js";
 import {post} from "./post.js";
 import {visible} from "./visible.js"
+import {Image, Video} from 'cloudinary-react';
 
 import {
   FaTimes,

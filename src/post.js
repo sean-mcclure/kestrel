@@ -2,6 +2,7 @@ import {list_of_messages} from "./Messages.js"
 import {visible} from "./visible.js"
 import {like} from "./like.js";
 import avatar from "./avatar.png";
+import {uploadFile} from "./upload_image.js"
 
 import {
   FaComment,
@@ -37,6 +38,7 @@ export function post() {
             </div>
         </div>
         )
+        uploadFile(image_src)
     } else {
         list_of_messages.unshift(<div className="msg_wrapper" key={post_id}><div><img className="avatar" src={avatar} alt="avatar_img"></img></div><div className="user">John Smith</div><div className="hold_msg">{msg}</div>
             <div className="icon_wrapper_post">
