@@ -41,16 +41,17 @@ export function Modal() {
                      <td>
                      <div className="gif">
                      <input id="upload_input" className="upload_input" type="file" style={input_styles}></input>
+                     <video id="upload_input_video" className="upload_input" type="file" style={input_styles}></video>
                      <FaCameraRetro className="upload_image" size="2em" color="#141414" onClick={(e) => {
                             function handle_img(event) {
-                                var file_types = ["png", "jpg", "jpeg", "gif"]
+                                var file_types = ["png", "jpg", "jpeg", "gif", "mp4"]
                                 var extension = event.target.files[0].name.split(".")[1]
                                 const is_success = file_types.indexOf(extension) > -1
                                 if (is_success) {
                                     var reader = new FileReader();
                                     reader.readAsDataURL(event.target.files[0])
                                     reader.onload = function(event) {
-                                        if (extension === "png" || extension === "jpg" || extension === "jpeg" || extension === "gif") {
+                                        if (extension === "png" || extension === "jpg" || extension === "jpeg" || extension === "gif" || extension === "mp4") {
                                             var file_upload_data_f678sdfa = event.target.result;
                                             document.getElementsByClassName("upload_input")[0].value = ""
                                             document.getElementsByClassName("hold_uploaded_img")[0].src = file_upload_data_f678sdfa
