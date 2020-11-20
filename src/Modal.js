@@ -3,7 +3,10 @@ import {post} from "./post.js";
 import {visible} from "./visible.js"
 
 import {
-  FaTimes
+  FaTimes,
+  FaCameraRetro,
+  FaPoll,
+  FaInfinity
 } from "react-icons/fa";
 
 
@@ -27,6 +30,7 @@ export function Modal() {
                  document.getElementsByClassName("flex_grid_banner")[0].style.zIndex = 999999999999;
                  document.getElementsByClassName("hold_uploaded_img")[0].src = ""
                  document.getElementsByClassName("hold_uploaded_img")[0].style.visibility = "hidden"
+                 document.getElementsByClassName("textarea")[0].value = ""
                  }}><FaTimes size="1.3em"/></div>
              <textarea id="textarea" className="textarea" onChange={character_counter}></textarea>
              <img id="hold_uploaded_img" className="hold_uploaded_img" alt="uploaded_img_preview" style={img_styles}></img>
@@ -36,7 +40,7 @@ export function Modal() {
                      <td>
                      <div className="gif">
                      <input id="upload_input" className="upload_input" type="file" style={input_styles}></input>
-                     <div className="upload_image" onClick={(e) => {
+                     <FaCameraRetro className="upload_image" size="2em" color="#141414" onClick={(e) => {
                             function handle_img(event) {
                                 var file_types = ["png", "jpg", "jpeg", "gif"]
                                 var extension = event.target.files[0].name.split(".")[1]
@@ -64,9 +68,9 @@ export function Modal() {
                             document.getElementsByClassName("upload_input")[0].removeEventListener("change", handle_img)
                             document.getElementsByClassName("upload_input")[0].addEventListener("change", handle_img)
                             
-                     }}>IMAGE</div></div></td>
-                     <td><div className="poll">POLL</div></td>
-                     <td><div className="thread">THREAD</div></td>
+                     }}/></div></td>
+                     <td><FaPoll className="poll" size="2em" color="#141414"/></td>
+                     <td><FaInfinity className="thread" size="2em" color="#141414"/></td>
                      <td><div className="post" onClick={post}>POST</div></td>
                  </tr>
                  </tbody>
