@@ -192,6 +192,7 @@ input {
 	filter: drop-shadow(4px 4px 2px black);
 	cursor: pointer;
     float: right;
+    margin-right: 20px;
 }
 
 textarea {
@@ -281,6 +282,7 @@ textarea {
 .msg_img {
 	width: 100%;
     margin-top: 10px;
+    border-radius: 5px;
 }
 
 .modal {
@@ -344,12 +346,27 @@ textarea {
     border: 0px solid black;
     width: 100%;
     table-layout: fixed;
+    margin-bottom: 20px;
 }
 
 td {
     border : 0px solid black;
 }
 
+.hold_uploaded_img {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.upload_image {
+    background: transparent;
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+    outline: 0;
+    cursor: pointer;
+}
 
 .gif {
     cursor: pointer;
@@ -367,6 +384,7 @@ td {
     -o-user-select: none;
     user-select: none;
     margin: 0 auto;
+    cursor: pointer;
 }
 
 .poll {
@@ -385,6 +403,7 @@ td {
     -o-user-select: none;
     user-select: none;
     margin: 0 auto;
+    cursor: pointer;
 }
 
 .post {
@@ -403,6 +422,7 @@ td {
     -o-user-select: none;
     user-select: none;
     margin: 0 auto;
+    cursor: pointer;
 }
 
 .like_count {

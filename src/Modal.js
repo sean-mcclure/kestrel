@@ -10,14 +10,20 @@ export function Modal() {
     }
 
     const img_styles = {
-        width : "40%"
+        width : "40%",
+        visibility: "hidden"
     }
 
     return (
          <>
          <div id="modal" className="modal">
              <div className="show_count">280</div>
-             <div className="close_modal" onClick={(event) => {event.preventDefault(); visible("modal"); document.getElementsByClassName("flex_grid_banner")[0].style.zIndex = 999999999999; document.getElementsByClassName("hold_uploaded_img")[0].src = ""}}>X</div>
+             <div className="close_modal" onClick={(event) => {
+                 event.preventDefault(); visible("modal");
+                 document.getElementsByClassName("flex_grid_banner")[0].style.zIndex = 999999999999;
+                 document.getElementsByClassName("hold_uploaded_img")[0].src = ""
+                 document.getElementsByClassName("hold_uploaded_img")[0].style.visibility = "hidden"
+                 }}>X</div>
              <textarea id="textarea" className="textarea" onChange={character_counter}></textarea>
              <img id="hold_uploaded_img" className="hold_uploaded_img" alt="uploaded_img_preview" style={img_styles}></img>
              <table className="table">
@@ -39,6 +45,8 @@ export function Modal() {
                                             var file_upload_data_f678sdfa = event.target.result;
                                             document.getElementsByClassName("upload_input")[0].value = ""
                                             document.getElementsByClassName("hold_uploaded_img")[0].src = file_upload_data_f678sdfa
+                                            window.recent_img_upload_url = file_upload_data_f678sdfa
+                                            document.getElementsByClassName("hold_uploaded_img")[0].style.visibility = "visible"
                                         } else {
                                             alert("Wrong extension. Only JPG, JPEG and GIF accepted.")
                                         }

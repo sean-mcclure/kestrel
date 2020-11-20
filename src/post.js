@@ -16,6 +16,11 @@ export function post() {
 
     window.scrollTo({top: 0, left: 0, behavior: 'smooth' });
 
+    document.getElementsByClassName("flex_grid_banner")[0].style.zIndex = 999999999999;
+    document.getElementsByClassName("hold_uploaded_img")[0].src = ""
+    document.getElementsByClassName("hold_uploaded_img")[0].style.visibility = "hidden"
+    document.getElementsByClassName("upload_input")[0].value = ""
+
     var msg = document.getElementById("textarea").value
     var image_src = window.recent_img_upload_url
     

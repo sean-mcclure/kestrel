@@ -29,7 +29,11 @@ function App() {
         <div className="flex_grid_banner">
         <div className="header_col" unselectable="on"><img src={logo} className="logo" alt="logo"/></div>
         {/*<div className="header_col"><input className="search" placeholder="search..."></input></div>*/}
-        <div className="header_col"><FaFeatherAlt color="white" size="2em" className="add_message" onClick={(event) => {event.preventDefault(); visible("modal"); document.getElementsByClassName("flex_grid_banner")[0].style.zIndex = -1}}/></div>
+        <div className="header_col"><FaFeatherAlt color="white" size="2em" className="add_message" onClick={(event) => {
+            event.preventDefault();
+            visible("modal");
+            document.getElementsByClassName("flex_grid_banner")[0].style.zIndex = -1
+            }}/></div>
 
         </div>
 

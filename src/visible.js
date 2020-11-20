@@ -2,6 +2,7 @@ import {is_mobile} from "./mobile.js"
 
 var viz_cnt = 0;
 export function visible(type) {
+    window.recent_img_upload_url = undefined
     viz_cnt++;
     if(type === "modal") {
         if((viz_cnt%2 === 0)) {
