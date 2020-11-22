@@ -9,6 +9,15 @@ import {
   FaInfinity
 } from "react-icons/fa";
 
+function validate_file_size(file, max_allowable_in_mb) {
+    var FileSize = file.files[0].size / 1024 / 1024;
+    if (FileSize > max_allowable_in_mb) {
+        return("not allowed")
+    } else {
+        return("allowed")
+    }
+}
+
 export function Modal() {
 
     const input_styles = {
@@ -20,6 +29,8 @@ export function Modal() {
         display : "none",
         margin : "0 auto"
     }
+
+    var camera_cnt = 0;
 
     return (
          <>
@@ -40,7 +51,7 @@ export function Modal() {
                  }}><FaTimes size="1.3em"/></div>
              <textarea id="textarea" className="textarea" onChange={character_counter}></textarea>
              <img id="hold_uploaded_img" className="hold_uploaded_img" alt="uploaded_img_preview" style={img_styles}></img>
-             <video playsinline controls id="hold_uploaded_video" className="hold_uploaded_video" style={img_styles}><source type="video/mp4"></source></video>
+             <video height="200px" playsinline controls id="hold_uploaded_video" className="hold_uploaded_video" style={img_styles}><source type="video/mp4"></source></video>
              <table className="table">
                  <tbody>
                  <tr>
@@ -48,7 +59,9 @@ export function Modal() {
                      <div className="gif">
                      <input id="upload_input" className="upload_input" type="file" style={input_styles}></input>
                      <FaCameraRetro className="upload_image" size="2em" color="#141414" onClick={(e) => {
+                            camera_cnt++;
                             function handle_img(event) {
+                                if(validate_file_size(event.target, 10) === "allowed") {
                                 var file_types = ["png", "jpg", "jpeg", "gif", "mp4", "MOV"]
                                 var extension = event.target.files[0].name.split(".")[1]
                                 const is_success = file_types.indexOf(extension) > -1 || extension.length === 36
@@ -75,10 +88,18 @@ export function Modal() {
                                             }
                                             document.getElementsByClassName("textarea")[0].style.marginBottom = "0px"             
                                         } else {
+                                            if(camera_cnt < 2) {
                                             alert("Wrong extension. Only JPG, JPEG, GIF, mp4, and MOV accepted.")
+                                            setTimeout(function() {
+                                                        camera_cnt = 0;
+                                            }, 1000)
+                                            }
                                         }
                                     }
                                 }
+                            } else {
+                                alert("File size too large. Keep images less than 10MB and videos less than 35 seconds.")
+                            }
                             }
                             document.getElementsByClassName("upload_input")[0].click()
                             document.getElementsByClassName("upload_input")[0].removeEventListener("change", handle_img)
