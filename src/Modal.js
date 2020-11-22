@@ -9,6 +9,14 @@ import {
   FaInfinity
 } from "react-icons/fa";
 
+function dataURLtoBlob(dataurl) {
+        var arr = dataurl.split(','), mime = arr[0].match(/:(.*?);/)[1],
+            bstr = atob(arr[1]), n = bstr.length, u8arr = new Uint8Array(n);
+        while(n--){
+            u8arr[n] = bstr.charCodeAt(n);
+        }
+        return new Blob([u8arr], {type:mime});
+    }
 
 export function Modal() {
 
@@ -21,6 +29,7 @@ export function Modal() {
         display : "none",
         margin : "0 auto"
     }
+
 
     return (
          <>
@@ -41,7 +50,7 @@ export function Modal() {
                  }}><FaTimes size="1.3em"/></div>
              <textarea id="textarea" className="textarea" onChange={character_counter}></textarea>
              <img id="hold_uploaded_img" className="hold_uploaded_img" alt="uploaded_img_preview" style={img_styles}></img>
-             <video controls id="hold_uploaded_video" className="hold_uploaded_video" style={img_styles}><source type="video/mp4"></source></video>
+             <video playsinline controls id="hold_uploaded_video" className="hold_uploaded_video" style={img_styles}><source type="video/mp4"></source></video>
              <table className="table">
                  <tbody>
                  <tr>
@@ -50,24 +59,26 @@ export function Modal() {
                      <input id="upload_input" className="upload_input" type="file" style={input_styles}></input>
                      <FaCameraRetro className="upload_image" size="2em" color="#141414" onClick={(e) => {
                             function handle_img(event) {
-                                var file_types = ["png", "jpg", "jpeg", "gif", "mp4"]
+                                var file_types = ["png", "jpg", "jpeg", "gif", "mp4", "MOV"]
                                 var extension = event.target.files[0].name.split(".")[1]
-                                const is_success = file_types.indexOf(extension) > -1
+                                const is_success = file_types.indexOf(extension) > -1 || extension.length === 36
                                 if (is_success) {
                                     var reader = new FileReader();
                                     reader.readAsDataURL(event.target.files[0])
                                     reader.onload = function(event) {
-                                        if (extension === "png" || extension === "jpg" || extension === "jpeg" || extension === "gif" || extension === "mp4") {
+                                        if (extension === "png" || extension === "jpg" || extension === "jpeg" || extension === "gif" || extension === "mp4" || extension === "MOV" || extension.length === 36) {
                                             var file_upload_data_f678sdfa = event.target.result;
                                             document.getElementsByClassName("upload_input")[0].value = ""
                                             window.recent_img_upload_url = file_upload_data_f678sdfa
-                                            if(extension !== "mp4") {
+   
+                                            if(extension !== "mp4" && extension !== "MOV" && extension.length !== 36) {
                                                 document.getElementsByClassName("hold_uploaded_img")[0].src = file_upload_data_f678sdfa
                                                 document.getElementsByClassName("hold_uploaded_video")[0].style.display = "none"
                                                 document.getElementsByClassName("hold_uploaded_img")[0].style.display = "block"
                                                 document.getElementsByClassName("hold_uploaded_img")[0].style.marginTop = "10px"
-                                            document.getElementsByClassName("hold_uploaded_img")[0].style.marginBottom = "10px"
+                                                document.getElementsByClassName("hold_uploaded_img")[0].style.marginBottom = "10px"
                                             } else {
+                                                alert("video")
                                                 document.getElementsByClassName("hold_uploaded_video")[0].src = file_upload_data_f678sdfa
                                                 document.getElementsByClassName("hold_uploaded_img")[0].style.display = "none"
                                                 document.getElementsByClassName("hold_uploaded_video")[0].style.display = "block"
@@ -77,7 +88,7 @@ export function Modal() {
                                             document.getElementsByClassName("textarea")[0].style.marginBottom = "0px"
                                             
                                         } else {
-                                            alert("Wrong extension. Only JPG, JPEG and GIF accepted.")
+                                            alert("Wrong extension. Only JPG, JPEG, GIF, mp4, and MOV accepted.")
                                         }
                                     }
                                 }

@@ -1,3 +1,5 @@
+import {is_mobile} from "./mobile.js"
+
 const cloudName = 'dllmrcc0h';
 const unsignedUploadPreset = 'qxq7k2nz';
 

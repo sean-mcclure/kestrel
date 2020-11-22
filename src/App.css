@@ -249,6 +249,10 @@ textarea {
     box-shadow : 2px 2px 200px black !important;
     border: 3px solid #141414 !important;
     }
+    video {
+    width: 90%;
+    margin: 0 auto;
+}
 }
 
 .koko {
@@ -501,5 +505,6 @@ td:nth-child(4) {
 }
 
 video {
-    width: 100%;
+    width: 99%;
+    margin: 0 auto;
 }
