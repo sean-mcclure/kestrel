@@ -19,7 +19,8 @@ export function Modal() {
 
     const img_styles = {
         width : "40%",
-        visibility: "hidden"
+        display : "none",
+        margin : "0 auto"
     }
 
     return (
@@ -30,18 +31,23 @@ export function Modal() {
                  event.preventDefault(); visible("modal");
                  document.getElementsByClassName("flex_grid_banner")[0].style.zIndex = 999999999999;
                  document.getElementsByClassName("hold_uploaded_img")[0].src = ""
-                 document.getElementsByClassName("hold_uploaded_img")[0].style.visibility = "hidden"
+                 var videoElement = document.getElementById("hold_uploaded_video");
+                 videoElement.pause();
+                 videoElement.removeAttribute('src');
+                 videoElement.load();
+                 document.getElementsByClassName("hold_uploaded_img")[0].style.display = "none"
+                 document.getElementsByClassName("hold_uploaded_video")[0].style.display = "none"
                  document.getElementsByClassName("textarea")[0].value = ""
                  }}><FaTimes size="1.3em"/></div>
              <textarea id="textarea" className="textarea" onChange={character_counter}></textarea>
              <img id="hold_uploaded_img" className="hold_uploaded_img" alt="uploaded_img_preview" style={img_styles}></img>
+             <video controls id="hold_uploaded_video" className="hold_uploaded_video" style={img_styles}><source type="video/mp4"></source></video>
              <table className="table">
                  <tbody>
                  <tr>
                      <td>
                      <div className="gif">
                      <input id="upload_input" className="upload_input" type="file" style={input_styles}></input>
-                     <video id="upload_input_video" className="upload_input" type="file" style={input_styles}></video>
                      <FaCameraRetro className="upload_image" size="2em" color="#141414" onClick={(e) => {
                             function handle_img(event) {
                                 var file_types = ["png", "jpg", "jpeg", "gif", "mp4"]
@@ -54,9 +60,16 @@ export function Modal() {
                                         if (extension === "png" || extension === "jpg" || extension === "jpeg" || extension === "gif" || extension === "mp4") {
                                             var file_upload_data_f678sdfa = event.target.result;
                                             document.getElementsByClassName("upload_input")[0].value = ""
-                                            document.getElementsByClassName("hold_uploaded_img")[0].src = file_upload_data_f678sdfa
                                             window.recent_img_upload_url = file_upload_data_f678sdfa
-                                            document.getElementsByClassName("hold_uploaded_img")[0].style.visibility = "visible"
+                                            if(extension !== "mp4") {
+                                                document.getElementsByClassName("hold_uploaded_img")[0].src = file_upload_data_f678sdfa
+                                                document.getElementsByClassName("hold_uploaded_video")[0].style.display = "none"
+                                                document.getElementsByClassName("hold_uploaded_img")[0].style.display = "block"
+                                            } else {
+                                                document.getElementsByClassName("hold_uploaded_video")[0].src = file_upload_data_f678sdfa
+                                                document.getElementsByClassName("hold_uploaded_img")[0].style.display = "none"
+                                                document.getElementsByClassName("hold_uploaded_video")[0].style.display = "block"
+                                            }
                                             document.getElementsByClassName("hold_uploaded_img")[0].style.marginTop = "10px"
                                             document.getElementsByClassName("hold_uploaded_img")[0].style.marginBottom = "10px"
                                         } else {

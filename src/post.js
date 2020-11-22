@@ -20,7 +20,12 @@ export function post() {
 
     document.getElementsByClassName("flex_grid_banner")[0].style.zIndex = 999999999999;
     document.getElementsByClassName("hold_uploaded_img")[0].src = ""
-    document.getElementsByClassName("hold_uploaded_img")[0].style.visibility = "hidden"
+    var videoElement = document.getElementById("hold_uploaded_video");
+    videoElement.pause();
+    videoElement.removeAttribute('src');
+    videoElement.load();
+    document.getElementsByClassName("hold_uploaded_img")[0].style.display = "none"
+    document.getElementsByClassName("hold_uploaded_video")[0].style.display = "none"
     document.getElementsByClassName("upload_input")[0].value = ""
 
     var msg = document.getElementById("textarea").value

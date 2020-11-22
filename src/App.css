@@ -203,6 +203,7 @@ input {
 
 textarea {
 	resize: none;
+    margin-bottom: 10px;
 }
 
 .user {
