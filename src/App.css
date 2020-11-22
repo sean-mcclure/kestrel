@@ -255,6 +255,7 @@ width: 98% !important;
     }
     video {
     margin: 0 auto;
+    border-radius: 4px !important;
 }
 }
 
@@ -510,4 +511,5 @@ td:nth-child(4) {
 video {
     width: 99%;
     margin: 0 auto;
+    border-radius: 4px;
 }

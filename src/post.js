@@ -36,7 +36,7 @@ export function post() {
 
     if(typeof(image_src) !== "undefined") {
         
-        if(image_src.indexOf("video/mp4") === -1) {
+        if(image_src.indexOf("video/mp4") === -1 && image_src.indexOf("video/quicktime") === -1) {
 
         list_of_messages.unshift(<div className="msg_wrapper" key={post_id}><div><img className="avatar" src={avatar} alt="avatar_img"></img></div><div className="user">John Smith</div><div className="hold_msg">{msg}</div>
         <img className="msg_img" src={image_src} alt="kestrel_img"></img>
