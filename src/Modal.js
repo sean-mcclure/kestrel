@@ -9,15 +9,6 @@ import {
   FaInfinity
 } from "react-icons/fa";
 
-function dataURLtoBlob(dataurl) {
-        var arr = dataurl.split(','), mime = arr[0].match(/:(.*?);/)[1],
-            bstr = atob(arr[1]), n = bstr.length, u8arr = new Uint8Array(n);
-        while(n--){
-            u8arr[n] = bstr.charCodeAt(n);
-        }
-        return new Blob([u8arr], {type:mime});
-    }
-
 export function Modal() {
 
     const input_styles = {
@@ -29,7 +20,6 @@ export function Modal() {
         display : "none",
         margin : "0 auto"
     }
-
 
     return (
          <>
@@ -70,7 +60,6 @@ export function Modal() {
                                             var file_upload_data_f678sdfa = event.target.result;
                                             document.getElementsByClassName("upload_input")[0].value = ""
                                             window.recent_img_upload_url = file_upload_data_f678sdfa
-   
                                             if(extension !== "mp4" && extension !== "MOV" && extension.length !== 36) {
                                                 document.getElementsByClassName("hold_uploaded_img")[0].src = file_upload_data_f678sdfa
                                                 document.getElementsByClassName("hold_uploaded_video")[0].style.display = "none"
@@ -78,22 +67,19 @@ export function Modal() {
                                                 document.getElementsByClassName("hold_uploaded_img")[0].style.marginTop = "10px"
                                                 document.getElementsByClassName("hold_uploaded_img")[0].style.marginBottom = "10px"
                                             } else {
-                                                alert("video")
                                                 document.getElementsByClassName("hold_uploaded_video")[0].src = file_upload_data_f678sdfa
                                                 document.getElementsByClassName("hold_uploaded_img")[0].style.display = "none"
                                                 document.getElementsByClassName("hold_uploaded_video")[0].style.display = "block"
                                                 document.getElementsByClassName("hold_uploaded_video")[0].style.marginTop = "10px"
-                                            document.getElementsByClassName("hold_uploaded_video")[0].style.marginBottom = "10px"
+                                                document.getElementsByClassName("hold_uploaded_video")[0].style.marginBottom = "10px"
                                             }
-                                            document.getElementsByClassName("textarea")[0].style.marginBottom = "0px"
-                                            
+                                            document.getElementsByClassName("textarea")[0].style.marginBottom = "0px"             
                                         } else {
                                             alert("Wrong extension. Only JPG, JPEG, GIF, mp4, and MOV accepted.")
                                         }
                                     }
                                 }
                             }
-                            
                             document.getElementsByClassName("upload_input")[0].click()
                             document.getElementsByClassName("upload_input")[0].removeEventListener("change", handle_img)
                             document.getElementsByClassName("upload_input")[0].addEventListener("change", handle_img)

@@ -249,8 +249,11 @@ textarea {
     box-shadow : 2px 2px 200px black !important;
     border: 3px solid #141414 !important;
     }
+    .msg_img {
+width: 98% !important;
+    margin: 0 auto;
+    }
     video {
-    width: 90%;
     margin: 0 auto;
 }
 }
