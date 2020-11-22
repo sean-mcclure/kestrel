@@ -27,6 +27,7 @@ export function post() {
     document.getElementsByClassName("hold_uploaded_img")[0].style.display = "none"
     document.getElementsByClassName("hold_uploaded_video")[0].style.display = "none"
     document.getElementsByClassName("upload_input")[0].value = ""
+    document.getElementsByClassName("textarea")[0].style.marginBottom = "10px"
 
     var msg = document.getElementById("textarea").value
     var image_src = window.recent_img_upload_url
@@ -34,7 +35,11 @@ export function post() {
     var post_id = Math.round(Math.random()*10000000000000, 1)
 
     if(typeof(image_src) !== "undefined") {
-        list_of_messages.unshift(<div className="msg_wrapper" key={post_id}><div><img className="avatar" src={avatar} alt="avatar_img"></img></div><div className="user">John Smith</div><div className="hold_msg">{msg}</div><img className="msg_img" src={image_src} alt="kestrel_img"></img>
+        
+        if(image_src.indexOf("video/mp4") === -1) {
+
+        list_of_messages.unshift(<div className="msg_wrapper" key={post_id}><div><img className="avatar" src={avatar} alt="avatar_img"></img></div><div className="user">John Smith</div><div className="hold_msg">{msg}</div>
+        <img className="msg_img" src={image_src} alt="kestrel_img"></img>
             <div className="icon_wrapper_post">
                 <div><FaComment className="icons_post" color="#3D3D3D" size="1.6em"/></div>
                 <div><FaRetweet className="icons_post" color="#3D3D3D" size="2em"/></div>
@@ -44,6 +49,19 @@ export function post() {
         </div>
         )
         uploadFile(image_src)
+        } else {
+            list_of_messages.unshift(<div className="msg_wrapper" key={post_id}><div><img className="avatar" src={avatar} alt="avatar_img"></img></div><div className="user">John Smith</div><div className="hold_msg">{msg}</div>
+        <video autoPlay id="hold_uploaded_video" className="hold_uploaded_video"><source type="video/mp4" src={image_src}></source></video>
+            <div className="icon_wrapper_post">
+                <div><FaComment className="icons_post" color="#3D3D3D" size="1.6em"/></div>
+                <div><FaRetweet className="icons_post" color="#3D3D3D" size="2em"/></div>
+                <div><FaThumbsUp className="icons_post" color="#3D3D3D" size="1.6em" onClick={like}/><span className="like_count">24</span></div>
+                <div><FaInfinity className="icons_post icon_thread" color="#3D3D3D" size="1.6em"/></div>
+            </div>
+        </div>
+        )
+        uploadFile(image_src)
+        }
     } else {
         list_of_messages.unshift(<div className="msg_wrapper" key={post_id}><div><img className="avatar" src={avatar} alt="avatar_img"></img></div><div className="user">John Smith</div><div className="hold_msg">{msg}</div>
             <div className="icon_wrapper_post">

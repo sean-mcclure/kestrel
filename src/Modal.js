@@ -1,7 +1,6 @@
 import {character_counter} from "./counter.js";
 import {post} from "./post.js";
 import {visible} from "./visible.js"
-import {Image, Video} from 'cloudinary-react';
 
 import {
   FaTimes,
@@ -38,6 +37,7 @@ export function Modal() {
                  document.getElementsByClassName("hold_uploaded_img")[0].style.display = "none"
                  document.getElementsByClassName("hold_uploaded_video")[0].style.display = "none"
                  document.getElementsByClassName("textarea")[0].value = ""
+                 document.getElementsByClassName("textarea")[0].style.marginBottom = "10px"
                  }}><FaTimes size="1.3em"/></div>
              <textarea id="textarea" className="textarea" onChange={character_counter}></textarea>
              <img id="hold_uploaded_img" className="hold_uploaded_img" alt="uploaded_img_preview" style={img_styles}></img>
@@ -65,13 +65,17 @@ export function Modal() {
                                                 document.getElementsByClassName("hold_uploaded_img")[0].src = file_upload_data_f678sdfa
                                                 document.getElementsByClassName("hold_uploaded_video")[0].style.display = "none"
                                                 document.getElementsByClassName("hold_uploaded_img")[0].style.display = "block"
+                                                document.getElementsByClassName("hold_uploaded_img")[0].style.marginTop = "10px"
+                                            document.getElementsByClassName("hold_uploaded_img")[0].style.marginBottom = "10px"
                                             } else {
                                                 document.getElementsByClassName("hold_uploaded_video")[0].src = file_upload_data_f678sdfa
                                                 document.getElementsByClassName("hold_uploaded_img")[0].style.display = "none"
                                                 document.getElementsByClassName("hold_uploaded_video")[0].style.display = "block"
+                                                document.getElementsByClassName("hold_uploaded_video")[0].style.marginTop = "10px"
+                                            document.getElementsByClassName("hold_uploaded_video")[0].style.marginBottom = "10px"
                                             }
-                                            document.getElementsByClassName("hold_uploaded_img")[0].style.marginTop = "10px"
-                                            document.getElementsByClassName("hold_uploaded_img")[0].style.marginBottom = "10px"
+                                            document.getElementsByClassName("textarea")[0].style.marginBottom = "0px"
+                                            
                                         } else {
                                             alert("Wrong extension. Only JPG, JPEG and GIF accepted.")
                                         }

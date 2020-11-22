@@ -499,3 +499,7 @@ td:nth-child(4) {
     width: 80px;
     margin-left: -20px;
 }
+
+video {
+    width: 100%;
+}
