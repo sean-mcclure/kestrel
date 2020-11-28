@@ -43,7 +43,7 @@ export function post() {
             <div className="icon_wrapper_post">
                 <div><FaComment className="icons_post" color="#3D3D3D" size="1.6em"/></div>
                 <div><FaRetweet className="icons_post" color="#3D3D3D" size="2em"/></div>
-                <div><FaThumbsUp className="icons_post" color="#3D3D3D" size="1.6em" onClick={like}/><span className="like_count">24</span></div>
+                <div><FaThumbsUp className="icons_post" color="#3D3D3D" size="1.6em" onClick={like}/><span className="like_count">0</span></div>
                 <div><FaInfinity className="icons_post icon_thread" color="#3D3D3D" size="1.6em"/></div>
             </div>
         </div>
