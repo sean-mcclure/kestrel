@@ -12,7 +12,10 @@ export function visible(type) {
                 document.body.style.overflowY = "scroll";
         } else {
             document.getElementById("modal").style.display = "block";
-            document.getElementById("textarea").focus();
+            document.getElementById("textarea1").click()
+            setTimeout(function() {
+                document.getElementById("textarea1").focus()
+            }, 300)
             document.getElementsByClassName("add_message")[0].style.visibility = "hidden";
             const mobile_check = is_mobile()
             if (mobile_check) {

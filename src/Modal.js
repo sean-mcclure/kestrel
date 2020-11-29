@@ -6,7 +6,7 @@ import {
   FaTimes,
   FaCameraRetro,
   FaPoll,
-  FaInfinity
+  FaPlusCircle
 } from "react-icons/fa";
 
 function validate_file_size(file, max_allowable_in_mb) {
@@ -49,9 +49,15 @@ export function Modal() {
                  document.getElementsByClassName("textarea")[0].value = ""
                  document.getElementsByClassName("textarea")[0].style.marginBottom = "10px"
                  }}><FaTimes size="1.3em"/></div>
-             <textarea id="textarea" className="textarea" onChange={character_counter}></textarea>
+                 <div id="textarea_wrapper" className="scrolling-wrapper">
+                    <textarea id="textarea1" className="textarea" onChange={character_counter}></textarea>
+                    <textarea id="textarea2" className="textarea" onChange={character_counter}></textarea>
+                    <textarea id="textarea3" className="textarea" onChange={character_counter}></textarea>
+                    <textarea id="textarea4" className="textarea" onChange={character_counter}></textarea>
+                    <textarea id="textarea5" className="textarea" onChange={character_counter}></textarea>
+                 </div>
              <img id="hold_uploaded_img" className="hold_uploaded_img" alt="uploaded_img_preview" style={img_styles}></img>
-             <video height="200px" playsinline controls id="hold_uploaded_video" className="hold_uploaded_video" style={img_styles}><source type="video/mp4"></source></video>
+             <video height="200px" playsInline controls id="hold_uploaded_video" className="hold_uploaded_video" style={img_styles}><source type="video/mp4"></source></video>
              <table className="table">
                  <tbody>
                  <tr>
@@ -107,7 +113,7 @@ export function Modal() {
                             
                      }}/></div></td>
                      <td><FaPoll className="poll" size="2em" color="#141414"/></td>
-                     <td><FaInfinity className="thread" size="2em" color="#141414"/></td>
+                     <td><FaPlusCircle className="thread" size="2em" color="#141414"/></td>
                      <td><div className="post" onClick={post}>POST</div></td>
                  </tr>
                  </tbody>

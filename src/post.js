@@ -14,7 +14,7 @@ import {
 
 export function post() {
 
-    if(document.getElementById("textarea").value !== "") {
+    if(document.getElementById("textarea1").value !== "") {
 
     window.scrollTo({top: 0, left: 0, behavior: 'smooth' });
 
@@ -29,7 +29,7 @@ export function post() {
     document.getElementsByClassName("upload_input")[0].value = ""
     document.getElementsByClassName("textarea")[0].style.marginBottom = "10px"
 
-    var msg = document.getElementById("textarea").value
+    var msg = document.getElementById("textarea1").value + "\n" + document.getElementById("textarea2").value + "\n" + document.getElementById("textarea3").value + "\n" + document.getElementById("textarea4").value + "\n" + document.getElementById("textarea5").value
     var image_src = window.recent_img_upload_url
     
     var post_id = Math.round(Math.random()*10000000000000, 1)
@@ -78,7 +78,10 @@ export function post() {
         )  
     }
 
-    document.getElementById("textarea").value = "";
+    var areas = document.querySelectorAll('textarea');
+    [].forEach.call(areas, function(area) {
+        area.value = "";
+    });
     document.getElementById("hold_uploaded_img").innerHTML = "";
     document.getElementsByClassName("textarea")[0].style.height = "150px"
     document.getElementsByClassName("show_count")[0].innerHTML = 280
@@ -94,10 +97,15 @@ export function post() {
   );
 
     } else {
-        document.getElementById("textarea").classList.add("shake_it");
-        setTimeout(function() {
-        document.getElementById("textarea").classList.remove("shake_it");
+        var areas_b = document.querySelectorAll('textarea');
+        [].forEach.call(areas_b, function(area) {
+                area.classList.add("shake_it");
+                area.style.border = "2px solid red";
+            setTimeout(function() {
+                area.classList.remove("shake_it");
+                area.style.border = "0px solid red";
         }, 1000)
+        });
 
     }
 
