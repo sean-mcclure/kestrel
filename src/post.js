@@ -11,7 +11,6 @@ import {
   FaInfinity
 } from "react-icons/fa";
 
-
 export function post() {
 
     if(document.getElementById("textarea1").value !== "") {
@@ -29,7 +28,7 @@ export function post() {
     document.getElementsByClassName("upload_input")[0].value = ""
     document.getElementsByClassName("textarea")[0].style.marginBottom = "10px"
 
-    var msg = document.getElementById("textarea1").value + "\n" + document.getElementById("textarea2").value + "\n" + document.getElementById("textarea3").value + "\n" + document.getElementById("textarea4").value + "\n" + document.getElementById("textarea5").value
+    var msg = document.getElementById("textarea1").value
     var image_src = window.recent_img_upload_url
     
     var post_id = Math.round(Math.random()*10000000000000, 1)
@@ -51,7 +50,6 @@ export function post() {
         )
         uploadFile(image_src)
         } else {
-            alert(document.getElementById("hold_uploaded_video").duration)
             if(document.getElementById("hold_uploaded_video").duration > 30) {
                 alert("video too long")
             }

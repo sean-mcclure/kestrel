@@ -6,13 +6,9 @@ import Messages from "./Messages"
 import Modal from "./Modal"
 import {visible} from "./visible.js"
 
-
-
 import {
   FaFeatherAlt
 } from "react-icons/fa";
-
-
 
 function App() {
    
@@ -39,19 +35,11 @@ function App() {
 
         <div className="flex-grid">
         <div className="col">
-            <p>This is some stuff!!!</p>
-            <p>This is some stuff!!!</p>
-            <p>This is some stuff!!!</p>
-            <p>This is some stuff!!!</p>
         </div>
         <div className="col">
              <Messages/>
         </div>
         <div className="col">
-            <p>This is some stuff!!!</p>
-            <p>This is some stuff!!!</p>
-            <p>This is some stuff!!!</p>
-            <p>This is some stuff!!!</p>
         </div>
         </div>
       

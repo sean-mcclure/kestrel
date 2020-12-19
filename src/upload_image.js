@@ -12,7 +12,6 @@ export function uploadFile(file) {
       var response = JSON.parse(xhr.responseText);
       var url = response.secure_url;
       var tokens = url.split('/');
-      /*tokens.splice(-2, 0, 'w_150,c_scale');*/
       var img = new Image();
       img.src = tokens.join('/');
       img.alt = response.public_id;

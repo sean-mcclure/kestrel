@@ -51,10 +51,10 @@ export function Modal() {
                  }}><FaTimes size="1.3em"/></div>
                  <div id="textarea_wrapper" className="scrolling-wrapper">
                     <textarea id="textarea1" className="textarea" onChange={character_counter}></textarea>
-                    <textarea id="textarea2" className="textarea" onChange={character_counter}></textarea>
+                    {/*<textarea id="textarea2" className="textarea" onChange={character_counter}></textarea>
                     <textarea id="textarea3" className="textarea" onChange={character_counter}></textarea>
                     <textarea id="textarea4" className="textarea" onChange={character_counter}></textarea>
-                    <textarea id="textarea5" className="textarea" onChange={character_counter}></textarea>
+                <textarea id="textarea5" className="textarea" onChange={character_counter}></textarea>*/}
                  </div>
              <img id="hold_uploaded_img" className="hold_uploaded_img" alt="uploaded_img_preview" style={img_styles}></img>
              <video height="200px" playsInline controls id="hold_uploaded_video" className="hold_uploaded_video" style={img_styles}><source type="video/mp4"></source></video>
@@ -83,7 +83,7 @@ export function Modal() {
                                                 document.getElementsByClassName("hold_uploaded_img")[0].src = file_upload_data_f678sdfa
                                                 document.getElementsByClassName("hold_uploaded_video")[0].style.display = "none"
                                                 document.getElementsByClassName("hold_uploaded_img")[0].style.display = "block"
-                                                document.getElementsByClassName("hold_uploaded_img")[0].style.marginTop = "10px"
+                                                document.getElementsByClassName("hold_uploaded_img")[0].style.marginTop = "0px"
                                                 document.getElementsByClassName("hold_uploaded_img")[0].style.marginBottom = "10px"
                                             } else {
                                                 document.getElementsByClassName("hold_uploaded_video")[0].src = file_upload_data_f678sdfa
@@ -92,7 +92,7 @@ export function Modal() {
                                                 document.getElementsByClassName("hold_uploaded_video")[0].style.marginTop = "10px"
                                                 document.getElementsByClassName("hold_uploaded_video")[0].style.marginBottom = "10px"
                                             }
-                                            document.getElementsByClassName("textarea")[0].style.marginBottom = "0px"             
+                                            document.getElementsByClassName("textarea")[0].style.marginBottom = "10px"             
                                         } else {
                                             if(camera_cnt < 2) {
                                             alert("Wrong extension. Only JPG, JPEG, GIF, mp4, and MOV accepted.")
