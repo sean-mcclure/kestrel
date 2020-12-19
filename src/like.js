@@ -13,7 +13,8 @@ function get_class_instance(classname, id) {
 export function like(event) {
     const id = event.currentTarget.id
     const class_instance = get_class_instance("like_icons", id)
-    var current_value = Number(document.getElementsByClassName("like_count")[class_instance].innerHTML)
+    alert(id)
+    var current_value = Number(document.getElementsByClassName("like_count")[class_instance].innerText)
     likes[id] = current_value
     if((current_value%2)===0 || typeof(current_value%2)==='undefined') {
         likes[id] = current_value + 1;
