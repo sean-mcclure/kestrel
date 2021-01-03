@@ -96,7 +96,7 @@ p {
 
 .modal {
 	height: auto;
-	width: 50%;
+	width: 90%;
 	padding: 0px;
 	padding-top: 10px;
 	border-radius: 4px;
@@ -132,7 +132,7 @@ p {
 
 .textarea {
     flex: 0 0 auto;
-	width: 94%;
+	width: 90%;
 	height: 150px;
 	color: whitesmoke;
 	outline: 0;
