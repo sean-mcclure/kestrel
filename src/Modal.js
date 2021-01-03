@@ -51,10 +51,6 @@ export function Modal() {
                  }}><FaTimes size="1.3em"/></div>
                  <div id="textarea_wrapper" className="scrolling-wrapper">
                     <textarea id="textarea1" className="textarea" onChange={character_counter}></textarea>
-                    {/*<textarea id="textarea2" className="textarea" onChange={character_counter}></textarea>
-                    <textarea id="textarea3" className="textarea" onChange={character_counter}></textarea>
-                    <textarea id="textarea4" className="textarea" onChange={character_counter}></textarea>
-                <textarea id="textarea5" className="textarea" onChange={character_counter}></textarea>*/}
                  </div>
              <img id="hold_uploaded_img" className="hold_uploaded_img" alt="uploaded_img_preview" style={img_styles}></img>
              <video height="200px" playsInline controls id="hold_uploaded_video" className="hold_uploaded_video" style={img_styles}><source type="video/mp4"></source></video>
