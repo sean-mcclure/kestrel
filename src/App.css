@@ -1,7 +1,7 @@
-body {
-	padding: 0px;
-    height: 100%;
-    max-width: 1000px;
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html, body {
+  overflow-x: hidden;
 }
 
 html {
@@ -9,9 +9,33 @@ html {
     height: 100%;
 }
 
+body {
+	padding: 0px;
+    height: 100%;
+   font-family: "Roboto";
+   position: relative;
+}
+
 p {
 	color: #D1CCC0;
 	font-size: 18px;
+}
+
+img {
+    max-width: 100%;
+}
+
+.col {
+    max-width: 50%;
+}
+
+.col2 {
+    background: #3d3d3d;
+    width: 50%;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    border-radius: 4px;
 }
 
 .flex_grid_banner {
@@ -96,7 +120,8 @@ p {
 
 .modal {
 	height: auto;
-	width: 90%;
+    width: 90%;
+    max-width: 600px;
 	padding: 0px;
 	padding-top: 10px;
 	border-radius: 4px;
@@ -132,7 +157,7 @@ p {
 
 .textarea {
     flex: 0 0 auto;
-	width: 90%;
+    width: 93%;
 	height: 150px;
 	color: whitesmoke;
 	outline: 0;
@@ -144,6 +169,7 @@ p {
     margin-top: 10px;
 	margin-bottom: 10px;
     margin-left: 10px;
+    font-family: Roboto;
     }
 
 .textarea:focus {
@@ -320,4 +346,34 @@ video {
 	width: 99%;
 	margin: 0 auto;
 	border-radius: 4px;
+}
+
+.news_header {
+    margin-left: 20px;
+}
+
+.news_header_cell {
+    background: transparent !important;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    html {
+    overflow-x: none !important;
+    }
+
+    .col {
+    max-width: 100%;
+}
+
+  .col2 {
+      display: none;
+  }
+
+.textarea {
+    width: 90% !important;
+}
+
+
 }

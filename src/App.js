@@ -6,7 +6,8 @@ import Modal from "./Modal"
 import {visible} from "./visible.js"
 
 import {
-  FaFeatherAlt
+  FaFeatherAlt,
+  FaNewspaper
 } from "react-icons/fa";
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <div><FaFeatherAlt color="white" size="2em" className="add_message" onClick={(event) => {
             event.preventDefault();
             visible("modal");
+            document.body.style.overflowY = "hidden"
             document.getElementsByClassName("flex_grid_banner")[0].style.zIndex = -1
             }}/></div>
 
@@ -31,6 +33,17 @@ function App() {
   
         <div className="col">
              <Messages/>
+        </div>
+
+        <div className="col2">
+            <table className="news_header">
+                <tbody>
+                <tr>
+                    <td className="news_header_cell"><FaNewspaper color="whitesmoke" size="2em" className="news"></FaNewspaper></td>
+                    <td className="news_header_cell"><p>WHAT'S HAPPENING?</p></td>
+                </tr>
+                </tbody>
+            </table>
         </div>
       
         </div>
