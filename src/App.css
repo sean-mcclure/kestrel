@@ -375,7 +375,8 @@ video {
 }
 
 .options_icons {
-	cursor: pointer;
+    cursor: pointer;
+    color: gold !important;
 }
 
 div:nth-child(1) > .options_icons {
