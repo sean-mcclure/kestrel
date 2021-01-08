@@ -1,20 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
-html, body {
-  overflow-x: hidden;
-  font-family: "Roboto";
+html,
+body {
+	overflow-x: hidden;
+	font-family: "Roboto";
 }
 
 html {
-    overflow-x: none !important;
-    height: 100%;
+	overflow-x: none !important;
+	height: 100%;
 }
 
 body {
 	padding: 0px;
-    height: 100%;
-   font-family: "Roboto";
-   position: relative;
+	height: 100%;
+	font-family: "Roboto";
+	position: relative;
 }
 
 p {
@@ -23,34 +23,35 @@ p {
 }
 
 img {
-    max-width: 100%;
+	max-width: 100%;
 }
 
 .col {
     max-width: 50%;
+    margin-bottom: 70px;
 }
 
 .col2 {
-    background: #3d3d3d;
-    width: 50%;
-    height: 100%;
-    position: fixed;
-    right: 0;
-    border-radius: 4px;
-    margin-top: -8px;
+	background: #3d3d3d;
+	width: 50%;
+	height: 100%;
+	position: fixed;
+	right: 0;
+	border-radius: 4px;
+	margin-top: -8px;
 }
 
 .flex_grid_banner {
-    background: #3d3d3d;
+	background: #3d3d3d;
 	display: flex;
 	flex-direction: row;
 	align-self: stretch;
-    padding: 5px;
+	padding: 5px;
 	position: sticky;
 	top: 0px;
 	z-index: 99999999999999999;
-    width: 100%;
-    height: 80px;
+	width: 100%;
+	height: 80px;
 }
 
 .logo {
@@ -82,10 +83,10 @@ img {
 	fill: #F3B32B;
 	z-index: 9999999999;
 	filter: drop-shadow(4px 4px 2px black);
-    cursor: pointer;
-    right: 0;
-    position: absolute;
-    margin: 20px;
+	cursor: pointer;
+	right: 0;
+	position: absolute;
+	margin: 20px;
 }
 
 .user {
@@ -96,8 +97,8 @@ img {
 
 .hold_msg {
 	background: transparent;
-    min-height: 50px;
-    padding: 10px;
+	min-height: 50px;
+	padding: 10px;
 }
 
 .msg_wrapper {
@@ -122,8 +123,8 @@ img {
 
 .modal {
 	height: auto;
-    width: 90%;
-    max-width: 600px;
+	width: 90%;
+	max-width: 600px;
 	padding: 0px;
 	padding-top: 10px;
 	border-radius: 4px;
@@ -148,18 +149,18 @@ img {
 	cursor: pointer;
 	font-weight: bold;
 	font-size: 20px;
-    position: absolute;
+	position: absolute;
 }
 
 .scrolling-wrapper {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: hidden;
+	display: flex;
+	flex-wrap: nowrap;
+	overflow-x: hidden;
 }
 
 .textarea {
-    flex: 0 0 auto;
-    width: 93%;
+	flex: 0 0 auto;
+	width: 93%;
 	height: 150px;
 	color: whitesmoke;
 	outline: 0;
@@ -167,15 +168,15 @@ img {
 	background: #4f4434;
 	border: none;
 	font-size: 20px;
-    resize: none;
-    margin-top: 10px;
+	resize: none;
+	margin-top: 10px;
 	margin-bottom: 10px;
-    margin-left: 10px;
-    font-family: Roboto;
-    }
+	margin-left: 10px;
+	font-family: Roboto;
+}
 
 .textarea:focus {
-  outline: 2px solid #f3b32b;
+	outline: 2px solid #f3b32b;
 }
 
 .icon_wrapper_post {
@@ -185,7 +186,8 @@ img {
 	padding: 10px;
 }
 
-.icons_post, .like_icons {
+.icons_post,
+.like_icons {
 	cursor: pointer;
 }
 
@@ -351,48 +353,62 @@ video {
 }
 
 .news_header {
-    margin-left: 20px;
+	margin-left: 20px;
 }
 
 .news_header_cell {
-    background: transparent !important;
+	background: transparent !important;
 }
 
 .footer {
-    height: 50px;
-    background: #3D3D3D;
-    position: fixed;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    margin-bottom: 0px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding-top: 20px;
+	height: 50px;
+	background: #3D3D3D;
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	margin-bottom: 0px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	padding-top: 20px;
 }
 
 .options_icons {
-    cursor: pointer;
+	cursor: pointer;
+}
+
+div:nth-child(1) > .options_icons {
+    font-size: 12px;
+}
+
+div:nth-child(2) > .options_icons {
+    font-size: 13px;
+}
+
+div:nth-child(3) > .options_icons {
+    font-size: 13px;
 }
 
 @media only screen and (max-width: 600px) {
-
-    html {
-    overflow-x: none !important;
+	html {
+		overflow-x: none !important;
+	}
+	.col {
+		max-width: 100%;
+	}
+	.col2 {
+		display: none;
+	}
+	.textarea {
+		width: 90% !important;
+	}
+	.options_icons {
+        font-size: 12px !important;
+        color: goldenrod !important;
     }
-
-    .col {
-    max-width: 100%;
-}
-
-  .col2 {
-      display: none;
-  }
-
-.textarea {
-    width: 90% !important;
-}
-
-
+    .footer {
+        height: auto;
+        padding: 15px;
+    }
 }

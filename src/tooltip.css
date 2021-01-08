@@ -2,6 +2,7 @@
 
 .tooltip {
     position: relative;
+    white-space: nowrap;
 }
 
 .tooltip::after {
@@ -47,4 +48,13 @@
 	top: 0;
 	left: 50%;
 	transform: translate(-50%, calc(-100% - 5px)) rotate(45deg);
+}
+
+@media only screen and (max-width: 600px) {
+    .tooltip:hover::before {
+	    visibility: hidden;
+    }
+    .tooltip.top::after {
+		visibility: hidden;
+    }
 }

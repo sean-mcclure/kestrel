@@ -54,7 +54,7 @@ function App() {
         </div>
 
         <div className="footer">
-            <div class="tooltip top" data-tooltip_text="REFRESH"><FaRedo id="refresh_icon" color="white" size="2em" className="options_icons"></FaRedo></div>
+            <div class="tooltip top" data-tooltip_text="FETCH LATEST"><FaRedo id="refresh_icon" color="white" size="2em" className="options_icons"></FaRedo></div>
             <div class="tooltip top" data-tooltip_text="SEARCH"><FaSearch id="search_icon" color="white" size="2em" className="options_icons"></FaSearch></div>
             <div class="tooltip top" data-tooltip_text="MESSAGES"><FaEnvelope id="dm_icon" color="white" size="2em" className="options_icons"></FaEnvelope></div>
             <div class="tooltip top" data-tooltip_text="PROFILE"><FaCogs id="profile_icon" color="white" size="2em" className="options_icons"></FaCogs></div>
