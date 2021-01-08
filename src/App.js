@@ -1,4 +1,5 @@
 import './App.css';
+import './tooltip.css';
 import logo from "./logo.png";
 
 import Messages from "./Messages"
@@ -7,7 +8,11 @@ import {visible} from "./visible.js"
 
 import {
   FaFeatherAlt,
-  FaNewspaper
+  FaNewspaper,
+  FaSearch,
+  FaCogs,
+  FaRedo,
+  FaEnvelope
 } from "react-icons/fa";
 
 function App() {
@@ -49,10 +54,10 @@ function App() {
         </div>
 
         <div className="footer">
-            <FaFeatherAlt color="white" size="2em" className="options_icons"></FaFeatherAlt>
-            <FaFeatherAlt color="white" size="2em" className="options_icons"></FaFeatherAlt>
-            <FaFeatherAlt color="white" size="2em" className="options_icons"></FaFeatherAlt>
-            <FaFeatherAlt color="white" size="2em" className="options_icons"></FaFeatherAlt>
+            <div class="tooltip top" data-tooltip_text="REFRESH"><FaRedo id="refresh_icon" color="white" size="2em" className="options_icons"></FaRedo></div>
+            <div class="tooltip top" data-tooltip_text="SEARCH"><FaSearch id="search_icon" color="white" size="2em" className="options_icons"></FaSearch></div>
+            <div class="tooltip top" data-tooltip_text="MESSAGES"><FaEnvelope id="dm_icon" color="white" size="2em" className="options_icons"></FaEnvelope></div>
+            <div class="tooltip top" data-tooltip_text="PROFILE"><FaCogs id="profile_icon" color="white" size="2em" className="options_icons"></FaCogs></div>
         </div>
       
     </div>

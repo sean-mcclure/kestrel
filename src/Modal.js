@@ -50,7 +50,7 @@ export function Modal() {
                  document.getElementsByClassName("textarea")[0].style.marginBottom = "10px"
                  }}><FaTimes size="1.3em"/></div>
                  <div id="textarea_wrapper" className="scrolling-wrapper">
-                    <textarea id="textarea1" className="textarea" onChange={character_counter} maxlength="280"></textarea>
+                    <textarea id="textarea1" className="textarea" onChange={character_counter} maxLength="280"></textarea>
                  </div>
              <img id="hold_uploaded_img" className="hold_uploaded_img" alt="uploaded_img_preview" style={img_styles}></img>
              <video height="200px" playsInline controls id="hold_uploaded_video" className="hold_uploaded_video" style={img_styles}><source type="video/mp4"></source></video>

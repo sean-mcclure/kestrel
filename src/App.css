@@ -2,6 +2,7 @@
 
 html, body {
   overflow-x: hidden;
+  font-family: "Roboto";
 }
 
 html {
@@ -44,7 +45,7 @@ img {
 	display: flex;
 	flex-direction: row;
 	align-self: stretch;
-	padding: 5px;
+    padding: 5px;
 	position: sticky;
 	top: 0px;
 	z-index: 99999999999999999;
@@ -371,6 +372,9 @@ video {
     padding-top: 20px;
 }
 
+.options_icons {
+    cursor: pointer;
+}
 
 @media only screen and (max-width: 600px) {
 
