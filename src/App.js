@@ -47,6 +47,13 @@ function App() {
         </div>
       
         </div>
+
+        <div className="footer">
+            <FaFeatherAlt color="white" size="2em" className="options_icons"></FaFeatherAlt>
+            <FaFeatherAlt color="white" size="2em" className="options_icons"></FaFeatherAlt>
+            <FaFeatherAlt color="white" size="2em" className="options_icons"></FaFeatherAlt>
+            <FaFeatherAlt color="white" size="2em" className="options_icons"></FaFeatherAlt>
+        </div>
       
     </div>
     </>

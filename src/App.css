@@ -36,6 +36,7 @@ img {
     position: fixed;
     right: 0;
     border-radius: 4px;
+    margin-top: -8px;
 }
 
 .flex_grid_banner {
@@ -354,6 +355,20 @@ video {
 
 .news_header_cell {
     background: transparent !important;
+}
+
+.footer {
+    height: 50px;
+    background: #3D3D3D;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 20px;
 }
 
 
