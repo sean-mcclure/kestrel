@@ -6,7 +6,6 @@ import Messages from "./Messages";
 import Modal from "./Modal";
 import Avatar from "./avatar.js";
 import {visible} from "./visible.js";
-import {avatar_drag} from "./avatar_drag.js";
 
 import {
   FaFeatherAlt,
@@ -63,7 +62,6 @@ function App() {
             <div class="tooltip top" data-tooltip_text="PROFILE"><FaCogs id="profile_icon" color="white" size="2em" className="options_icons" onClick={(event) => {
                 event.preventDefault();
                 visible("avatar");
-                avatar_drag();
                 document.body.style.overflowY = "hidden"
                 document.getElementsByClassName("flex_grid_banner")[0].style.zIndex = -1
             }}></FaCogs></div>

@@ -26,6 +26,31 @@ img {
 	max-width: 100%;
 }
 
+textarea {
+    resize: none !important;
+}
+
+::placeholder {
+  color: silver;
+  opacity: 1;
+  padding-left: 5px;
+  font-size: 18px;
+}
+
+:-ms-input-placeholder {
+  color: silver;
+    padding-left: 5px;
+     font-size: 18px;
+
+}
+
+::-ms-input-placeholder {
+  color: silver;
+    padding-left: 5px;
+     font-size: 18px;
+
+}
+
 .col {
     max-width: 50%;
     margin-bottom: 70px;
@@ -130,7 +155,7 @@ img {
 	border-radius: 4px;
 	background: #3D3D3D;
 	border: 3px solid #141414;
-	box-shadow: 2px 2px 100px black;
+	box-shadow: 2px 2px 100px goldenrod;
 	text-align: center;
 	position: fixed;
 	top: 50%;
@@ -141,6 +166,11 @@ img {
 	z-index: 999999999999999999999;
 }
 
+#avatar_modal {
+    width: auto;
+    box-shadow: 2px 2px 100px goldenrod;
+}
+
 .close_modal {
 	color: whitesmoke;
 	right: 0;
@@ -149,7 +179,12 @@ img {
 	cursor: pointer;
 	font-weight: bold;
 	font-size: 20px;
-	position: absolute;
+    position: absolute;
+    -webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
 }
 
 .scrolling-wrapper {
@@ -172,12 +207,15 @@ img {
 	margin-top: 10px;
 	margin-bottom: 10px;
 	margin-left: 10px;
-	font-family: Roboto;
+    font-family: Roboto;
+    outline: 2px solid goldenrod;
 }
 
+/*
 .textarea:focus {
 	outline: 2px solid #f3b32b;
 }
+*/
 
 .icon_wrapper_post {
 	display: flex;
@@ -391,17 +429,6 @@ div:nth-child(3) > .options_icons {
     font-size: 13px;
 }
 
-.avatar_wrapper {
-background-image: url("https://banner2.cleanpng.com/20181118/uxu/kisspng-clip-art-image-generic-drug-social-media-photograp-male-svg-png-icon-free-download-5-6821-online-5bf22649c9d890.4957056815425961698268.jpg");
-background-size: cover;
-background-repeat: no-repeat;
-border: 3px solid black;
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  overflow: hidden;
-  margin-left: 40%;
-}
 
 .input_hide {
     visibility: hidden;
@@ -410,18 +437,72 @@ border: 3px solid black;
 .camera_icon {
     color: gold;
     font-size: 30px;
-    margin: 20px;
+    margin: 10px;
+    margin-bottom: -10px;
+    cursor: pointer;
 }
 
+.upload_title {
+    color: whitesmoke;
+}
+
+.upload_title_sub {
+    color: silver;
+    margin-top: -20px;
+}
+
+.avatar_close {
+    margin-top: 30px;
+}
+
+
 #avatar_pic {
-    width: 200px;
-    max-width: 1000px;
+    border-radius:50%;
+    margin: 0 auto;
+    width:100px;
+    height:100px;
+    margin-right: 10%;
+    margin-left: 10%;
+    background-image: url("./avatar.png");
+    background-size : cover;
+    border: 2px solid black !important;
+}
+
+.bio {
+    height: 100px !important;
+    width: 80% !important;
+    margin-bottom: 10px !important;
+    background: #797171a8;
+    color: whitesmoke;
+    font-size: 18px; 
+    padding: 10px;
+}
+
+.save_profile {
+    height: 30px;
+    width: auto;
+    border: none;
+    border-radius: 3px;
+    color:#141414;
+    background: gold;
+    margin-bottom: 10px;
+    font-size: 20px;
 }
 
 @media only screen and (max-width: 600px) {
 	html {
 		overflow-x: none !important;
-	}
+    }
+    .logo {
+        width: 130px;
+    }
+    .add_message {
+        width : 30px !important; 
+        margin-right: 30px !important;
+    }
+    .flex_grid_banner {
+        height: auto !important;
+    }
 	.col {
 		max-width: 100%;
 	}
@@ -436,7 +517,14 @@ border: 3px solid black;
         color: gold !important;
     }
     .footer {
-        height: auto;
+        height: 20px !important;
         padding: 15px;
+    }
+    #avatar_modal {
+        width: 90%;
+    }
+    #profile_icon {
+        font-size: 14px !important;
+        margin-top: -3px;
     }
 }

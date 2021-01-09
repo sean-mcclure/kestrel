@@ -31,11 +31,11 @@ export function visible(type) {
 
     if(type === "avatar") {
         if((viz_cnt%2 === 0)) {
-            document.getElementById("avatar").style.display = "none";
+            document.getElementById("avatar_modal").style.display = "none";
             document.body.style.position = "relative";
             document.body.style.overflowY = "scroll";
         } else {
-            document.getElementById("avatar").style.display = "block";
+            document.getElementById("avatar_modal").style.display = "block";
             const mobile_check = is_mobile()
             if (mobile_check) {
                 document.body.style.position = "fixed";
