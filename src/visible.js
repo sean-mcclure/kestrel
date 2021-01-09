@@ -6,10 +6,10 @@ export function visible(type) {
     viz_cnt++;
     if(type === "modal") {
         if((viz_cnt%2 === 0)) {
-                document.getElementById("modal").style.display = "none";
-                document.getElementsByClassName("add_message")[0].style.visibility = "visible";
-                document.body.style.position = "relative";
-                document.body.style.overflowY = "scroll";
+            document.getElementById("modal").style.display = "none";
+            document.getElementsByClassName("add_message")[0].style.visibility = "visible";
+            document.body.style.position = "relative";
+            document.body.style.overflowY = "scroll";
         } else {
             document.getElementById("modal").style.display = "block";
             document.getElementById("textarea1").click()
@@ -28,4 +28,25 @@ export function visible(type) {
             }
         }
     }
+
+    if(type === "avatar") {
+        if((viz_cnt%2 === 0)) {
+            document.getElementById("avatar").style.display = "none";
+            document.body.style.position = "relative";
+            document.body.style.overflowY = "scroll";
+        } else {
+            document.getElementById("avatar").style.display = "block";
+            const mobile_check = is_mobile()
+            if (mobile_check) {
+                document.body.style.position = "fixed";
+                document.body.style.overflowY = "hidden";
+                document.getElementsByClassName("flex-grid")[0].style.background = "";
+                document.body.addEventListener('touchstart', function(e) {
+                    e.preventDefault();
+                });
+            }
+        }
+    }
+
+
 }

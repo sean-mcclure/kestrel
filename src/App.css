@@ -391,6 +391,20 @@ div:nth-child(3) > .options_icons {
     font-size: 13px;
 }
 
+.avatar_wrapper {
+  border: 3px solid black;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  margin-left: 40%;
+}
+
+#hold_uploaded_img {
+    max-width: none;
+    width: 100px;
+}
+
 @media only screen and (max-width: 600px) {
 	html {
 		overflow-x: none !important;
@@ -406,7 +420,7 @@ div:nth-child(3) > .options_icons {
 	}
 	.options_icons {
         font-size: 12px !important;
-        color: goldenrod !important;
+        color: gold !important;
     }
     .footer {
         height: auto;

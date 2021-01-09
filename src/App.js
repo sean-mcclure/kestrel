@@ -2,9 +2,11 @@ import './App.css';
 import './tooltip.css';
 import logo from "./logo.png";
 
-import Messages from "./Messages"
-import Modal from "./Modal"
-import {visible} from "./visible.js"
+import Messages from "./Messages";
+import Modal from "./Modal";
+import Avatar from "./avatar.js";
+import {visible} from "./visible.js";
+import {avatar_drag} from "./avatar_drag.js";
 
 import {
   FaFeatherAlt,
@@ -21,6 +23,7 @@ function App() {
 
          <>
          <Modal/>
+         <Avatar/>
      
         <div className="App">
         <div className="flex_grid_banner">
@@ -57,7 +60,13 @@ function App() {
             <div class="tooltip top" data-tooltip_text="FETCH LATEST"><FaRedo id="refresh_icon" color="white" size="2em" className="options_icons"></FaRedo></div>
             <div class="tooltip top" data-tooltip_text="SEARCH"><FaSearch id="search_icon" color="white" size="2em" className="options_icons"></FaSearch></div>
             <div class="tooltip top" data-tooltip_text="MESSAGES"><FaEnvelope id="dm_icon" color="white" size="2em" className="options_icons"></FaEnvelope></div>
-            <div class="tooltip top" data-tooltip_text="PROFILE"><FaCogs id="profile_icon" color="white" size="2em" className="options_icons"></FaCogs></div>
+            <div class="tooltip top" data-tooltip_text="PROFILE"><FaCogs id="profile_icon" color="white" size="2em" className="options_icons" onClick={(event) => {
+                event.preventDefault();
+                visible("avatar");
+                avatar_drag();
+                document.body.style.overflowY = "hidden"
+                document.getElementsByClassName("flex_grid_banner")[0].style.zIndex = -1
+            }}></FaCogs></div>
         </div>
       
     </div>
