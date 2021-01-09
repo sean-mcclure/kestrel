@@ -1,5 +1,5 @@
 export function avatar_drag() {
-    var dragItem = document.querySelector("#hold_uploaded_img");
+    var dragItem = document.querySelector("#avatar_pic");
     var container = document.querySelector("#avatar_wrapper");
     var active = false;
     var currentX;

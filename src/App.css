@@ -392,7 +392,10 @@ div:nth-child(3) > .options_icons {
 }
 
 .avatar_wrapper {
-  border: 3px solid black;
+background-image: url("https://banner2.cleanpng.com/20181118/uxu/kisspng-clip-art-image-generic-drug-social-media-photograp-male-svg-png-icon-free-download-5-6821-online-5bf22649c9d890.4957056815425961698268.jpg");
+background-size: cover;
+background-repeat: no-repeat;
+border: 3px solid black;
   border-radius: 50%;
   width: 100px;
   height: 100px;
@@ -400,9 +403,19 @@ div:nth-child(3) > .options_icons {
   margin-left: 40%;
 }
 
-#hold_uploaded_img {
-    max-width: none;
-    width: 100px;
+.input_hide {
+    visibility: hidden;
+}
+
+.camera_icon {
+    color: gold;
+    font-size: 30px;
+    margin: 20px;
+}
+
+#avatar_pic {
+    width: 200px;
+    max-width: 1000px;
 }
 
 @media only screen and (max-width: 600px) {
