@@ -3,6 +3,8 @@ import './tooltip.css';
 import logo from "./logo.png";
 
 import Messages from "./Messages";
+import TopPosts from "./TopPosts";
+import Headlines from "./Headlines";
 import Modal from "./Modal";
 import Avatar from "./avatar.js";
 import SignIn from "./sign_in.js";
@@ -49,16 +51,25 @@ function App() {
         </div>
 
         <div className="col2">
-            <table className="news_header">
+            <table className="col_2_table">
                 <tbody>
                 <tr>
+                    <td className="top_posts_cell"><FaNewspaper color="whitesmoke" size="2em" className="news"></FaNewspaper></td>
+                    <td className="top_posts_cell"><p className="posts_title">TODAY'S TOP POSTS</p></td>
                     <td className="news_header_cell"><FaNewspaper color="whitesmoke" size="2em" className="news"></FaNewspaper></td>
-                    <td className="news_header_cell"><p>WHAT'S HAPPENING?</p></td>
+                    <td className="news_header_cell"><p className="news_title">WHAT'S HAPPENING?</p></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><TopPosts/></td>
+                    <td></td>
+                    <td><Headlines/></td>
                 </tr>
                 </tbody>
             </table>
+            
         </div>
-      
+        
         </div>
 
         <div className="footer">

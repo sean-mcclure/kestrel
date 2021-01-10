@@ -51,6 +51,17 @@ textarea {
 
 }
 
+.headline_wrapper {
+    border : 1px solid silver;
+    width: 80%;
+    margin: 10px;
+}
+
+.headline_title {
+    text-align: left;
+    margin-left: 10px;
+}
+
 .col {
     max-width: 50%;
     margin-bottom: 70px;
@@ -63,7 +74,7 @@ textarea {
 	position: fixed;
 	right: 0;
 	border-radius: 4px;
-	margin-top: -8px;
+    margin-top: -8px;
 }
 
 .flex_grid_banner {
@@ -122,14 +133,9 @@ textarea {
 	text-align: center;
 }
 
-
-
-
-
 .user {
-	padding-top: 10px;
-	font-weight: bold;
-	margin-top: 5px;
+    font-weight: bold;
+    margin-left: 10px;
 }
 
 .hold_msg {
@@ -391,9 +397,7 @@ td:nth-child(4) {
 }
 
 .avatar {
-	float: left;
-	width: 80px;
-	margin-left: -20px;
+	width: 60px;
 }
 
 video {
@@ -402,12 +406,45 @@ video {
 	border-radius: 4px;
 }
 
-.news_header {
-	margin-left: 20px;
+.col_2_table {
+    margin-left: 20px;
+    width: 95%;
+    border-collapse:collapse;
 }
 
-.news_header_cell {
-	background: transparent !important;
+.col2 > .col_2_table > tbody > tr > td {
+    background: transparent !important;
+}
+
+.top_posts_cell, .news_header_cell, .headlines_cell {
+    background: transparent !important;
+}
+
+.posts_title, .news_title {
+    text-align: left;
+    margin-left: 10px;
+    font-size: 20px;
+    font-family: "Roboto";
+    margin-top: 15px;
+}
+
+.top_post_wrapper > table {
+    margin-left: -30px;
+    margin-bottom: 10px;
+}
+
+.headlines_wrapper > table {
+    margin-left: -30px;
+    margin-bottom: 10px;
+}
+
+.top_post_title {
+    color: whitesmoke;
+}
+
+.top_posts_user {
+    color: silver;
+    font-size: 12px;
 }
 
 .footer {
