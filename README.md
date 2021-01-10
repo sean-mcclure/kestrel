@@ -1,11 +1,17 @@
 # Kestrel
-## Twitter Alternative Project
+## Twitter Alternative
 
-### Details Coming Soon...
+### Why a Twitter Alternative?
 
-We need something different. Technology behind Twitter isn't particularly innovative. It comes down to paying for scalabiity, should have become a (welcomed) problem. 
+There are various reasons one might choose a platform other than Twitter for microblogging and social networking; 
+- too many advertisements;
+- concerns over freedom of speech;
+- not local enough;
+- etc. 
 
-### Problems with Twitter
-- misinformation
-- nonlocality 
-- etc.
+### Why Open Source the Application?
+
+### Scalability?
+
+### Content Moderation
+Content moderation on Kestrel goes as far as automated nudity filtering. 

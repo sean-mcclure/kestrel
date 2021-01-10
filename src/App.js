@@ -5,6 +5,7 @@ import logo from "./logo.png";
 import Messages from "./Messages";
 import Modal from "./Modal";
 import Avatar from "./avatar.js";
+import SignIn from "./sign_in.js";
 import {visible} from "./visible.js";
 
 import {
@@ -23,16 +24,21 @@ function App() {
          <>
          <Modal/>
          <Avatar/>
+          <SignIn/>
      
         <div className="App">
+
         <div className="flex_grid_banner">
-        <div unselectable="on"><img src={logo} className="logo" alt="logo"/></div>
-        <div><FaFeatherAlt color="white" size="2em" className="add_message" onClick={(event) => {
-            event.preventDefault();
-            visible("modal");
-            document.body.style.overflowY = "hidden"
-            document.getElementsByClassName("flex_grid_banner")[0].style.zIndex = -1
-            }}/></div>
+
+            <div unselectable="on"><img src={logo} className="logo" alt="logo"/></div>
+            
+            <div><FaFeatherAlt color="white" size="2em" className="add_message" onClick={(event) => {
+                event.preventDefault();
+                visible("modal");
+                document.body.style.overflowY = "hidden"
+                document.getElementsByClassName("flex_grid_banner")[0].style.zIndex = -1
+                }}/>
+            </div>
 
         </div>
 
@@ -56,6 +62,12 @@ function App() {
         </div>
 
         <div className="footer">
+             <div><p className="sign_in" onClick={(event) => {
+                event.preventDefault();
+                visible("sign_in");
+                document.body.style.overflowY = "hidden"
+                document.getElementsByClassName("flex_grid_banner")[0].style.zIndex = -1
+             }}>SIGN IN</p></div>
             <div class="tooltip top" data-tooltip_text="FETCH LATEST"><FaRedo id="refresh_icon" color="white" size="2em" className="options_icons"></FaRedo></div>
             <div class="tooltip top" data-tooltip_text="SEARCH"><FaSearch id="search_icon" color="white" size="2em" className="options_icons"></FaSearch></div>
             <div class="tooltip top" data-tooltip_text="MESSAGES"><FaEnvelope id="dm_icon" color="white" size="2em" className="options_icons"></FaEnvelope></div>

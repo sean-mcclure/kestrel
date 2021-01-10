@@ -69,9 +69,10 @@ textarea {
 .flex_grid_banner {
 	background: #3d3d3d;
 	display: flex;
-	flex-direction: row;
-	align-self: stretch;
-	padding: 5px;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px;
+    padding-right: 0px;
 	position: sticky;
 	top: 0px;
 	z-index: 99999999999999999;
@@ -90,6 +91,25 @@ textarea {
 	user-select: none;
 }
 
+.sign_in {
+    position: relative;
+    cursor: pointer;
+    margin-top: 0px;
+}
+
+.add_message {
+	width: 40px;
+	height: 40px;
+	fill: #F3B32B;
+	z-index: 9999999999;
+	filter: drop-shadow(4px 4px 2px black);
+	cursor: pointer;
+    right: 0;
+	position: absolute;
+	margin: 20px;
+}
+
+
 .flex-grid {
 	display: flex;
 	flex-direction: row;
@@ -102,17 +122,9 @@ textarea {
 	text-align: center;
 }
 
-.add_message {
-	width: 40px;
-	height: 40px;
-	fill: #F3B32B;
-	z-index: 9999999999;
-	filter: drop-shadow(4px 4px 2px black);
-	cursor: pointer;
-	right: 0;
-	position: absolute;
-	margin: 20px;
-}
+
+
+
 
 .user {
 	padding-top: 10px;
@@ -457,7 +469,7 @@ div:nth-child(3) > .options_icons {
 
 
 #avatar_pic {
-    border-radius:50%;
+    border-radius:0%;
     margin: 0 auto;
     width:100px;
     height:100px;
@@ -465,7 +477,7 @@ div:nth-child(3) > .options_icons {
     margin-left: 10%;
     background-image: url("./avatar.png");
     background-size : cover;
-    border: 2px solid black !important;
+    border: none;
 }
 
 .bio {
@@ -479,14 +491,54 @@ div:nth-child(3) > .options_icons {
 }
 
 .save_profile {
-    height: 30px;
+    height: 26px;
     width: auto;
     border: none;
     border-radius: 3px;
-    color:#141414;
+    color:darkslategrey;
     background: gold;
     margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: 0;
+}
+
+.sign_in_input {
+    height: 40px;
+    width: 90%;
+    border: 1px solid whitesmoke;
+    border-radius: 3px;
+    background: #3F3E3D;
+    margin-bottom: 20px;
+    color: whitesmoke;
+    padding: 4px;
+    padding-left: 10px;
     font-size: 20px;
+    font-family: "Roboto";
+}
+
+.input_1 {
+    margin-top: 50px;
+}
+
+.forgot_pass {
+    color: silver;
+    margin-top: -10px;
+    cursor: pointer;
+}
+
+.submit {
+    height: 30px;
+    border: none;
+    background: gold;
+    border-radius: 3px;
+    margin: 10px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    outline: 0;
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 600px) {
@@ -498,7 +550,7 @@ div:nth-child(3) > .options_icons {
     }
     .add_message {
         width : 30px !important; 
-        margin-right: 30px !important;
+        margin-right: 20px !important;
     }
     .flex_grid_banner {
         height: auto !important;
@@ -507,7 +559,8 @@ div:nth-child(3) > .options_icons {
 		max-width: 100%;
 	}
 	.col2 {
-		display: none;
+        display: none;
+        z-index: -1;
 	}
 	.textarea {
 		width: 90% !important;
