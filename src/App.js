@@ -13,6 +13,7 @@ import {visible} from "./visible.js";
 import {
   FaFeatherAlt,
   FaNewspaper,
+  FaCrow,
   FaSearch,
   FaCogs,
   FaRedo,
@@ -54,7 +55,7 @@ function App() {
             <table className="col_2_table">
                 <tbody>
                 <tr>
-                    <td className="top_posts_cell"><FaNewspaper color="whitesmoke" size="2em" className="news"></FaNewspaper></td>
+                    <td className="top_posts_cell"><FaCrow color="whitesmoke" size="2em" className="news"></FaCrow></td>
                     <td className="top_posts_cell"><p className="posts_title">TODAY'S TOP POSTS</p></td>
                     <td className="news_header_cell"><FaNewspaper color="whitesmoke" size="2em" className="news"></FaNewspaper></td>
                     <td className="news_header_cell"><p className="news_title">WHAT'S HAPPENING?</p></td>

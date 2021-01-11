@@ -1,7 +1,27 @@
 import React from 'react';
 
 const headlines = [{
-                    logo : "https://www.bbb.org/ProfileImages/2d00bd8f-a238-4212-be19-7253b92e97f5.png",
+                    logo : "https://i0.wp.com/lo3energy.com/wp-content/uploads/2018/12/cnn-logo-square.png?ssl=1s",
+                    title : "Forbes Says It's Targeting Trump Staffers and Their Future Employers",
+                    link : "https://www.newsmax.com/"
+                  },
+                  {
+                    logo : "https://www.freepnglogos.com/uploads/abc-png-logo/company-abc-png-logo-2.png",
+                    title : "Forbes Says It's Targeting Trump Staffers and Their Future Employers",
+                    link : "https://www.newsmax.com/"
+                  },
+                  {
+                    logo : "https://www.pngitem.com/pimgs/m/488-4884737_msnbc-news-cnbc-logo-png-transparent-png.png",
+                    title : "Forbes Says It's Targeting Trump Staffers and Their Future Employers",
+                    link : "https://www.newsmax.com/"
+                  },
+                  {
+                    logo : "https://cdn.freebiesupply.com/logos/large/2x/fox-news-logo-svg-vector.svg",
+                    title : "Forbes Says It's Targeting Trump Staffers and Their Future Employers",
+                    link : "https://www.newsmax.com/"
+                  },
+                  {
+                    logo : "https://cdn.freebiesupply.com/logos/large/2x/fox-news-logo-svg-vector.svg",
                     title : "Forbes Says It's Targeting Trump Staffers and Their Future Employers",
                     link : "https://www.newsmax.com/"
                   }]
@@ -11,8 +31,8 @@ export var list_of_headlines = headlines.map((headline_obj, i) =>
           <table>
               <tbody>
                   <tr>
-                      <td className="headlines_cell"><img className="avatar" src="https://img.utdstc.com/icon/771/f6d/771f6d762698529b0f48f0f351871619b6034ce1fbaec75d431bf14fb5defb75:200" alt="avatar_img"></img><div className="user top_posts_user">John Smith</div></td>
-                      <td className="headlines_cell"><h4 className="top_post_title">{headline_obj.title}</h4></td>
+                      <td className="headlines_cell"><img className="news_logo" src={headline_obj.logo} alt="news_logo"></img></td>
+                      <td className="headlines_cell"><h4 className="headline_title"><a href={headline_obj.link} target="_blank">{headline_obj.title.slice(0, 40) + "..."}</a></h4></td>
                   </tr>
               </tbody>
           </table>
