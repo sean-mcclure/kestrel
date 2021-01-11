@@ -600,6 +600,28 @@ div:nth-child(3) > .options_icons {
     cursor: pointer;
 }
 
+.feed_titles_wrapper {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    margin-top: -5px;
+    margin-left: -5px;
+}
+
+.feed_titles {
+    width: 100%;
+    background: gold;
+    cursor: pointer;
+}
+
+.feed_titles:nth-child(2) {
+    background : #313030;
+    color: silver;
+}
+
+
 @media only screen and (max-width: 600px) {
 	html {
 		overflow-x: none !important;
@@ -641,5 +663,8 @@ div:nth-child(3) > .options_icons {
     .col2 {
         display: none;
         z-index: -1;
+    }
+    .feed_titles_wrapper {
+        width: 100%;
     }
 }

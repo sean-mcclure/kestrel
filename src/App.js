@@ -9,6 +9,7 @@ import Modal from "./Modal";
 import Avatar from "./avatar.js";
 import SignIn from "./sign_in.js";
 import {visible} from "./visible.js";
+import {style_element} from "./style.js";
 
 import {
   FaFeatherAlt,
@@ -17,7 +18,7 @@ import {
   FaSearch,
   FaCogs,
   FaRedo,
-  FaEnvelope
+  FaEnvelope,
 } from "react-icons/fa";
 
 function App() {
@@ -48,6 +49,11 @@ function App() {
         <div className="flex-grid">
   
         <div className="col">
+            <div className="feed_titles_wrapper">
+            <div id="world" className="feed_titles" onClick={(event) => {style_element('feed', event)}}>WORLD FEED</div>
+            <div id="followers" className="feed_titles" onClick={(event) => {style_element('feed', event)}}>FOLLOWER FEED</div>
+            </div>
+    
              <Messages/>
         </div>
 
