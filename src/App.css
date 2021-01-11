@@ -424,6 +424,7 @@ video {
 
 .top_posts_cell, .news_header_cell, .headlines_cell {
     background: transparent !important;
+    cursor: pointer;
 }
 
 .posts_title, .news_title {

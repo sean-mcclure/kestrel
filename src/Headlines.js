@@ -31,7 +31,7 @@ export var list_of_headlines = headlines.map((headline_obj, i) =>
           <table>
               <tbody>
                   <tr>
-                      <td className="headlines_cell"><img className="news_logo" src={headline_obj.logo} alt="news_logo"></img></td>
+                      <td className="headlines_cell"><a href={headline_obj.link} target="_blank" rel="noreferrer"><img className="news_logo" src={headline_obj.logo} alt="news_logo"></img></a></td>
                       <td className="headlines_cell"><h4 className="headline_title"><a href={headline_obj.link} target="_blank" rel="noreferrer">{headline_obj.title.slice(0, 40) + "..."}</a></h4></td>
                   </tr>
               </tbody>
