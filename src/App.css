@@ -2,7 +2,10 @@
 html,
 body {
 	overflow-x: hidden;
-	font-family: "Roboto";
+    font-family: "Roboto";
+    overscroll-behavior-y: none;
+    position: fixed;
+    overflow: hidden;
 }
 
 html {
@@ -65,6 +68,9 @@ textarea {
 .col {
     max-width: 50%;
     margin-bottom: 70px;
+    height: 100vh;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
 }
 
 .col2 {
@@ -88,7 +94,7 @@ textarea {
 	top: 0px;
 	z-index: 99999999999999999;
 	width: 100%;
-	height: 80px;
+    height: 80px;
 }
 
 .logo {
@@ -397,7 +403,7 @@ td:nth-child(4) {
 }
 
 .avatar {
-	width: 60px;
+    width: 60px;
 }
 
 video {
@@ -608,6 +614,7 @@ div:nth-child(3) > .options_icons {
     position: fixed;
     margin-top: -5px;
     margin-left: -5px;
+    z-index: 99999999;
 }
 
 .feed_titles {
@@ -658,7 +665,7 @@ div:nth-child(3) > .options_icons {
 }
 @media only screen and (max-width: 1000px) {
     .col {
-		max-width: 100%;
+        max-width: 100%;
 	}
     .col2 {
         display: none;
@@ -666,5 +673,7 @@ div:nth-child(3) > .options_icons {
     }
     .feed_titles_wrapper {
         width: 100%;
+        margin-top: 0px;
+        border : none;
     }
 }

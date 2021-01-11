@@ -12,8 +12,6 @@ import {
 const messages = ["This is some text that represents a message in Kestrel. And then therer is some more text to see how this wraps around the avater. \n\nDoes it every wrap around teh vater or does it just keep in the same flush!!!", "This is some text that represents a message in Kestrel.", "This is some text that represents a message in Kestrel.", "This is some text that represents a message in Kestrel.", "This is some text that represents a message in Kestrel.", "This is some text that represents a message in Kestrel.", "This is some text that represents a message in Kestrel."]
 
 export var list_of_messages = messages.map((msg, i) => 
-
-      
       <div className="msg_wrapper" key={i.toString()}><div><img className="avatar" src={avatar} alt="avatar_img"></img></div><div className="user">John Smith</div>
       <div className="hold_msg">{msg}</div>
       <img className="msg_img" src="https://i.redd.it/tk46u5nrkxm21.png" alt="kestrel_img"></img>

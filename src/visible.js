@@ -7,8 +7,8 @@ export function visible(type) {
 
     if((viz_cnt%2 === 0)) {
         document.getElementsByClassName("add_message")[0].style.visibility = "visible";
-        document.body.style.position = "relative";
-        document.body.style.overflowY = "scroll";
+        document.body.style.position = "fixed";
+        document.body.style.overflow = "hidden";
     } else {
         const mobile_check = is_mobile()
         if (mobile_check) {

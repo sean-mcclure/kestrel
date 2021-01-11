@@ -53,7 +53,7 @@ function App() {
             <div id="world" className="feed_titles" onClick={(event) => {style_element('feed', event)}}>WORLD FEED</div>
             <div id="followers" className="feed_titles" onClick={(event) => {style_element('feed', event)}}>FOLLOWER FEED</div>
             </div>
-    
+                <div>.</div>
              <Messages/>
         </div>
 
