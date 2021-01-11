@@ -60,11 +60,6 @@ textarea {
     margin: 10px;
 }
 
-.headline_title {
-    text-align: left;
-    margin-left: 10px;
-}
-
 .col {
     max-width: 50%;
     margin-bottom: 70px;
@@ -412,19 +407,22 @@ video {
 	border-radius: 4px;
 }
 
-.col_2_table {
-    margin-left: 20px;
-    width: 95%;
-    border-collapse:collapse;
+.top_and_news_wrapper {
+    display: grid;
+    grid-template-columns: 10% 40% 10% 40%;
+    gap: 10px;
+    grid-auto-rows: 20px 300px;
+    width: 100%;
+    height: 100%;
+    background: grey;
 }
 
-.col2 > .col_2_table > tbody > tr > td {
-    background: transparent !important;
-}
-
-.top_posts_cell, .news_header_cell, .headlines_cell {
-    background: transparent !important;
-    cursor: pointer;
+.top_post_wrapper, .headlines_wrapper {
+    display: grid;
+    grid-template-columns: 10% 90%;
+    gap: 10px;
+    grid-auto-rows: 70px;
+    margin-top: 20px;
 }
 
 .posts_title, .news_title {
@@ -434,12 +432,6 @@ video {
     font-family: "Roboto";
     margin-top: 15px;
     white-space: nowrap;
-}
-
-.top_post_wrapper > table {
-    margin-left: -30px;
-    margin-bottom: 30px;
-    max-width: 300px;
 }
 
 .headlines_wrapper > table {
@@ -570,6 +562,8 @@ div:nth-child(3) > .options_icons {
     outline: 0;
 }
 
+
+
 .sign_in_input {
     height: 40px;
     width: 90%;
@@ -585,7 +579,7 @@ div:nth-child(3) > .options_icons {
 }
 
 .input_1 {
-    margin-top: 50px;
+    margin-top: 10px;
 }
 
 .forgot_pass {
@@ -596,15 +590,40 @@ div:nth-child(3) > .options_icons {
 
 .submit {
     height: 30px;
+    width: 95%;
     border: none;
     background: gold;
     border-radius: 3px;
     margin: 10px;
     margin-top: 0px;
-    margin-bottom: 20px;
     font-size: 16px;
     outline: 0;
     cursor: pointer;
+}
+
+.sign_in_up_wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin: 10px;
+    margin-left: 25px;
+}
+
+.submit_options {
+    height: 30px;
+    min-width: 50%;
+    border: none;
+    background: gold;
+    border-radius: 3px;
+    font-size: 16px;
+    outline: 0;
+    cursor: pointer;
+}
+
+.submit_options:nth-child(2) {
+    background: grey;
+    color: whitesmoke;
+    margin-left: 10px;
 }
 
 .feed_titles_wrapper {

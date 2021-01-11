@@ -27,16 +27,10 @@ const headlines = [{
                   }]
 
 export var list_of_headlines = headlines.map((headline_obj, i) => 
-      <div className="headlines_wrapper" key={i.toString()}>
-          <table>
-              <tbody>
-                  <tr>
-                      <td className="headlines_cell"><a href={headline_obj.link} target="_blank" rel="noreferrer"><img className="news_logo" src={headline_obj.logo} alt="news_logo"></img></a></td>
-                      <td className="headlines_cell"><h4 className="headline_title"><a href={headline_obj.link} target="_blank" rel="noreferrer">{headline_obj.title.slice(0, 40) + "..."}</a></h4></td>
-                  </tr>
-              </tbody>
-          </table>
-      </div>    
+        <div className="headlines_wrapper" key={i.toString()}>
+            <a href={headline_obj.link} target="_blank" rel="noreferrer"><img className="news_logo" src={headline_obj.logo} alt="news_logo"></img></a>
+            <h4 className="headline_title"><a href={headline_obj.link} target="_blank" rel="noreferrer">{headline_obj.title.slice(0, 40) + "..."}</a></h4>      
+        </div>
 );
 
 class Headlines extends React.Component {

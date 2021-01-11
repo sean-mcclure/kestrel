@@ -58,22 +58,18 @@ function App() {
         </div>
 
         <div className="col2">
-            <table className="col_2_table">
-                <tbody>
-                <tr>
-                    <td className="top_posts_cell"><FaCrow color="whitesmoke" size="2em" className="news"></FaCrow></td>
-                    <td className="top_posts_cell"><p className="posts_title">TODAY'S TOP POSTS</p></td>
-                    <td className="news_header_cell"><FaNewspaper color="whitesmoke" size="2em" className="news"></FaNewspaper></td>
-                    <td className="news_header_cell"><p className="news_title">WHAT'S HAPPENING?</p></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><TopPosts/></td>
-                    <td></td>
-                    <td><Headlines/></td>
-                </tr>
-                </tbody>
-            </table>
+
+
+            <div className="top_and_news_wrapper">
+                <div className="top_and_news"><FaCrow color="whitesmoke" size="2em" className="news"></FaCrow></div>
+                <div className="top_and_news"><p className="posts_title">TODAY'S TOP POSTS</p></div>
+                <div className="top_and_news"><FaNewspaper color="whitesmoke" size="2em" className="news"></FaNewspaper></div>
+                <div className="top_and_news"><p className="news_title">WHAT'S HAPPENING?</p></div>
+                <div className="top_and_news"></div>
+                <div className="top_and_news"><TopPosts/></div>
+                <div className="top_and_news"></div>
+                <div className="top_and_news"><Headlines/></div>
+            </div>
             
         </div>
         
@@ -85,7 +81,7 @@ function App() {
                 visible("sign_in");
                 document.body.style.overflowY = "hidden"
                 document.getElementsByClassName("flex_grid_banner")[0].style.zIndex = -1
-             }}>SIGN IN</p></div>
+             }}>SIGN IN/UP</p></div>
             <div class="tooltip top" data-tooltip_text="FETCH LATEST"><FaRedo id="refresh_icon" color="white" size="2em" className="options_icons"></FaRedo></div>
             <div class="tooltip top" data-tooltip_text="SEARCH"><FaSearch id="search_icon" color="white" size="2em" className="options_icons"></FaSearch></div>
             <div class="tooltip top" data-tooltip_text="MESSAGES"><FaEnvelope id="dm_icon" color="white" size="2em" className="options_icons"></FaEnvelope></div>
