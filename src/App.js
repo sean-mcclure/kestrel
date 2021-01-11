@@ -46,14 +46,15 @@ function App() {
 
         </div>
 
-        <div className="flex-grid">
-  
-        <div className="col">
-            <div className="feed_titles_wrapper">
+                <div className="feed_titles_wrapper">
             <div id="world" className="feed_titles" onClick={(event) => {style_element('feed', event)}}>WORLD FEED</div>
             <div id="followers" className="feed_titles" onClick={(event) => {style_element('feed', event)}}>FOLLOWER FEED</div>
             </div>
-                <div>.</div>
+
+
+        <div className="flex-grid">
+  
+        <div className="col">
              <Messages/>
         </div>
 
@@ -61,7 +62,7 @@ function App() {
 
 
             <div className="top_and_news_wrapper">
-                <div className="top_and_news"><FaCrow color="whitesmoke" size="2em" className="news"></FaCrow></div>
+                <div className="top_and_news"><FaCrow color="whitesmoke" size="2em" className="top_posts"></FaCrow></div>
                 <div className="top_and_news"><p className="posts_title">TODAY'S TOP POSTS</p></div>
                 <div className="top_and_news"><FaNewspaper color="whitesmoke" size="2em" className="news"></FaNewspaper></div>
                 <div className="top_and_news"><p className="news_title">WHAT'S HAPPENING?</p></div>
