@@ -1,4 +1,5 @@
 import React from 'react';
+import "./posts_and_headlines.css";
 
 const headlines = [{
                     logo : "https://i0.wp.com/lo3energy.com/wp-content/uploads/2018/12/cnn-logo-square.png?ssl=1s",
@@ -24,11 +25,6 @@ const headlines = [{
                     logo : "https://cdn.freebiesupply.com/logos/large/2x/fox-news-logo-svg-vector.svg",
                     title : "Forbes Says It's Targeting Trump Staffers and Their Future Employers",
                     link : "https://www.newsmax.com/"
-                  },
-                  {
-                    logo : "https://cdn.freebiesupply.com/logos/large/2x/fox-news-logo-svg-vector.svg",
-                    title : "Forbes Says It's Targeting Trump Staffers and Their Future Employers",
-                    link : "https://www.newsmax.com/"
                   }]
 
 export var list_of_headlines = headlines.map((headline_obj, i) => 
@@ -39,33 +35,10 @@ export var list_of_headlines = headlines.map((headline_obj, i) =>
 );
 
 class Headlines extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {headlines: list_of_headlines
-};
-  }
-
-  componentDidMount() {
-    this.headline_id = setInterval(
-      () => this.tick(),
-      1000
-    );
-  }
-
-  componentWillUnmount() {
-    clearInterval(this.headline_id);
-  }
-
-  tick() {
-    this.setState({
-      headlines: list_of_headlines
-    });
-  }
-
   render() {
     return (
          <>
-         {this.state.headlines}
+         {list_of_headlines}
          </>
     );
   }

@@ -5,7 +5,7 @@
     margin-right: -30px;
     position: absolute;
     background: #3D3D3D;
-    box-shadow: 2px 2px 40px #764545;
+    box-shadow: none;
     z-index: 999999;
     font-family: "Oswald";
     color: whitesmoke;

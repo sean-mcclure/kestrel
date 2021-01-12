@@ -9,6 +9,7 @@ import Modal from "./Modal";
 import Avatar from "./avatar.js";
 import SignIn from "./sign_in.js";
 import SideDiv from "./SideDiv";
+import Search from "./Search";
 import {visible} from "./visible.js";
 import {style_element} from "./style.js";
 
@@ -31,6 +32,7 @@ function App() {
          <Avatar/>
          <SignIn/>
          <SideDiv/>
+         <Search/>
      
         <div className="App">
 
@@ -86,7 +88,9 @@ function App() {
                 document.getElementsByClassName("flex_grid_banner")[0].style.zIndex = -1
              }}>SIGN IN/UP</p></div>
             <div class="tooltip top" data-tooltip_text="FETCH LATEST"><FaRedo id="refresh_icon" color="white" size="2em" className="options_icons"></FaRedo></div>
-            <div class="tooltip top" data-tooltip_text="SEARCH"><FaSearch id="search_icon" color="white" size="2em" className="options_icons"></FaSearch></div>
+            <div class="tooltip top" data-tooltip_text="SEARCH"><FaSearch id="search_icon" color="white" size="2em" className="options_icons" onClick={(event) => {
+                visible("search");
+            }}></FaSearch></div>
             <div class="tooltip top" data-tooltip_text="MESSAGES"><FaEnvelope id="dm_icon" color="white" size="2em" className="options_icons" onClick={(event) => {
                 visible("direct_message");
             }}></FaEnvelope></div>

@@ -58,7 +58,10 @@ export function visible(type) {
             document.getElementsByClassName("side_div")[0].style.width = "0px";
             document.getElementsByClassName("side_div")[0].style.marginRight = "-30px";
             document.getElementsByClassName("side_div")[0].style.transition = "0.2s ease-in";
+            document.getElementsByClassName("tooltip")[2].style.visibility = "visible";
+            
             var elems = document.getElementsByClassName("dir_msg_text");
+            document.getElementsByClassName("side_div")[0].style.boxShadow = "none";
             for(var i=0; i<elems.length; i++) {
                 elems[i].style.display = "none";
             }
@@ -67,13 +70,34 @@ export function visible(type) {
             document.getElementsByClassName("side_div")[0].style.width = "300px";
             document.getElementsByClassName("side_div")[0].style.marginRight = "0px";
             document.getElementsByClassName("side_div")[0].style.transition = "0.2s ease-in";
+            document.getElementsByClassName("tooltip")[2].style.visibility = "hidden";
             document.getElementsByClassName("side_div")[0].style.zIndex = "99999999";
+            document.getElementsByClassName("side_div")[0].style.boxShadow = "2px 2px 40px #764545";
             var elems_b = document.getElementsByClassName("dir_msg_text");
             setTimeout(function() {
                 for(var j=0; j<elems_b.length; j++) {
                     elems_b[j].style.display = "block";
                 }
             }, 500)
+        }
+    }
+
+    if(type === "search") {
+        if(viz_cnt%2===0) {
+            document.getElementById("search_icon").style.visibility = "visible";
+            document.getElementsByClassName("side_div")[1].style.width = "0px";
+            document.getElementsByClassName("side_div")[1].style.marginRight = "-30px";
+            document.getElementsByClassName("side_div")[1].style.transition = "0.2s ease-in";
+            document.getElementsByClassName("side_div")[1].style.boxShadow = "none";
+            document.getElementsByClassName("tooltip")[1].style.visibility = "visible";
+        } else {
+            document.getElementById("search_icon").style.visibility = "hidden";
+            document.getElementsByClassName("side_div")[1].style.width = "300px";
+            document.getElementsByClassName("side_div")[1].style.marginRight = "0px";
+            document.getElementsByClassName("side_div")[1].style.transition = "0.2s ease-in";
+            document.getElementsByClassName("tooltip")[1].style.visibility = "hidden";
+            document.getElementsByClassName("side_div")[1].style.zIndex = "99999999";
+            document.getElementsByClassName("side_div")[1].style.boxShadow = "2px 2px 40px #764545";
         }
     }
 
