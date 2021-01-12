@@ -424,6 +424,7 @@ video {
     grid-auto-rows: 10vh;
     margin-top: 20px;
     margin-left: -20px;
+    cursor: pointer;
 }
 
 .top_posts, .news {

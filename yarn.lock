@@ -9033,6 +9033,11 @@ react-app-polyfill@^2.0.0:
     regenerator-runtime "^0.13.7"
     whatwg-fetch "^3.4.1"
 
+react-colgroup@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/react-colgroup/-/react-colgroup-1.0.2.tgz#28134dacbc03830fda0ad599ff92b7297b3587a3"
+  integrity sha1-KBNNrLwDgw/aCtWZ/5K3KXs1h6M=
+
 react-dev-utils@^11.0.0:
   version "11.0.0"
   resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-11.0.0.tgz#9fdb1b173f4ffc1f23fcf98465d93b16a860b73e"

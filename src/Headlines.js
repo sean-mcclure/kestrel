@@ -24,6 +24,11 @@ const headlines = [{
                     logo : "https://cdn.freebiesupply.com/logos/large/2x/fox-news-logo-svg-vector.svg",
                     title : "Forbes Says It's Targeting Trump Staffers and Their Future Employers",
                     link : "https://www.newsmax.com/"
+                  },
+                  {
+                    logo : "https://cdn.freebiesupply.com/logos/large/2x/fox-news-logo-svg-vector.svg",
+                    title : "Forbes Says It's Targeting Trump Staffers and Their Future Employers",
+                    link : "https://www.newsmax.com/"
                   }]
 
 export var list_of_headlines = headlines.map((headline_obj, i) => 

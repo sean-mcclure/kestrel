@@ -5,7 +5,8 @@ const top_posts = ["This is a Headline Title.",
                     "This is a Headline Title.",
                     "This is a Headline Title.", 
                     "This is a Headline Title.",
-                    "This is a Headline Title."]
+                    "This is a Headline Title.", 
+                    "This is a headline title"]
 
 export var list_of_top_posts = top_posts.map((post, i) => 
       <div className="top_post_wrapper" key={i.toString()}>

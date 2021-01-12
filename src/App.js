@@ -8,6 +8,7 @@ import Headlines from "./Headlines";
 import Modal from "./Modal";
 import Avatar from "./avatar.js";
 import SignIn from "./sign_in.js";
+import SideDiv from "./SideDiv";
 import {visible} from "./visible.js";
 import {style_element} from "./style.js";
 
@@ -28,7 +29,8 @@ function App() {
          <>
          <Modal/>
          <Avatar/>
-          <SignIn/>
+         <SignIn/>
+         <SideDiv/>
      
         <div className="App">
 
@@ -65,7 +67,7 @@ function App() {
                 <div className="top_and_news"><FaCrow color="whitesmoke" size="2em" className="top_posts"></FaCrow></div>
                 <div className="top_and_news"><p className="posts_title">TODAY'S TOP POSTS</p></div>
                 <div className="top_and_news"><FaNewspaper color="whitesmoke" size="2em" className="news"></FaNewspaper></div>
-                <div className="top_and_news"><p className="news_title">WHAT'S HAPPENING?</p></div>
+                <div className="top_and_news"><p className="news_title">HEADLINES</p></div>
                 <div className="top_and_news"></div>
                 <div className="top_and_news"><TopPosts/></div>
                 <div className="top_and_news"></div>
@@ -85,7 +87,9 @@ function App() {
              }}>SIGN IN/UP</p></div>
             <div class="tooltip top" data-tooltip_text="FETCH LATEST"><FaRedo id="refresh_icon" color="white" size="2em" className="options_icons"></FaRedo></div>
             <div class="tooltip top" data-tooltip_text="SEARCH"><FaSearch id="search_icon" color="white" size="2em" className="options_icons"></FaSearch></div>
-            <div class="tooltip top" data-tooltip_text="MESSAGES"><FaEnvelope id="dm_icon" color="white" size="2em" className="options_icons"></FaEnvelope></div>
+            <div class="tooltip top" data-tooltip_text="MESSAGES"><FaEnvelope id="dm_icon" color="white" size="2em" className="options_icons" onClick={(event) => {
+                visible("direct_message");
+            }}></FaEnvelope></div>
             <div class="tooltip top" data-tooltip_text="PROFILE"><FaCogs id="profile_icon" color="white" size="2em" className="options_icons" onClick={(event) => {
                 event.preventDefault();
                 visible("avatar");

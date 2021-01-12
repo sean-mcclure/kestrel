@@ -38,7 +38,7 @@ export function Modal() {
              <div className="show_count">280</div>
              <div className="close_modal" onClick={(event) => {
                  event.preventDefault(); visible("modal");
-                 document.getElementsByClassName("flex_grid_banner")[0].style.zIndex = 999999999999;
+                 document.getElementsByClassName("flex_grid_banner")[0].style.zIndex = 9999;
                  document.getElementsByClassName("hold_uploaded_img")[0].src = ""
                  var videoElement = document.getElementById("hold_uploaded_video");
                  videoElement.pause();
