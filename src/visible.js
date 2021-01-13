@@ -56,7 +56,7 @@ export function visible(type) {
             document.getElementsByClassName("upload_title_sub")[0].style.display = "none";
             document.getElementsByClassName("follow_block_wrapper")[0].style.display = "block";
             document.getElementsByClassName("bio")[0].style.pointerEvents = "none";
-            document.getElementsByClassName("save_profile")[0].style.display = "none"
+            document.getElementsByClassName("save_profile")[0].style.display = "none";
         }
     }
 
@@ -75,7 +75,6 @@ export function visible(type) {
             document.getElementsByClassName("side_div")[0].style.marginRight = "-30px";
             document.getElementsByClassName("side_div")[0].style.transition = "0.2s ease-in";
             document.getElementsByClassName("tooltip")[2].style.visibility = "visible";
-            
             var elems = document.getElementsByClassName("dir_msg_text");
             document.getElementsByClassName("side_div")[0].style.boxShadow = "none";
             for(var i=0; i<elems.length; i++) {
@@ -83,7 +82,11 @@ export function visible(type) {
             }
         } else {
             document.getElementById("dm_icon").style.visibility = "hidden";
-            document.getElementsByClassName("side_div")[0].style.width = "300px";
+            if(is_mobile()) {
+                document.getElementsByClassName("side_div")[0].style.width = "100%";
+            } else {
+                document.getElementsByClassName("side_div")[0].style.width = "300px";
+            }
             document.getElementsByClassName("side_div")[0].style.marginRight = "0px";
             document.getElementsByClassName("side_div")[0].style.transition = "0.2s ease-in";
             document.getElementsByClassName("tooltip")[2].style.visibility = "hidden";
@@ -108,7 +111,11 @@ export function visible(type) {
             document.getElementsByClassName("tooltip")[1].style.visibility = "visible";
         } else {
             document.getElementById("search_icon").style.visibility = "hidden";
-            document.getElementsByClassName("side_div")[1].style.width = "300px";
+            if(is_mobile()) {
+                document.getElementsByClassName("side_div")[1].style.width = "100%";
+            } else {
+                document.getElementsByClassName("side_div")[1].style.width = "300px";
+            }
             document.getElementsByClassName("side_div")[1].style.marginRight = "0px";
             document.getElementsByClassName("side_div")[1].style.transition = "0.2s ease-in";
             document.getElementsByClassName("tooltip")[1].style.visibility = "hidden";

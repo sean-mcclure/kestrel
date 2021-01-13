@@ -249,7 +249,13 @@ textarea {
 
 .icons_post,
 .like_icons {
-	cursor: pointer;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .icon_thread {
@@ -446,6 +452,20 @@ div:nth-child(2)>.options_icons {
 
 div:nth-child(3)>.options_icons {
 	font-size: 13px;
+}
+
+#refresh_icon {
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+#search_icon {
+    margin-top: 4px;
+}
+
+#dm_icon {
+    font-size: 13px;
+    margin-top: 4px;
 }
 
 .input_hide {
@@ -657,7 +677,20 @@ div:nth-child(3)>.options_icons {
 	#profile_icon {
 		font-size: 14px !important;
 		margin-top: -3px;
-	}
+    }
+    #refresh_icon {
+        font-size: 11px !important;
+        margin-top: 0px;
+    }
+
+    #search_icon {
+        margin-top: 0px;
+    }
+
+    #dm_icon {
+        font-size: 13px;
+        margin-top: -1px;
+    }
 }
 
 @media only screen and (max-width: 1000px) {
