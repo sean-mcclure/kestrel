@@ -103,4 +103,16 @@ export function visible(type) {
         }
     }
 
+    if(type === "poll") {
+        if(viz_cnt%2===0) {
+            document.getElementById("textarea_wrapper").style.display = "none";
+            document.getElementById("poll_wrapper").style.display = "block";
+            document.getElementsByClassName("show_count")[0].style.display = "none";
+        } else {
+            document.getElementById("textarea_wrapper").style.display = "block";
+            document.getElementById("poll_wrapper").style.display = "none";
+            document.getElementsByClassName("show_count")[0].style.display = "block";
+        }
+    }
+
 }
