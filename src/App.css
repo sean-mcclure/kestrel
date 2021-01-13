@@ -469,6 +469,24 @@ div:nth-child(3)>.options_icons {
 	margin-bottom: -30px;
 }
 
+.follow_block_wrapper {
+    display: none;
+    margin-bottom: 20px;
+}
+
+.follow_block {
+    border: none;
+    height: 20px;
+    margin-left: 4px;
+    margin-right: 4px;
+    border-radius: 3px;
+    background: grey;
+    color: whitesmoke;
+    outline: 0;
+    cursor: pointer;
+}
+
+
 .upload_title {
 	color: whitesmoke;
 }
@@ -502,7 +520,7 @@ div:nth-child(3)>.options_icons {
 	background: #797171a8;
 	color: whitesmoke;
 	font-size: 18px;
-	padding: 10px;
+    padding: 10px;
 }
 
 .save_profile {

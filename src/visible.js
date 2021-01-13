@@ -52,6 +52,11 @@ export function visible(type) {
         } else {
             document.getElementById("avatar_modal").style.display = "block";
             document.getElementsByClassName("camera_icon")[0].style.display = "none";
+            document.getElementsByClassName("upload_title")[0].style.display = "none";
+            document.getElementsByClassName("upload_title_sub")[0].style.display = "none";
+            document.getElementsByClassName("follow_block_wrapper")[0].style.display = "block";
+            document.getElementsByClassName("bio")[0].style.pointerEvents = "none";
+            document.getElementsByClassName("save_profile")[0].style.display = "none"
         }
     }
 
