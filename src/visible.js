@@ -108,10 +108,19 @@ export function visible(type) {
             document.getElementById("textarea_wrapper").style.display = "none";
             document.getElementById("poll_wrapper").style.display = "block";
             document.getElementsByClassName("show_count")[0].style.display = "none";
+            document.getElementsByClassName("upload_image")[0].style.pointerEvents = "none";
+            document.getElementsByClassName("upload_image")[0].style.opacity = "0.5";
+            document.getElementsByClassName("thread")[0].style.pointerEvents = "none";
+            document.getElementsByClassName("thread")[0].style.opacity = "0.5";
+            
         } else {
             document.getElementById("textarea_wrapper").style.display = "block";
             document.getElementById("poll_wrapper").style.display = "none";
             document.getElementsByClassName("show_count")[0].style.display = "block";
+            document.getElementsByClassName("upload_image")[0].style.pointerEvents = "auto";
+            document.getElementsByClassName("upload_image")[0].style.opacity = "1";
+            document.getElementsByClassName("thread")[0].style.pointerEvents = "auto";
+            document.getElementsByClassName("thread")[0].style.opacity = "1";
         }
     }
 
