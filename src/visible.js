@@ -38,9 +38,11 @@ export function visible(type) {
         if((viz_cnt%2 === 0)) {
             document.getElementById("avatar_modal").style.display = "none";
             document.getElementById("profile_icon").style.visibility = "visible";
+            document.getElementsByClassName("tooltip")[3].style.visibility = "visible";
         } else {
             document.getElementById("avatar_modal").style.display = "block";
             document.getElementById("profile_icon").style.visibility = "hidden";
+            document.getElementsByClassName("tooltip")[3].style.visibility = "hidden";
         }
     }
 

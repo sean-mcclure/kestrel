@@ -11,6 +11,11 @@
     color: whitesmoke;
     text-align: center;
     padding: 10px;
+    -webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
 }
 
 .dir_msg_text {
