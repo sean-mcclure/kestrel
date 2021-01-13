@@ -46,6 +46,15 @@ export function visible(type) {
         }
     }
 
+    if(type === "avatar_icon") {
+        if((viz_cnt%2 === 0)) {
+            document.getElementById("avatar_modal").style.display = "none";
+        } else {
+            document.getElementById("avatar_modal").style.display = "block";
+            document.getElementsByClassName("camera_icon")[0].style.display = "none";
+        }
+    }
+
     if(type === "sign_in") {
         if((viz_cnt%2 === 0)) {
             document.getElementById("sign_in_modal").style.display = "none";
