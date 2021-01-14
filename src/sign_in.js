@@ -32,6 +32,7 @@ export function Avatar() {
                         document.getElementById("sign_up").style.background = "grey";
                         document.getElementById("sign_in").style.pointerEvents = "none";
                         document.getElementById("sign_up").style.pointerEvents = "auto";
+                        document.getElementsByClassName("sign_in_input")[0].focus();
                         }}>SIGN IN</button>
                     <button id="sign_up" className="submit_options" onClick={(event) => {
                         document.getElementsByClassName("forgot_pass")[0].style.display = "none";
@@ -42,6 +43,7 @@ export function Avatar() {
                         document.getElementById("sign_up").style.color = "#141414";
                         document.getElementById("sign_in").style.pointerEvents = "auto";
                         document.getElementById("sign_up").style.pointerEvents = "none";
+                        document.getElementsByClassName("sign_in_input")[0].focus();
                         }}>SIGN UP</button>
                 </div>
 

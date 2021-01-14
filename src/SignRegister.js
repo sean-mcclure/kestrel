@@ -16,6 +16,10 @@ import {visible} from "./visible";
             document.getElementsByClassName("sign_in_input")[0].value = "";
             document.getElementsByClassName("sign_in_input")[1].value = "";
             document.getElementById("welcome_modal").style.display = "block";
+            setTimeout(function() {
+                document.getElementById("welcome_modal").style.display = "none";
+                document.getElementsByClassName("options_icons")[3].classList.add("rubberBand_it");
+            }, 3000)
         } catch (error) {
             alert(error.message);
             document.getElementsByClassName("sign_in_input")[0].value = "";

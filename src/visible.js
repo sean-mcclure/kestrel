@@ -65,6 +65,7 @@ export function visible(type) {
             document.getElementById("sign_in_modal").style.display = "none";
         } else {
             document.getElementById("sign_in_modal").style.display = "block";
+            document.getElementsByClassName("sign_in_input")[0].focus();
         }
     }
 
