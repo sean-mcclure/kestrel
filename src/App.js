@@ -9,6 +9,7 @@ import Modal from "./Modal";
 import Avatar from "./avatar.js";
 import SignIn from "./sign_in.js";
 import SideDiv from "./SideDiv";
+import Welcome from "./Welcome";
 
 import Search from "./Search";
 import {visible} from "./visible.js";
@@ -34,6 +35,7 @@ function App() {
          <SignIn/>
          <SideDiv/>
          <Search/>
+         <Welcome/>
      
         <div className="App">
 

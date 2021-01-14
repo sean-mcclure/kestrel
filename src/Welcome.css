@@ -1,0 +1,19 @@
+#welcome_modal {
+    display: none;
+}
+
+#welcome_modal > h1 {
+    color: whitesmoke;
+    font-family: "Oswald";
+    font-size: 50px;
+    margin-top: 0px;
+}
+
+#welcome_modal > p {
+    margin-top: -10px;
+}
+
+.hand_shake {
+    margin: 20px;
+    margin-top: -20px;
+}

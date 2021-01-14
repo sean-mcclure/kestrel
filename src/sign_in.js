@@ -1,6 +1,8 @@
 import {visible} from "./visible.js";
 import logo from "./logo.png";
 
+import {new_user} from "./SignRegister";
+
 import {
   FaTimes
 } from "react-icons/fa";
@@ -56,6 +58,9 @@ export function Avatar() {
                                 alert("not an email")
                             } else {
                                 document.getElementById("submit").style.pointerEvents = "none";
+                                var email = document.getElementsByClassName("sign_in_input")[0].value;
+                                var password = document.getElementsByClassName("sign_in_input")[1].value;
+                                new_user(email, password)
                             }
                         } else {
                             alert("fill in all fields")

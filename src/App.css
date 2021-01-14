@@ -599,7 +599,12 @@ div:nth-child(3)>.options_icons {
 	flex-direction: row;
 	width: 90%;
 	margin: 10px;
-	margin-left: 25px;
+    margin-left: 25px;
+    -webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
 }
 
 .submit_options {
