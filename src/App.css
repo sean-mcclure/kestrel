@@ -112,6 +112,20 @@ textarea {
 	user-select: none;
 }
 
+.at_symbol {
+    color: whitesmoke;
+    margin-bottom: -10px;
+}
+
+.handle {
+  background: transparent;
+  border-width: 0 0 2px;
+  border-color: solver;
+  outline: 0;
+  color: whitesmoke;
+  font-size: 20px;
+}
+
 .add_message {
 	width: 40px;
 	height: 40px;

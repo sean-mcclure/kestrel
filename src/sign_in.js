@@ -27,6 +27,7 @@ export function Avatar() {
                  <div className="sign_in_up_wrapper">
                      <button id="sign_in" className="submit_options" onClick={(event) => {
                         document.getElementsByClassName("forgot_pass")[0].style.display = "block";
+                        document.getElementsByClassName("at_symbol")[0].remove();
                         document.getElementById("repeat_pass").remove();
                         document.getElementById("sign_in").style.background = "gold";
                         document.getElementById("sign_up").style.background = "grey";
@@ -36,7 +37,9 @@ export function Avatar() {
                         }}>SIGN IN</button>
                     <button id="sign_up" className="submit_options" onClick={(event) => {
                         document.getElementsByClassName("forgot_pass")[0].style.display = "none";
-                        document.getElementById("hold_inputs").innerHTML += "<div><input id='repeat_pass' className='sign_in_input' placeholder='confirm password...' type='password' spellCheck='false' maxLength='100'></input></div>"
+                        document.getElementById("hold_inputs").innerHTML += "<div><input id='repeat_pass' className='sign_in_input' placeholder='confirm password...' type='password' spellCheck='false' maxLength='100'></input></div>";
+                        document.getElementById("hold_inputs").innerHTML += "<div class='at_symbol'>@<input class='handle' placeholder='choose a handle...' spellcheck='false' maxLength='30'></input></div>";
+                        document.getElementsByClassName("handle")[0].style.marginBottom = "30px";
                         document.getElementById("repeat_pass").classList.add("sign_in_input");
                         document.getElementById("sign_in").style.background = "grey";
                         document.getElementById("sign_up").style.background = "gold";
