@@ -126,6 +126,7 @@ export function visible(type) {
 
     if(type === "poll") {
         if(viz_cnt%2===0) {
+            document.getElementsByClassName("close_modal")[0].style.display = "none";
             document.getElementById("textarea_wrapper").style.display = "none";
             document.getElementById("poll_wrapper").style.display = "block";
             document.getElementsByClassName("show_count")[0].style.display = "none";
@@ -135,6 +136,7 @@ export function visible(type) {
             document.getElementsByClassName("thread")[0].style.opacity = "0.5";
             
         } else {
+            document.getElementsByClassName("close_modal")[0].style.display = "block";
             document.getElementById("textarea_wrapper").style.display = "block";
             document.getElementById("poll_wrapper").style.display = "none";
             document.getElementsByClassName("show_count")[0].style.display = "block";

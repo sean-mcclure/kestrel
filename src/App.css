@@ -60,11 +60,10 @@ textarea {
 
 .col {
 	max-width: 50%;
-	margin-bottom: 70px;
 	padding-top: 20px;
-	height: 100vh;
+	height: 70vh;
 	overflow-y: scroll;
-	-webkit-overflow-scrolling: touch;
+    -webkit-overflow-scrolling: touch;
 }
 
 .col2 {
@@ -690,6 +689,12 @@ div:nth-child(3)>.options_icons {
     #dm_icon {
         font-size: 13px;
         margin-top: -1px;
+    }
+    .sign_in_up_wrapper {
+        margin-left: 10px;
+    }
+    .msg_img {
+        width: 98%;
     }
 }
 

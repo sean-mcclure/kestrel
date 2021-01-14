@@ -18,12 +18,17 @@
 	user-select: none;
 }
 
+.side_div > h4 {
+    margin-left: 20px;
+}
+
 .dir_msg_text {
     display: none;
 }
 
 .close_side_div {
-    font-size: 20px;
+    font-size: 25px;
     cursor: pointer;
     float: right;
+    margin-right: -4px;
 }

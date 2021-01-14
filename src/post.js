@@ -15,8 +15,10 @@ export function post() {
 
     if(document.getElementById("textarea1").value !== "") {
 
-    window.scrollTo({top: 0, left: 0, behavior: 'smooth' });
-
+    setTimeout(function() {
+        document.getElementsByClassName("col")[0].scrollTo({top: 0, left: 0, behavior: 'smooth' });
+    }, 1000)
+    
     document.getElementsByClassName("flex_grid_banner")[0].style.zIndex = 999999999999;
     document.getElementsByClassName("hold_uploaded_img")[0].src = ""
     var videoElement = document.getElementById("hold_uploaded_video");
