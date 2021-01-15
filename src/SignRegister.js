@@ -15,11 +15,14 @@ import {visible} from "./visible";
             visible("sign_in");
             document.getElementsByClassName("sign_in_input")[0].value = "";
             document.getElementsByClassName("sign_in_input")[1].value = "";
+            document.getElementsByClassName("sign_in_input")[2].value = "";
             document.getElementById("welcome_modal").style.display = "block";
             setTimeout(function() {
                 document.getElementById("welcome_modal").style.display = "none";
                 document.getElementsByClassName("options_icons")[3].classList.add("rubberBand_it");
             }, 3000)
+            var currentUser = Parse.User.current();
+            console.log(currentUser)
         } catch (error) {
             alert(error.message);
             document.getElementsByClassName("sign_in_input")[0].value = "";
@@ -28,22 +31,22 @@ import {visible} from "./visible";
         }
     }
 
-    async function sign_in_user(pass_email, pass_password) {
+    export async function sign_in_user(pass_email, pass_password) {
         try {
             var user = await Parse.User.logIn(pass_email, pass_password);
             console.log(user)
         } catch (error) {
-            console.log(error.message);
+            alert(error.message);
         }
     }
 
-    function log_user_out() {
+    export function log_user_out() {
         Parse.User.logOut().then(() => {
             var currentUser = Parse.User.current(); // this will now be null
         });
     }
 
-    function check_if_user_is_already_signed_in() {
+    export function check_if_user_is_already_signed_in() {
         var currentUser = Parse.User.current();
         if (currentUser) {
             console.log(currentUser)

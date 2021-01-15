@@ -1,11 +1,13 @@
 import {visible} from "./visible.js";
 import logo from "./logo.png";
 
-import {new_user} from "./SignRegister";
+import {new_user, sign_in_user} from "./SignRegister";
 
 import {
   FaTimes
 } from "react-icons/fa";
+
+import { validate } from "./validate.js";
 
 export function Avatar() {
 
@@ -58,18 +60,20 @@ export function Avatar() {
                 
                 <div>
                     <button id="submit" className="submit" onClick={(event) => {
-                        if(document.getElementsByClassName("sign_in_input")[0].value !== "" && document.getElementsByClassName("sign_in_input")[1].value !== "") {
-                            if(document.getElementsByClassName("sign_in_input")[0].value.indexOf("@") === -1) {
-                                alert("not an email")
-                            } else {
-                                document.getElementById("submit").style.pointerEvents = "none";
-                                var email = document.getElementsByClassName("sign_in_input")[0].value;
-                                var password = document.getElementsByClassName("sign_in_input")[1].value;
+                        var email = document.getElementsByClassName("sign_in_input")[0].value;
+                        var password = document.getElementsByClassName("sign_in_input")[1].value;
+                        validate({
+                            input_class : "sign_in_input",
+                            fail_message_1 : "Not an email",
+                            fail_message_2 : "Fill in all fields.",
+                            fail_message_3 : "",
+                            new_user_function: function() {
                                 new_user(email, password)
+                            },
+                            existing_user_function : function() {
+                                sign_in_user(email, password)
                             }
-                        } else {
-                            alert("fill in all fields")
-                        }
+                        })
                     }}>SUBMIT</button>
                 </div>
                      

@@ -3,8 +3,7 @@ import "./Welcome.css";
 import logo from "./logo.png";
 
 import {
-  FaHandsHelping,
-  FaCogs
+  FaHandsHelping
 } from "react-icons/fa";
 
 export function Welcome() {
