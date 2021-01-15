@@ -348,18 +348,6 @@ td:nth-child(4) {
 	margin-top: 4px;
 }
 
-.post {
-	background: transparent;
-	font-weight: bold;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	-o-user-select: none;
-	user-select: none;
-	margin: 0 auto;
-	cursor: pointer;
-}
-
 .like_count {
 	position: relative;
 	top: -3px;

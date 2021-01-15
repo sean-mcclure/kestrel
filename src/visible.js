@@ -130,7 +130,6 @@ export function visible(type) {
             document.getElementsByClassName("write")[0].style.width = "0px";
             document.getElementsByClassName("write")[0].style.marginRight = "-30px";
             document.getElementsByClassName("write")[0].style.transition = "0.2s ease-in";
-            document.getElementsByClassName("write")[0].style.boxShadow = "none";
         } else {
         if(is_mobile()) {
             document.getElementsByClassName("write")[0].style.width = "100%";
@@ -139,6 +138,10 @@ export function visible(type) {
         }
         document.getElementsByClassName("write")[0].style.marginRight = "0px";
         document.getElementsByClassName("write")[0].style.transition = "0.2s ease-in";
+        setTimeout(function(){
+            document.getElementsByClassName("write_textarea")[0].focus();
+        }, 400)
+        
         }
     }
 
