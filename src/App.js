@@ -15,6 +15,8 @@ import Search from "./Search";
 import {visible} from "./visible.js";
 import {style_element} from "./style.js";
 
+import {log_user_out} from "./SignRegister";
+
 import {
   FaFeatherAlt,
   FaNewspaper,
@@ -86,9 +88,13 @@ function App() {
         <div className="footer">
              <div><p className="sign_in" onClick={(event) => {
                 event.preventDefault();
-                visible("sign_in");
-                document.body.style.overflowY = "hidden"
-                document.getElementsByClassName("flex_grid_banner")[0].style.zIndex = -1
+                if(document.getElementsByClassName("sign_in")[0].innerText === "SIGN OUT") {
+                    log_user_out()
+                } else {
+                    visible("sign_in");
+                    document.body.style.overflowY = "hidden"
+                    document.getElementsByClassName("flex_grid_banner")[0].style.zIndex = -1
+                }
              }}>SIGN IN/UP</p></div>
             <div class="tooltip top" data-tooltip_text="FETCH LATEST"><FaRedo id="refresh_icon" color="white" size="2em" className="options_icons"></FaRedo></div>
             <div class="tooltip top" data-tooltip_text="SEARCH"><FaSearch id="search_icon" color="white" size="2em" className="options_icons" onClick={(event) => {
