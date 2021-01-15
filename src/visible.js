@@ -125,6 +125,23 @@ export function visible(type) {
         }
     }
 
+    if(type === "write") {
+        if(viz_cnt%2===0) {
+            document.getElementsByClassName("write")[0].style.width = "0px";
+            document.getElementsByClassName("write")[0].style.marginRight = "-30px";
+            document.getElementsByClassName("write")[0].style.transition = "0.2s ease-in";
+            document.getElementsByClassName("write")[0].style.boxShadow = "none";
+        } else {
+        if(is_mobile()) {
+            document.getElementsByClassName("write")[0].style.width = "100%";
+        } else {
+            document.getElementsByClassName("write")[0].style.width = "300px";
+        }
+        document.getElementsByClassName("write")[0].style.marginRight = "0px";
+        document.getElementsByClassName("write")[0].style.transition = "0.2s ease-in";
+        }
+    }
+
     if(type === "poll") {
         if(viz_cnt%2===0) {
             document.getElementsByClassName("close_modal")[0].style.display = "none";

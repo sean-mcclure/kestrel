@@ -1,0 +1,26 @@
+.write {
+    width: 0px;
+    height: 100vh;
+    right: 0;
+    margin-right: -30px;
+    position: absolute;
+    background: rgba(61, 61, 61, 0.95);
+    box-shadow: none;
+    z-index: 999999;
+    font-family: "Oswald";
+    color: whitesmoke;
+    text-align: center;
+    padding: 10px;
+    -webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+.close_side_div {
+    font-size: 25px;
+    cursor: pointer;
+    float: right;
+    margin-right: -4px;
+}

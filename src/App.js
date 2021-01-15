@@ -9,6 +9,7 @@ import Modal from "./Modal";
 import Avatar from "./avatar.js";
 import SignIn from "./sign_in.js";
 import SideDiv from "./SideDiv";
+import Write from "./Write";
 import Welcome from "./Welcome";
 
 import Search from "./Search";
@@ -36,6 +37,7 @@ function App() {
          <Avatar/>
          <SignIn/>
          <SideDiv/>
+         <Write/>
          <Search/>
          <Welcome/>
      
@@ -47,9 +49,10 @@ function App() {
             
             <div><FaFeatherAlt color="white" size="2em" className="add_message" onClick={(event) => {
                 event.preventDefault();
-                visible("modal");
-                document.body.style.overflowY = "hidden"
-                document.getElementsByClassName("flex_grid_banner")[0].style.zIndex = -1
+                //visible("modal");
+                visible("write");
+               // document.body.style.overflowY = "hidden"
+               // document.getElementsByClassName("flex_grid_banner")[0].style.zIndex = -1
                 }}/>
             </div>
 
