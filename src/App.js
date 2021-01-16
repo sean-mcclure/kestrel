@@ -49,10 +49,8 @@ function App() {
             
             <div><FaFeatherAlt color="white" size="2em" className="add_message" onClick={(event) => {
                 event.preventDefault();
-                //visible("modal");
+                document.getElementsByClassName("repost_toggle")[0].style.display = "none";
                 visible("write");
-               // document.body.style.overflowY = "hidden"
-               // document.getElementsByClassName("flex_grid_banner")[0].style.zIndex = -1
                 }}/>
             </div>
 

@@ -1,5 +1,6 @@
 import "./Write.css";
 import Poll from "./Poll";
+import RePost from "./RePost";
 
 import {character_counter} from "./counter.js";
 import {post} from "./post.js";
@@ -8,8 +9,7 @@ import {visible} from "./visible.js"
 import {
   FaTimes,
   FaCameraRetro,
-  FaPoll,
-  FaPlusCircle
+  FaPoll
 } from "react-icons/fa";
 
 const React = require('react')
@@ -75,6 +75,7 @@ render() {
                 <div className="write_options_item">
                     <div className="post" onClick={post}>POST</div>
                 </div>
+                <div className="write_options_item repost_toggle"><RePost/></div>
              </div>
              </div>
     );
