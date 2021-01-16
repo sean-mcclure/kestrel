@@ -35,14 +35,21 @@ export function visible(type) {
     }
 
     if(type === "avatar") {
-        if((viz_cnt%2 === 0)) {
-            document.getElementById("avatar_modal").style.display = "none";
-            document.getElementById("profile_icon").style.visibility = "visible";
-            document.getElementsByClassName("tooltip")[3].style.visibility = "visible";
+        if(viz_cnt%2===0) {
+            document.getElementsByClassName("avatar_modal")[0].style.width = "0px";
+            document.getElementsByClassName("avatar_modal")[0].style.marginRight = "-30px";
+            document.getElementsByClassName("avatar_modal")[0].style.transition = "0.15s ease-in";
+            document.getElementsByClassName("avatar_close")[0].style.display = "none";
         } else {
-            document.getElementById("avatar_modal").style.display = "block";
-            document.getElementById("profile_icon").style.visibility = "hidden";
-            document.getElementsByClassName("tooltip")[3].style.visibility = "hidden";
+        if(is_mobile()) {
+            document.getElementsByClassName("avatar_modal")[0].style.width = "100%";
+        } else {
+            document.getElementsByClassName("avatar_modal")[0].style.width = "300px";
+        }
+        document.getElementsByClassName("avatar_close")[0].style.display = "block";
+        document.getElementsByClassName("avatar_modal")[0].style.marginRight = "0px";
+        document.getElementsByClassName("avatar_modal")[0].style.transition = "0.15s ease-in";
+        
         }
     }
 
@@ -61,11 +68,21 @@ export function visible(type) {
     }
 
     if(type === "sign_in") {
-        if((viz_cnt%2 === 0)) {
-            document.getElementById("sign_in_modal").style.display = "none";
+        if(viz_cnt%2===0) {
+            document.getElementsByClassName("sign_in_modal")[0].style.width = "0px";
+            document.getElementsByClassName("sign_in_modal")[0].style.marginRight = "-30px";
+            document.getElementsByClassName("sign_in_modal")[0].style.transition = "0.15s ease-in";
+            document.getElementsByClassName("sign_in_close")[0].style.display = "none";
         } else {
-            document.getElementById("sign_in_modal").style.display = "block";
-            document.getElementsByClassName("sign_in_input")[0].focus();
+        if(is_mobile()) {
+            document.getElementsByClassName("sign_in_modal")[0].style.width = "100%";
+        } else {
+            document.getElementsByClassName("sign_in_modal")[0].style.width = "300px";
+        }
+        document.getElementsByClassName("sign_in_close")[0].style.display = "block";
+        document.getElementsByClassName("sign_in_modal")[0].style.marginRight = "0px";
+        document.getElementsByClassName("sign_in_modal")[0].style.transition = "0.15s ease-in";
+        
         }
     }
 

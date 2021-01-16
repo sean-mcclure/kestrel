@@ -1,11 +1,13 @@
 export function character_counter(e) {
     const cnt = 280 - Number(e.target.value.length)
-    document.getElementsByClassName("show_count")[0].innerHTML = cnt;
+    console.log(cnt)
+    document.getElementById("show_count").innerHTML = cnt;
     if (cnt > 50 && cnt <= 280) {
-        document.getElementsByClassName("show_count")[0].style.color = "whitesmoke";
-    } else if (cnt >= 0 && cnt <= 50) {
-        document.getElementsByClassName("show_count")[0].style.color = "yellow";
+        document.getElementById("show_count").style.color = "whitesmoke";
+    } else if (cnt > 0 && cnt <= 50) {
+        document.getElementById("show_count").style.color = "yellow";
     } else {
-        document.getElementsByClassName("show_count")[0].style.color = "red";
+        document.getElementById("show_count").style.color = "red";
+        document.getElementById("show_count").classList.add("rubberBand_it");
     }
 }

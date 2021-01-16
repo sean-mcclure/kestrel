@@ -1,3 +1,5 @@
+import "./Avatar.css";
+
 import {visible} from "./visible.js";
 
 import UploadImage from "./UploadImage";
@@ -11,7 +13,7 @@ export function Avatar() {
 
     return (
          <>
-         <div id="avatar_modal" className="modal">
+         <div id="avatar_modal" className="avatar_modal">
              <div className="close_modal" onClick={(event) => {
                     event.preventDefault();
                     visible("avatar");

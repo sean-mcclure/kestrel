@@ -5,9 +5,8 @@ import logo from "./logo.png";
 import Messages from "./Messages";
 import TopPosts from "./TopPosts";
 import Headlines from "./Headlines";
-import Modal from "./Modal";
-import Avatar from "./avatar.js";
-import SignIn from "./sign_in.js";
+import Avatar from "./Avatar";
+import SignIn from "./SignIn";
 import SideDiv from "./SideDiv";
 import Write from "./Write";
 import Welcome from "./Welcome";
@@ -33,7 +32,6 @@ function App() {
   return (
 
          <>
-         <Modal/>
          <Avatar/>
          <SignIn/>
          <SideDiv/>

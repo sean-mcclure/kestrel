@@ -59,6 +59,7 @@ render() {
              
              <div className="write_options_wrapper">
                  <div className="write_options_item">
+                     <div id="show_count" className="show_count">280</div>
                     <textarea id="write_textarea" className="textarea write_textarea" onChange={character_counter} maxLength="280"></textarea>
                 </div>
                 <div className="write_options_item">

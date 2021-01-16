@@ -61,7 +61,8 @@ textarea {
 .col {
 	max-width: 50%;
 	padding-top: 20px;
-	height: 70vh;
+    height: 70vh;
+    overflow-x: hidden;
 	overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
 }
@@ -199,11 +200,6 @@ textarea {
 	-webkit-appearance: none;
 	display: none;
 	z-index: 99999;
-}
-
-#avatar_modal {
-	width: auto;
-	box-shadow: 2px 2px 100px goldenrod;
 }
 
 .close_modal {
@@ -593,69 +589,6 @@ div:nth-child(3)>.options_icons {
 	outline: 0;
 }
 
-.sign_in_input,
-.search_input {
-	height: 40px;
-	width: 90%;
-	border: 1px solid whitesmoke;
-	border-radius: 3px;
-	background: #3F3E3D;
-	margin-bottom: 20px;
-	color: whitesmoke;
-	padding: 4px;
-	padding-left: 10px;
-	font-size: 20px;
-	font-family: "Roboto";
-}
-
-.input_1 {
-	margin-top: 10px;
-}
-
-.forgot_pass {
-	color: silver;
-	margin-top: -10px;
-	cursor: pointer;
-}
-
-.submit {
-	height: 30px;
-	width: 95%;
-	border: none;
-	background: gold;
-	border-radius: 3px;
-	margin: 10px;
-	margin-top: 0px;
-	font-size: 16px;
-	outline: 0;
-	cursor: pointer;
-}
-
-.sign_in_up_wrapper {
-	display: flex;
-	flex-direction: row;
-	width: 90%;
-	margin: 10px;
-    margin-left: 25px;
-}
-
-.submit_options {
-	height: 30px;
-	min-width: 50%;
-	border: none;
-	background: gold;
-	border-radius: 3px;
-	font-size: 16px;
-	outline: 0;
-	cursor: pointer;
-}
-
-.submit_options:nth-child(2) {
-	background: grey;
-	color: whitesmoke;
-	margin-left: 10px;
-}
-
 .feed_titles_wrapper {
 	width: 50%;
 	display: flex;
@@ -706,9 +639,6 @@ div:nth-child(3)>.options_icons {
 	.footer {
 		height: 20px !important;
 		padding: 15px;
-	}
-	#avatar_modal {
-		width: 90%;
 	}
 	#profile_icon {
 		font-size: 14px !important;

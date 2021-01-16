@@ -1,3 +1,5 @@
+import "./SignIn.css";
+
 import {visible} from "./visible.js";
 import logo from "./logo.png";
 
@@ -13,8 +15,8 @@ export function Avatar() {
 
     return (
          <>
-         <div id="sign_in_modal" className="modal">
-             <div className="close_modal" onClick={(event) => {
+         <div id="sign_in_modal" className="sign_in_modal">
+             <div className="close_modal_sign_in" onClick={(event) => {
                  event.preventDefault(); visible("sign_in");
                  document.getElementsByClassName("flex_grid_banner")[0].style.zIndex = 9999;
                  document.getElementsByClassName("hold_uploaded_img")[0].src = ""
@@ -22,7 +24,7 @@ export function Avatar() {
                  document.getElementsByClassName("hold_uploaded_video")[0].style.display = "none"
                  }}>
                 
-                <FaTimes size="1.3em" className="avatar_close"/></div>
+                <FaTimes size="1.3em" className="sign_in_close"/></div>
 
                  <div><img src={logo} alt="logo" className="logo"></img></div>
   
@@ -35,7 +37,6 @@ export function Avatar() {
                         document.getElementById("sign_up").style.background = "grey";
                         document.getElementById("sign_in").style.pointerEvents = "none";
                         document.getElementById("sign_up").style.pointerEvents = "auto";
-                        document.getElementsByClassName("sign_in_input")[0].focus();
                         }}>SIGN IN</button>
                     <button id="sign_up" className="submit_options" onClick={(event) => {
                         document.getElementsByClassName("forgot_pass")[0].style.display = "none";
@@ -48,7 +49,6 @@ export function Avatar() {
                         document.getElementById("sign_up").style.color = "#141414";
                         document.getElementById("sign_in").style.pointerEvents = "auto";
                         document.getElementById("sign_up").style.pointerEvents = "none";
-                        document.getElementsByClassName("sign_in_input")[0].focus();
                         }}>SIGN UP</button>
                 </div>
 
