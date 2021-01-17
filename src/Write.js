@@ -1,6 +1,7 @@
 import "./Write.css";
 import Poll from "./Poll";
 import RePost from "./RePost";
+import Comment from "./Comment";
 
 import {character_counter} from "./counter.js";
 import {post} from "./post.js";
@@ -76,7 +77,6 @@ render() {
                 <div className="write_options_item">
                     <div className="post" onClick={post}>POST</div>
                 </div>
-                <div className="write_options_item repost_toggle"><RePost/></div>
              </div>
              </div>
     );

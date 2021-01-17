@@ -1,73 +1,76 @@
+.repost {
+    height: auto;
+    width: 0vw;
+    margin: 0 auto;
+    position: absolute;
+    background:rgba(61, 61, 61, 1);
+    top: 30%;
+}
+
 .repost_wrapper {
     display: grid;
-    grid-template-columns: "100%";
-    grid-auto-rows: auto auto auto auto;
+    grid-template-columns: "auto";
+    grid-auto-rows: auto auto;
     gap: 10px;
-    margin-top: -30px;
+    height: auto;
+    align-items: center;
+    justify-content: space-around;
 }
 
-.repost_item {
-    background: transparent;
-}
-
-.repost_item :nth-child(1){
-    grid-column: 1;
+.repost_item:nth-child(1){
     grid-row: 1;
+    margin-top: 10px;
+    width: 100vw;
 }
 
-.repost_item :nth-child(2){
-    grid-column: 1;
+.repost_item:nth-child(2) {
     grid-row: 2;
-}
-
-.repost_item :nth-child(3){
-    grid-column: 1;
-    grid-row: 3;
-}
-
-.repost_item :nth-child(4){
-    grid-column: 1;
-    grid-row: 4;
-}
-
-.avatar_repost {
-    width: 50px;
-    float: left;
-    
-}
-
-.username_repost {
-    text-align: left;
-    margin-left: 10px;
-}
-
-.post_repost {
-    text-align: left;
-    margin-left: 10px;
-}
-
-.msg_img_repost {
-    width: 90%;
+    margin-bottom: 10px;
+    width: 100px;
+    background: gold;
+    color: #141414;
+    border-radius: 3px;
+    outline: 0;
+    height: 30px;
     margin: 0 auto;
-    display: block;
+    margin-bottom: 15px;
+    font-size: 16px;
+    border: none;
+    font-weight: bold;
 }
 
-@media only screen and (min-width: 600px) {
- .avatar_repost {
-  margin-top: 40px;
- }
+#repost_textrea {
+    margin-top: 10px;
+    width: 45%;
+    height: 130px;
+    color: whitesmoke;
+	outline: 0;
+	padding: 10px;
+	background: #4f4434;
+	border: none;
+	font-size: 20px;
+	resize: none;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-family: Roboto;
+	outline: 2px solid goldenrod;
+}
+
+@media only screen and (max-width: 1000px) {
+    .repost {
+        width: 100vw;
+    }
+    #repost_textrea {
+        width: 90%;
+    }
 }
 
 @media only screen and (max-width: 600px) {
-    .write {
-        height: 100vh;
+    .repost {
+        width: 100vw;
     }
-    .repost_wrapper {
-        padding: 40px;
-    }
-    .msg_img_repost {
-        width: 100%;
-        margin-left: 10px;
-        border-radius: 4px;
+    #repost_textrea {
+        width: 88%;
+        margin-left: -10px;
     }
 }

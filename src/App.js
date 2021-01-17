@@ -10,6 +10,7 @@ import SignIn from "./SignIn";
 import SideDiv from "./SideDiv";
 import Write from "./Write";
 import Welcome from "./Welcome";
+import RePost from "./RePost";
 
 import Search from "./Search";
 import {visible} from "./visible.js";
@@ -47,8 +48,8 @@ function App() {
             <div unselectable="on"><img src={logo} className="logo" alt="logo"/></div>
             
             <div><FaFeatherAlt color="white" size="2em" className="add_message" onClick={(event) => {
-                event.preventDefault();
-                document.getElementsByClassName("repost_toggle")[0].style.display = "none";
+               event.preventDefault();
+               // document.getElementsByClassName("repost_toggle")[0].style.display = "none";
                 visible("write");
                 }}/>
             </div>
@@ -65,6 +66,7 @@ function App() {
   
         <div className="col">
              <Messages/>
+             <RePost/>
         </div>
 
         <div className="col2">
@@ -72,7 +74,7 @@ function App() {
 
             <div className="top_and_news_wrapper">
                 <div className="top_and_news"><FaCrow color="whitesmoke" size="2em" className="top_posts"></FaCrow></div>
-                <div className="top_and_news"><p className="posts_title">TODAY'S TOP POSTS</p></div>
+                <div className="top_and_news"><p className="posts_title">TRENDING</p></div>
                 <div className="top_and_news"><FaNewspaper color="whitesmoke" size="2em" className="news"></FaNewspaper></div>
                 <div className="top_and_news"><p className="news_title">HEADLINES</p></div>
                 <div className="top_and_news"></div>

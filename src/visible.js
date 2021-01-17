@@ -163,6 +163,23 @@ export function visible(type) {
         }
     }
 
+     if(type === "repost") {
+        if(viz_cnt%2===0) {
+            document.getElementsByClassName("repost")[0].style.width = "0px";
+            document.getElementsByClassName("repost")[0].style.marginRight = "-30px";
+            document.getElementsByClassName("repost")[0].style.transition = "0.15s ease-in";
+            document.getElementsByClassName("repost")[0].style.overflowY = "hidden";
+        } else {
+        if(is_mobile()) {
+            document.getElementsByClassName("repost")[0].style.width = "100vw";
+        } else {
+            document.getElementsByClassName("repost")[0].style.width = "50vw";
+        }
+        document.getElementsByClassName("repost")[0].style.marginRight = "0px";
+        document.getElementsByClassName("repost")[0].style.transition = "0.15s ease-in";       
+        }
+    }
+
     if(type === "poll") {
         if(viz_cnt%2===0) {
             document.getElementsByClassName("close_modal")[0].style.display = "none";

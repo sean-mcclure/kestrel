@@ -5,7 +5,8 @@ body {
 	font-family: "Roboto";
 	overscroll-behavior-y: none;
 	position: fixed;
-	overflow: hidden;
+    overflow: hidden;
+     background: #3D3D3D;
 }
 
 html {
@@ -123,7 +124,8 @@ textarea {
 }
 
 .col {
-	max-width: 50%;
+    max-width: 50%;
+     background: whitesmoke;
 	padding-top: 20px;
     height: 70vh;
     overflow-x: hidden;
@@ -227,7 +229,7 @@ textarea {
 }
 
 .msg_wrapper {
-	width: 95%;
+    width: 95%;
 	height: auto;
 	padding: 5px;
 	background: transparent;
@@ -731,7 +733,8 @@ div:nth-child(3)>.options_icons {
 
 @media only screen and (max-width: 1000px) {
 	.col {
-		max-width: 100%;
+        max-width: 100%;
+    margin: 0;
 	}
 	.col2 {
 		display: none;
