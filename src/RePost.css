@@ -1,10 +1,10 @@
 .repost {
     height: auto;
     width: 0vw;
-    margin: 0 auto;
     position: absolute;
     background:rgba(61, 61, 61, 1);
-    top: 30%;
+    bottom: 0;
+    margin-bottom: 50px;
 }
 
 .repost_wrapper {
@@ -20,23 +20,25 @@
 .repost_item:nth-child(1){
     grid-row: 1;
     margin-top: 10px;
-    width: 100vw;
+    width: 0vw;
+    display: none;
 }
 
 .repost_item:nth-child(2) {
+    display: none;
     grid-row: 2;
-    margin-bottom: 10px;
-    width: 100px;
+    width: 0px;
     background: gold;
     color: #141414;
     border-radius: 3px;
     outline: 0;
     height: 30px;
     margin: 0 auto;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     font-size: 16px;
     border: none;
     font-weight: bold;
+    cursor: pointer;
 }
 
 #repost_textrea {
@@ -58,7 +60,7 @@
 
 @media only screen and (max-width: 1000px) {
     .repost {
-        width: 100vw;
+        width: 0vw;
     }
     #repost_textrea {
         width: 90%;
@@ -67,7 +69,7 @@
 
 @media only screen and (max-width: 600px) {
     .repost {
-        width: 100vw;
+        width: 0vw;
     }
     #repost_textrea {
         width: 88%;

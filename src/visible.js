@@ -166,15 +166,25 @@ export function visible(type) {
      if(type === "repost") {
         if(viz_cnt%2===0) {
             document.getElementsByClassName("repost")[0].style.width = "0px";
-            document.getElementsByClassName("repost")[0].style.marginRight = "-30px";
             document.getElementsByClassName("repost")[0].style.transition = "0.15s ease-in";
             document.getElementsByClassName("repost")[0].style.overflowY = "hidden";
         } else {
         if(is_mobile()) {
             document.getElementsByClassName("repost")[0].style.width = "100vw";
+            document.getElementsByClassName("repost_item")[0].style.width = "100vw";
+            document.getElementsByClassName("repost_item")[1].style.width = "100px";
         } else {
+            document.getElementsByClassName("repost")[0].style.marginBottom = "70px";
             document.getElementsByClassName("repost")[0].style.width = "50vw";
+            document.getElementsByClassName("repost_item")[0].style.width = "105vw";
+            document.getElementsByClassName("repost_item")[0].style.marginRight = "10px";
+            document.getElementsByClassName("repost_item")[1].style.width = "50px";
+            document.getElementsByClassName("repost_item")[1].style.width = "100px";
+            document.getElementsByClassName("repost_item")[1].style.marginTop = "-4px";
+            document.getElementsByClassName("repost_item")[1].style.marginBottom = "20px";
         }
+        document.getElementsByClassName("repost_item")[0].style.display = "block";
+            document.getElementsByClassName("repost_item")[1].style.display = "block";
         document.getElementsByClassName("repost")[0].style.marginRight = "0px";
         document.getElementsByClassName("repost")[0].style.transition = "0.15s ease-in";       
         }
