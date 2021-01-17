@@ -76,7 +76,7 @@ export function Avatar() {
                         })
                     }}>SUBMIT</button>
                 </div>
-                     
+                     <div className="loader"></div>
          </div>
          </>
   );

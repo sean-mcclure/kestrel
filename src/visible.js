@@ -147,6 +147,7 @@ export function visible(type) {
             document.getElementsByClassName("write")[0].style.width = "0px";
             document.getElementsByClassName("write")[0].style.marginRight = "-30px";
             document.getElementsByClassName("write")[0].style.transition = "0.15s ease-in";
+            document.getElementsByClassName("write")[0].style.overflowY = "hidden";
         } else {
         if(is_mobile()) {
             document.getElementsByClassName("write")[0].style.width = "100%";

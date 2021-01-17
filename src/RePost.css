@@ -61,7 +61,6 @@
 @media only screen and (max-width: 600px) {
     .write {
         height: 100vh;
-        overflow-y: scroll;
     }
     .repost_wrapper {
         padding: 40px;

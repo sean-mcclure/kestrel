@@ -26,6 +26,7 @@ export var list_of_messages = messages.map((msg, i) =>
                     event.preventDefault();
                     visible("write");
                     document.getElementsByClassName("repost_toggle")[0].style.display = "block";
+                    document.getElementsByClassName("write")[0].style.overflowY = "scroll";
                 }}/></div>
                 <div><FaThumbsUp id={"like_icon_" + i.toString()} className="icons_post like_icons" color="#3D3D3D" size="1.5em" onClick={like}/><span className="like_count">0</span></div>
                 <div><FaInfinity className="icons_post icon_thread" color="#3D3D3D" size="1.6em"/></div>
