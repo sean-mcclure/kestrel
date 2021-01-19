@@ -1,11 +1,6 @@
 import "./DirectMessages.css";
-import {visible} from "./visible.js";
 
-import {
-  FaTimes
-} from "react-icons/fa";
-
-const React = require('react')
+import Close from "./Close";
 
 var direct_messages = [{
                         message : "Hey how is it going?",
@@ -35,22 +30,16 @@ export var dir_msgs = direct_messages.map((obj, i) =>
     </div>
 );
 
-class DirectMessages extends React.Component {
-  
-render() {
+function DirectMessages() {
     return (
       <>
-      <div className="direct_messages">
-        <FaTimes className="close_direct_messages" onClick={(event) => {
-                 event.preventDefault(); 
-                 visible("direct_message");
-        }}/>
+      <div className="dm_close"><Close/></div>
+      <div className="dm">
         <h4>MESSAGES</h4>
         {dir_msgs}
       </div>
       </>
     );
-  }
 }
 
 export default DirectMessages;

@@ -1,17 +1,16 @@
 import "./Avatar.css";
 
-import {visible} from "./visible.js";
-
+import Close from "./Close";
 import UploadImage from "./UploadImage";
 
 import {
-  FaTimes,
   FaCamera
 } from "react-icons/fa";
 
 export function Avatar() {
     return (
          <>
+         <Close/>
          <UploadImage></UploadImage>
          <p id="follower_count">217 Followers</p>
          <div className="follow_block_wrapper">

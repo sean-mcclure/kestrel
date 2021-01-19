@@ -1,7 +1,5 @@
 import "./RePost.css";
 
-import avatar from "./avatar.png";
-
 import {visible} from "./visible.js";
 
 import {

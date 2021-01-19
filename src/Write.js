@@ -43,7 +43,7 @@ class Write extends React.Component {
 render() {
     return (
         <>
-        
+        <Close/>
         <img id="hold_uploaded_img" className="hold_uploaded_img" alt="uploaded_img_preview" style={img_styles}></img>
         <video height="200px" playsInline controls id="hold_uploaded_video" className="hold_uploaded_video" style={img_styles}><source type="video/mp4"></source></video>
         <input id="upload_input" className="upload_input" type="file" style={input_styles}></input>        
@@ -72,7 +72,7 @@ render() {
         </div>
 
         </div>
-        
+
         </>
     )
   }

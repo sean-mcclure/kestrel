@@ -10,7 +10,6 @@ import {
 } from "react-icons/fa";
 
 import { visible } from './visible.js';
-import { smooth_scroll } from "./utility.js";
 
 const messages = ["This is some text that represents a message in Kestrel. And then therer is some more text to see how this wraps around the avater. \n\nDoes it every wrap around teh vater or does it just keep in the same flush!!!", "This is some text that represents a message in Kestrel.", "This is some text that represents a message in Kestrel.", "This is some text that represents a message in Kestrel.", "This is some text that represents a message in Kestrel.", "This is some text that represents a message in Kestrel.", "This is some text that represents a message in Kestrel."]
 
