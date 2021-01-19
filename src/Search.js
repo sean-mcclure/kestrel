@@ -1,31 +1,20 @@
 import "./Search.css";
-import {visible} from "./visible.js";
 
-import {
-  FaTimes
-} from "react-icons/fa";
+import Close from "./Close";
 
-const React = require('react')
-
-class Search extends React.Component {
-  
-render() {
+function Search() {
     return (
       <>
-      <div className="search">
-        <FaTimes className="close_search" onClick={(event) => {
-                 event.preventDefault(); 
-                 visible("search");
-        }}/>
+      <div className="search_wrapper">
+         <div className="search_close"><Close/></div>
         <h4>SEARCH POSTS</h4>
             <div id="hold_inputs">
-                <div><input className="search_input" placeholder="..." spellCheck="true" maxLength="100"></input></div>
-                <div><input className="search_input" placeholder="..." spellCheck="true" maxLength="100"></input></div>
+                <div><input className="search_input" placeholder="has words (comma separated)" spellCheck="false" maxLength="100"></input></div>
+                <div><input className="search_input" placeholder="from user (e.g. @sean)" spellCheck="false" maxLength="100"></input></div>
             </div>
       </div>
       </>
     );
-  }
 }
 
 export default Search;
