@@ -1,5 +1,4 @@
 .sidediv {
-    visibility: hidden;
     width: 0px;
     height: 100vh;
     right: 0;
@@ -17,14 +16,4 @@
 	-ms-user-select: none;
 	-o-user-select: none;
 	user-select: none;
-}
-
-.write, .avatar {
-    display: none;
-}
-
-@media only screen and (max-width: 600px) {
-    .sidediv {
-        width: 100vw !important;
-    }
 }

@@ -1,6 +1,5 @@
 import "./Write.css";
 import Poll from "./Poll";
-import RePost from "./RePost";
 import Comment from "./Comment";
 import Close from "./Close";
 
@@ -71,6 +70,8 @@ render() {
             <div className="post" onClick={post}>POST</div>
         </div>
 
+        <div className="hold_repost"></div>
+        
         </div>
 
         </>

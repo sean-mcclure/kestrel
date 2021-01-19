@@ -15,8 +15,6 @@ export function open_div(class_name) {
         document.getElementsByClassName("sidediv")[0].style.width = "300px";
     }
 
-    document.getElementsByClassName("sidediv")[0].style.visibility = "visible";
-
     document.getElementsByClassName("sidediv")[0].style.marginRight = "0px";
     document.getElementsByClassName("sidediv")[0].style.transition = "0.15s ease-in";
 
@@ -29,6 +27,11 @@ export function open_div(class_name) {
 
     document.getElementsByClassName(class_name)[0].style.display = "block";
     document.getElementsByClassName(class_name)[0].style.width = "100%";
+
+    if(class_name === "repost") {
+        document.getElementsByClassName("write_textarea")[1].style.height = "80px";
+        document.getElementsByClassName("write_textarea")[1].style.width = "85%";
+    }
 
     document.getElementsByClassName("show_count")[0].innerHTML = 280;
     document.getElementsByClassName("show_count")[1].innerHTML = 280;

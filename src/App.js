@@ -8,8 +8,6 @@ import Headlines from "./Headlines";
 
 import SideDiv from "./SideDiv";
 
-import RePost from "./RePost";
-
 import {style_element} from "./style.js";
 import {open_div} from "./SideDiv";
 
@@ -46,7 +44,6 @@ function App() {
         <div className="flex-grid">
         <div className="col">
              <Messages/>
-             <RePost/>
         </div>
         <div className="col2">
         <div className="top_and_news_wrapper">

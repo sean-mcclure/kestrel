@@ -3,6 +3,7 @@ import {like} from "./like.js";
 import avatar from "./avatar.png";
 
 import {open_div} from "./SideDiv";
+import {clone_and_append} from "./clone_and_append.js";
 
 import {
   FaComment,
@@ -13,7 +14,7 @@ import {
 
 import { visible } from './visible.js';
 
-const messages = ["This is some text that represents a message in Kestrel. And then therer is some more text to see how this wraps around the avater. \n\nDoes it every wrap around teh vater or does it just keep in the same flush!!!", "This is some text that represents a message in Kestrel.", "This is some text that represents a message in Kestrel.", "This is some text that represents a message in Kestrel.", "This is some text that represents a message in Kestrel.", "This is some text that represents a message in Kestrel.", "This is some text that represents a message in Kestrel."]
+const messages = ["ONE This is some text that represents a message in Kestrel. And then therer is some more text to see how this wraps around the avater. \n\nDoes it every wrap around teh vater or does it just keep in the same flush!!!", "TWO This is some text that represents a message in Kestrel.", "THREE This is some text that represents a message in Kestrel.", "FOUR This is some text that represents a message in Kestrel.", "FIVE This is some text that represents a message in Kestrel.", "SIX This is some text that represents a message in Kestrel.", "SEVEN This is some text that represents a message in Kestrel."]
 
 export var list_of_messages = messages.map((msg, i) => 
       <div className="msg_wrapper" id={"msg_wrapper_" + i} key={i.toString()}><div><img className="avatar" src={avatar} alt="avatar_img" onClick={(event) => {
@@ -30,6 +31,7 @@ export var list_of_messages = messages.map((msg, i) =>
                 <div><FaRetweet className="icons_post icon_retweet" color="#3D3D3D" size="2em" onClick = {(event) => {
                     event.preventDefault();
                     open_div("repost");
+                    clone_and_append(i);
                 }}/></div>
                 <div><FaThumbsUp id={"like_icon_" + i.toString()} className="icons_post like_icons" color="#3D3D3D" size="1.5em" onClick={like}/><span className="like_count">0</span></div>
                 <div><FaInfinity className="icons_post icon_thread" color="#3D3D3D" size="1.6em"/></div>
