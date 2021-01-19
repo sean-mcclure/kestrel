@@ -22,9 +22,15 @@ export function open_div(class_name) {
     document.getElementsByClassName("direct_messages")[0].style.display = "none";
     document.getElementsByClassName("search")[0].style.display = "none";
     document.getElementsByClassName("sign_in")[0].style.display = "none";
+    document.getElementsByClassName("repost")[0].style.display = "none";
 
     document.getElementsByClassName(class_name)[0].style.display = "block";
     document.getElementsByClassName(class_name)[0].style.width = "100%";
+
+    var close_elems = document.getElementsByClassName("close");
+    for(var j=0; j<close_elems.length;j++) {
+        close_elems[j].style.display = "block";
+    }
 }
 
 function SideDiv() {
@@ -44,6 +50,9 @@ function SideDiv() {
             </div>
             <div className="sign_in">
                 <SignIn/>
+            </div>
+            <div className="repost">
+                <Write/>
             </div>
         </div>
     )

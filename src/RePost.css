@@ -1,12 +1,3 @@
-.repost {
-    height: auto;
-    width: 0vw;
-    position: absolute;
-    background:rgba(61, 61, 61, 1);
-    bottom: 0;
-    margin-bottom: 50px;
-}
-
 .repost_wrapper {
     display: grid;
     grid-template-columns: "auto";
@@ -14,20 +5,18 @@
     gap: 10px;
     height: auto;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .repost_item:nth-child(1){
     grid-row: 1;
     margin-top: 10px;
-    width: 0vw;
-    display: none;
+    width: 100%;
 }
 
 .repost_item:nth-child(2) {
-    display: none;
     grid-row: 2;
-    width: 0px;
+    width: 100%;
     background: gold;
     color: #141414;
     border-radius: 3px;
@@ -43,8 +32,8 @@
 
 #repost_textrea {
     margin-top: 40px !important;
-    width: 45%;
     height: 80px;
+    width: 100%;
     color: whitesmoke;
 	outline: 0;
 	padding: 10px;
@@ -58,18 +47,10 @@
     outline: 2px solid goldenrod;
 }
 
-.close_repost {
-    color: whitesmoke;
-    right: 0;
-    margin: 10px;
-    font-size: 20px;
-    cursor: pointer;
-    position: absolute;
-}
 
 @media only screen and (max-width: 1000px) {
     .repost {
-        width: 0vw;
+        width: 100vw !important;
     }
     #repost_textrea {
         width: 90%;
@@ -80,11 +61,11 @@
     .repost_wrapper {
         width: 100% !important;
     }
-    .repost {
-        width: 0vw;
-    }
     #repost_textrea {
         width: 88%;
         margin-left: -10px;
+    }
+    .close_repost {
+        font-size: 20px;
     }
 }

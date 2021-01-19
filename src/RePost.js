@@ -1,6 +1,6 @@
 import "./RePost.css";
 
-import {visible} from "./visible.js";
+import Close from "./Close";
 
 import {
   FaTimes
@@ -8,18 +8,13 @@ import {
 
 function RePost() {
     return (
-        <div className="repost">
-            <FaTimes size="1.3em" className="close_repost" onClick={
-                (event) => {
-                     event.preventDefault();
-                     visible("repost");
-                }
-            }/>
-             <div className="repost_wrapper">
-                 <div className="repost_item"><textarea id="repost_textrea" placeholder="say something..."></textarea></div>
-                 <button className="repost_item">REPOST</button>
-            </div>     
-    </div>
+    <>
+        <div><Close/></div>
+        <div className="repost_wrapper">
+            <div className="repost_item"><textarea id="repost_textrea" placeholder="say something..."></textarea></div>
+            <button className="repost_item">REPOST</button>
+        </div> 
+    </>    
     );
 }
 
