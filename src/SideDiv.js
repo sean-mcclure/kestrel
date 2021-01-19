@@ -31,6 +31,8 @@ export function open_div(class_name) {
     if(class_name === "repost") {
         document.getElementsByClassName("write_textarea")[1].style.height = "80px";
         document.getElementsByClassName("write_textarea")[1].style.width = "85%";
+        document.getElementsByClassName("write_textarea")[1].placeholder = "say something...";
+        document.getElementsByClassName("post")[1].innerHTML = "REPOST";
     }
 
     document.getElementsByClassName("show_count")[0].innerHTML = 280;

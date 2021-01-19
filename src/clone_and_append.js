@@ -27,11 +27,15 @@ export function clone_and_append(instance) {
 
     document.getElementsByClassName("msg_wrapper_clone")[0].children[3].style.width = "95%";
     document.getElementsByClassName("msg_wrapper_clone")[0].children[3].style.marginLeft = "0px";
+    document.getElementsByClassName("hold_repost")[1].style.boxShadow = "0px 2px 20px black";
+
+    document.getElementsByClassName("msg_wrapper_clone")[0].children[4].style.display = "none";
 
     if(is_mobile()) {
         document.getElementsByClassName("hold_repost")[1].style.marginTop = "-90px";
-        document.getElementsByClassName("hold_repost")[1].style.marginLeft = "22px";
+        document.getElementsByClassName("hold_repost")[1].style.marginLeft = "35px";
         document.getElementsByClassName("hold_repost")[1].style.paddingBottom = "100px";
+        document.getElementsByClassName("hold_repost")[1].style.width = "85%";
         document.getElementsByClassName("msg_wrapper_clone")[0].children[3].style.width = "98%";
     }
 
