@@ -14,6 +14,9 @@ export function open_div(class_name) {
     } else {
         document.getElementsByClassName("sidediv")[0].style.width = "300px";
     }
+
+    document.getElementsByClassName("sidediv")[0].style.visibility = "visible";
+
     document.getElementsByClassName("sidediv")[0].style.marginRight = "0px";
     document.getElementsByClassName("sidediv")[0].style.transition = "0.15s ease-in";
 
@@ -26,6 +29,9 @@ export function open_div(class_name) {
 
     document.getElementsByClassName(class_name)[0].style.display = "block";
     document.getElementsByClassName(class_name)[0].style.width = "100%";
+
+    document.getElementsByClassName("show_count")[0].innerHTML = 280;
+    document.getElementsByClassName("show_count")[1].innerHTML = 280;
 
     var close_elems = document.getElementsByClassName("close");
     for(var j=0; j<close_elems.length;j++) {

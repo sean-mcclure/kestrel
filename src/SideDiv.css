@@ -1,4 +1,5 @@
 .sidediv {
+    visibility: hidden;
     width: 0px;
     height: 100vh;
     right: 0;
@@ -20,4 +21,10 @@
 
 .write, .avatar {
     display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .sidediv {
+        width: 100vw !important;
+    }
 }
