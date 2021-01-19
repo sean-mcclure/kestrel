@@ -7,7 +7,7 @@ import TopPosts from "./TopPosts";
 import Headlines from "./Headlines";
 import Avatar from "./Avatar";
 import SignIn from "./SignIn";
-import SideDiv from "./SideDiv";
+import DirectMessages from "./DirectMessages";
 import Write from "./Write";
 import Welcome from "./Welcome";
 import RePost from "./RePost";
@@ -35,7 +35,7 @@ function App() {
          <>
          <Avatar/>
          <SignIn/>
-         <SideDiv/>
+         <DirectMessages/>
          <Write/>
          <Search/>
          <Welcome/>

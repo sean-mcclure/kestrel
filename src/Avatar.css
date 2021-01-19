@@ -15,9 +15,43 @@
 	-moz-user-select: none;
 	-ms-user-select: none;
 	-o-user-select: none;
-	user-select: none;
+    user-select: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.bio {
+	height: 100px !important;
+	width: 90% !important;
+	margin-bottom: 10px !important;
+	background: #797171a8;
+	color: whitesmoke;
+	font-size: 18px;
+    padding: 10px;
+}
+
+.save_profile {
+	height: 40px;
+	width: auto;
+	border: none;
+	border-radius: 3px;
+	color: #141414;
+	background: gold;
+	margin-bottom: 10px;
+	font-size: 16px;
+	font-weight: bold;
+	cursor: pointer;
+	outline: 0;
 }
 
 .avatar_close {
     display: none;
+    font-size: 22px;
+    margin-top: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+    .bio {
+         margin-left: 20px;
+    }
 }

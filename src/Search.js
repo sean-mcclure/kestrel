@@ -1,4 +1,4 @@
-import "./SideDiv.css";
+import "./Search.css";
 import {visible} from "./visible.js";
 
 import {
@@ -7,13 +7,13 @@ import {
 
 const React = require('react')
 
-class SideDiv extends React.Component {
+class Search extends React.Component {
   
 render() {
     return (
       <>
-      <div className="side_div">
-        <FaTimes className="close_side_div" onClick={(event) => {
+      <div className="search">
+        <FaTimes className="close_search" onClick={(event) => {
                  event.preventDefault(); 
                  visible("search");
         }}/>
@@ -28,4 +28,4 @@ render() {
   }
 }
 
-export default SideDiv;
+export default Search;

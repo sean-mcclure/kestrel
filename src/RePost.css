@@ -42,9 +42,9 @@
 }
 
 #repost_textrea {
-    margin-top: 10px;
+    margin-top: 40px !important;
     width: 45%;
-    height: 130px;
+    height: 80px;
     color: whitesmoke;
 	outline: 0;
 	padding: 10px;
@@ -55,7 +55,16 @@
 	margin-top: 10px;
 	margin-bottom: 10px;
 	font-family: Roboto;
-	outline: 2px solid goldenrod;
+    outline: 2px solid goldenrod;
+}
+
+.close_repost {
+    color: whitesmoke;
+    right: 0;
+    margin: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -68,6 +77,9 @@
 }
 
 @media only screen and (max-width: 600px) {
+    .repost_wrapper {
+        width: 100% !important;
+    }
     .repost {
         width: 0vw;
     }

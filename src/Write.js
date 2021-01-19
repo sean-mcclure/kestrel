@@ -44,7 +44,7 @@ render() {
 
         <div className="write">
 
-        <FaTimes className="close_side_div" onClick={(event) => {
+        <FaTimes className="close_write" onClick={(event) => {
              event.preventDefault(); 
              visible("write");
         }}/>

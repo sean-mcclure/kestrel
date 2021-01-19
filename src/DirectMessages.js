@@ -1,4 +1,4 @@
-import "./SideDiv.css";
+import "./DirectMessages.css";
 import {visible} from "./visible.js";
 
 import {
@@ -35,13 +35,13 @@ export var dir_msgs = direct_messages.map((obj, i) =>
     </div>
 );
 
-class SideDiv extends React.Component {
+class DirectMessages extends React.Component {
   
 render() {
     return (
       <>
-      <div className="side_div">
-        <FaTimes className="close_side_div" onClick={(event) => {
+      <div className="direct_messages">
+        <FaTimes className="close_direct_messages" onClick={(event) => {
                  event.preventDefault(); 
                  visible("direct_message");
         }}/>
@@ -53,4 +53,4 @@ render() {
   }
 }
 
-export default SideDiv;
+export default DirectMessages;

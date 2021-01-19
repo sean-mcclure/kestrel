@@ -613,11 +613,6 @@ div:nth-child(3)>.options_icons {
 	color: silver;
 	margin-top: -20px;
 }
-
-.avatar_close {
-	margin-top: 30px;
-}
-
 #avatar_pic {
 	border-radius: 0%;
 	margin: 0 auto;
@@ -629,30 +624,6 @@ div:nth-child(3)>.options_icons {
 	background-size: cover;
 	border: none;
 	margin-bottom: -15px;
-}
-
-.bio {
-	height: 100px !important;
-	width: 80% !important;
-	margin-bottom: 10px !important;
-	background: #797171a8;
-	color: whitesmoke;
-	font-size: 18px;
-    padding: 10px;
-}
-
-.save_profile {
-	height: 26px;
-	width: auto;
-	border: none;
-	border-radius: 3px;
-	color: #141414;
-	background: gold;
-	margin-bottom: 10px;
-	font-size: 16px;
-	font-weight: bold;
-	cursor: pointer;
-	outline: 0;
 }
 
 .feed_titles_wrapper {

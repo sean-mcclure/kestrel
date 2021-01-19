@@ -89,27 +89,28 @@ export function visible(type) {
     if(type === "direct_message") {
         if(viz_cnt%2===0) {
             document.getElementById("dm_icon").style.visibility = "visible";
-            document.getElementsByClassName("side_div")[0].style.width = "0px";
-            document.getElementsByClassName("side_div")[0].style.marginRight = "-30px";
-            document.getElementsByClassName("side_div")[0].style.transition = "0.2s ease-in";
+            document.getElementsByClassName("direct_messages")[0].style.width = "0px";
+            document.getElementsByClassName("direct_messages")[0].style.marginRight = "-30px";
+            document.getElementsByClassName("direct_messages")[0].style.transition = "0.2s ease-in";
             document.getElementsByClassName("tooltip")[2].style.visibility = "visible";
             var elems = document.getElementsByClassName("dir_msg_text");
-            document.getElementsByClassName("side_div")[0].style.boxShadow = "none";
+            document.getElementsByClassName("direct_messages")[0].style.boxShadow = "none";
             for(var i=0; i<elems.length; i++) {
                 elems[i].style.display = "none";
             }
         } else {
             document.getElementById("dm_icon").style.visibility = "hidden";
             if(is_mobile()) {
-                document.getElementsByClassName("side_div")[0].style.width = "100%";
+                document.getElementsByClassName("direct_messages")[0].style.width = "100%";
             } else {
-                document.getElementsByClassName("side_div")[0].style.width = "300px";
+                document.getElementsByClassName("direct_messages")[0].style.width = "300px";
             }
-            document.getElementsByClassName("side_div")[0].style.marginRight = "0px";
-            document.getElementsByClassName("side_div")[0].style.transition = "0.2s ease-in";
+            document.getElementsByClassName("close_direct_messages")[0].style.display = "block";
+            document.getElementsByClassName("direct_messages")[0].style.marginRight = "0px";
+            document.getElementsByClassName("direct_messages")[0].style.transition = "0.2s ease-in";
             document.getElementsByClassName("tooltip")[2].style.visibility = "hidden";
-            document.getElementsByClassName("side_div")[0].style.zIndex = "99999999";
-            document.getElementsByClassName("side_div")[0].style.boxShadow = "2px 2px 40px #764545";
+            document.getElementsByClassName("direct_messages")[0].style.zIndex = "99999999";
+            document.getElementsByClassName("direct_messages")[0].style.boxShadow = "2px 2px 40px #764545";
             var elems_b = document.getElementsByClassName("dir_msg_text");
             setTimeout(function() {
                 for(var j=0; j<elems_b.length; j++) {
@@ -122,23 +123,24 @@ export function visible(type) {
     if(type === "search") {
         if(viz_cnt%2===0) {
             document.getElementById("search_icon").style.visibility = "visible";
-            document.getElementsByClassName("side_div")[1].style.width = "0px";
-            document.getElementsByClassName("side_div")[1].style.marginRight = "-30px";
-            document.getElementsByClassName("side_div")[1].style.transition = "0.2s ease-in";
-            document.getElementsByClassName("side_div")[1].style.boxShadow = "none";
-            document.getElementsByClassName("tooltip")[1].style.visibility = "visible";
+            document.getElementsByClassName("search")[0].style.width = "0px";
+            document.getElementsByClassName("search")[0].style.marginRight = "-30px";
+            document.getElementsByClassName("search")[0].style.transition = "0.2s ease-in";
+            document.getElementsByClassName("search")[0].style.boxShadow = "none";
+            document.getElementsByClassName("tooltip")[0].style.visibility = "visible";
         } else {
             document.getElementById("search_icon").style.visibility = "hidden";
             if(is_mobile()) {
-                document.getElementsByClassName("side_div")[1].style.width = "100%";
+                document.getElementsByClassName("search")[0].style.width = "100%";
             } else {
-                document.getElementsByClassName("side_div")[1].style.width = "300px";
+                document.getElementsByClassName("search")[0].style.width = "300px";
             }
-            document.getElementsByClassName("side_div")[1].style.marginRight = "0px";
-            document.getElementsByClassName("side_div")[1].style.transition = "0.2s ease-in";
-            document.getElementsByClassName("tooltip")[1].style.visibility = "hidden";
-            document.getElementsByClassName("side_div")[1].style.zIndex = "99999999";
-            document.getElementsByClassName("side_div")[1].style.boxShadow = "2px 2px 40px #764545";
+            document.getElementsByClassName("close_search")[0].style.display = "block";
+            document.getElementsByClassName("search")[0].style.marginRight = "0px";
+            document.getElementsByClassName("search")[0].style.transition = "0.2s ease-in";
+            document.getElementsByClassName("tooltip")[0].style.visibility = "hidden";
+            document.getElementsByClassName("search")[0].style.zIndex = "99999999";
+            document.getElementsByClassName("search")[0].style.boxShadow = "2px 2px 40px #764545";
         }
     }
 
@@ -156,6 +158,7 @@ export function visible(type) {
         }
         document.getElementsByClassName("write")[0].style.marginRight = "0px";
         document.getElementsByClassName("write")[0].style.transition = "0.15s ease-in";
+        document.getElementsByClassName("close_write")[0].style.display = "block";
         setTimeout(function(){
             document.getElementsByClassName("write_textarea")[0].focus();
         }, 400)

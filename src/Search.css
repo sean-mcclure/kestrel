@@ -1,0 +1,35 @@
+.search {
+    width: 0px;
+    height: 100vh;
+    right: 0;
+    margin-right: -30px;
+    position: absolute;
+    background: #3D3D3D;
+    box-shadow: none;
+    z-index: 999999;
+    font-family: "Oswald";
+    color: whitesmoke;
+    text-align: center;
+    padding: 10px;
+    -webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+.search > h4 {
+    margin-left: 20px;
+}
+
+.dir_msg_text {
+    display: none;
+}
+
+.close_search {
+    display: none;
+    font-size: 30px !important;
+    cursor: pointer;
+    float: right;
+    margin-right: -4px;
+}

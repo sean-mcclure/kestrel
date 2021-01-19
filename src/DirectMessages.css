@@ -1,4 +1,4 @@
-.side_div {
+.direct_messages {
     width: 0px;
     height: 100vh;
     right: 0;
@@ -18,7 +18,7 @@
 	user-select: none;
 }
 
-.side_div > h4 {
+.direct_messages > h4 {
     margin-left: 20px;
 }
 
@@ -26,8 +26,9 @@
     display: none;
 }
 
-.close_side_div {
-    font-size: 25px;
+.close_direct_messages {
+    display: none;
+    font-size: 30px !important;
     cursor: pointer;
     float: right;
     margin-right: -4px;
