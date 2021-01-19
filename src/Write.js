@@ -2,6 +2,7 @@ import "./Write.css";
 import Poll from "./Poll";
 import RePost from "./RePost";
 import Comment from "./Comment";
+import Close from "./Close";
 
 import {character_counter} from "./counter.js";
 import {post} from "./post.js";
@@ -41,45 +42,39 @@ class Write extends React.Component {
 
 render() {
     return (
-
-        <div className="write">
-
-        <FaTimes className="close_write" onClick={(event) => {
-             event.preventDefault(); 
-             visible("write");
-        }}/>
-
+        <>
+        
         <img id="hold_uploaded_img" className="hold_uploaded_img" alt="uploaded_img_preview" style={img_styles}></img>
         <video height="200px" playsInline controls id="hold_uploaded_video" className="hold_uploaded_video" style={img_styles}><source type="video/mp4"></source></video>
         <input id="upload_input" className="upload_input" type="file" style={input_styles}></input>        
-            
+        
+        <Poll/>
 
-            
-            <Poll/>
- 
-             
-             <div className="write_options_wrapper">
-                 <div className="write_options_item">
-                     <div id="show_count" className="show_count">280</div>
-                    <textarea id="write_textarea" className="textarea write_textarea" onChange={character_counter} maxLength="280"></textarea>
-                </div>
-                <div className="write_options_item">
-                    <FaCameraRetro className="upload_image" size="2em" color="gold" onClick={(e) => {
+        <div className="write_options_wrapper">
+            <div className="write_options_item">
+            <div id="show_count" className="show_count">280</div>
+            <textarea id="write_textarea" className="textarea write_textarea" onChange={character_counter} maxLength="280"></textarea>
+        </div>
 
-                    }}/>
-                </div>
-                <div className="write_options_item">
-                    <FaPoll className="poll" size="2em" color="gold" onClick={(event) => {
-                         event.preventDefault();
-                         visible("poll");
-                     }}/>
-                </div>
-                <div className="write_options_item">
-                    <div className="post" onClick={post}>POST</div>
-                </div>
-             </div>
-             </div>
-    );
+        <div className="write_options_item">
+            <FaCameraRetro className="upload_image" size="2em" color="gold" onClick={(e) => {}}/>
+        </div>
+
+        <div className="write_options_item">
+            <FaPoll className="poll" size="2em" color="gold" onClick={(event) => {
+                    event.preventDefault();
+                    visible("poll");
+            }}/>
+        </div>
+
+        <div className="write_options_item">
+            <div className="post" onClick={post}>POST</div>
+        </div>
+
+        </div>
+        
+        </>
+    )
   }
 }
 

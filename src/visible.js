@@ -145,7 +145,7 @@ export function visible(type) {
     }
 
     if(type === "write") {
-        if(viz_cnt%2===0) {
+        if(document.getElementsByClassName("write")[0].style.width !== "0px") {
             document.getElementsByClassName("write")[0].style.width = "0px";
             document.getElementsByClassName("write")[0].style.marginRight = "-30px";
             document.getElementsByClassName("write")[0].style.transition = "0.15s ease-in";
@@ -158,11 +158,6 @@ export function visible(type) {
         }
         document.getElementsByClassName("write")[0].style.marginRight = "0px";
         document.getElementsByClassName("write")[0].style.transition = "0.15s ease-in";
-        document.getElementsByClassName("close_write")[0].style.display = "block";
-        setTimeout(function(){
-            document.getElementsByClassName("write_textarea")[0].focus();
-        }, 400)
-        
         }
     }
 

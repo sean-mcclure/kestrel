@@ -2,9 +2,13 @@ import './App.css';
 import './tooltip.css';
 import logo from "./logo.png";
 
+
 import Messages from "./Messages";
 import TopPosts from "./TopPosts";
 import Headlines from "./Headlines";
+
+import SideDiv from "./SideDiv";
+
 import Avatar from "./Avatar";
 import SignIn from "./SignIn";
 import DirectMessages from "./DirectMessages";
@@ -15,6 +19,7 @@ import RePost from "./RePost";
 import Search from "./Search";
 import {visible} from "./visible.js";
 import {style_element} from "./style.js";
+import {open_div} from "./SideDiv";
 
 import {log_user_out} from "./SignRegister";
 
@@ -33,12 +38,12 @@ function App() {
   return (
 
          <>
-         <Avatar/>
          <SignIn/>
          <DirectMessages/>
-         <Write/>
          <Search/>
          <Welcome/>
+
+         <SideDiv/>
      
         <div className="App">
 
@@ -49,8 +54,7 @@ function App() {
             
             <div><FaFeatherAlt color="white" size="2em" className="add_message" onClick={(event) => {
                event.preventDefault();
-               // document.getElementsByClassName("repost_toggle")[0].style.display = "none";
-                visible("write");
+                open_div("write");
                 }}/>
             </div>
 
@@ -107,9 +111,10 @@ function App() {
             }}></FaEnvelope></div>
             <div class="tooltip top" data-tooltip_text="PROFILE"><FaCogs id="profile_icon" color="white" size="2em" className="options_icons" onClick={(event) => {
                 event.preventDefault();
-                visible("avatar");
-                document.body.style.overflowY = "hidden"
-                document.getElementsByClassName("flex_grid_banner")[0].style.zIndex = -1
+                open_div("avatar");
+                //visible("avatar");
+                //document.body.style.overflowY = "hidden"
+                //document.getElementsByClassName("flex_grid_banner")[0].style.zIndex = -1
             }}></FaCogs></div>
         </div>
       

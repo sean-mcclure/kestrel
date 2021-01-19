@@ -1,31 +1,3 @@
-.write {
-    width: 0px;
-    height: 100vh;
-    right: 0;
-    margin-right: -30px;
-    position: absolute;
-    background: rgba(61, 61, 61, 1);
-    box-shadow: 2px 2px 40px #141414;
-    z-index: 999999;
-    font-family: "Oswald";
-    color: whitesmoke;
-    text-align: center;
-    padding: 10px;
-    -webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	-o-user-select: none;
-	user-select: none;
-}
-
-.close_write {
-    display: none;
-    font-size: 25px;
-    cursor: pointer;
-    float: right;
-    margin-right: -4px;
-}
-
 .write_options_wrapper {
     display: grid;
     grid-template-columns: 33% 33% 33%;
