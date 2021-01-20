@@ -1,6 +1,5 @@
 import "./Write.css";
 import Poll from "./Poll";
-import Comment from "./Comment";
 import Close from "./Close";
 
 import {character_counter} from "./counter.js";
@@ -49,28 +48,31 @@ render() {
         
         <Poll/>
 
+        <div className="hold_comment"></div>
+
         <div className="write_options_wrapper">
+
             <div className="write_options_item">
-            <div className="show_count">280</div>
-            <textarea id="write_textarea" className="textarea write_textarea" onChange={(event) => {character_counter("show_count", event)}} maxLength="280"></textarea>
-        </div>
+                <div className="show_count">280</div>
+                <textarea id="write_textarea" className="textarea write_textarea" onChange={(event) => {character_counter("show_count", event)}} maxLength="280"></textarea>
+            </div>
 
-        <div className="write_options_item">
-            <FaCameraRetro className="upload_image" size="2em" color="gold" onClick={(e) => {}}/>
-        </div>
+            <div className="write_options_item">
+                <FaCameraRetro className="upload_image" size="2em" color="gold" onClick={(e) => {}}/>
+            </div>
 
-        <div className="write_options_item">
-            <FaPoll className="poll" size="2em" color="gold" onClick={(event) => {
-                    event.preventDefault();
-                    visible("poll");
-            }}/>
-        </div>
+            <div className="write_options_item">
+                <FaPoll className="poll" size="2em" color="gold" onClick={(event) => {
+                        event.preventDefault();
+                        visible("poll");
+                }}/>
+            </div>
 
-        <div className="write_options_item">
-            <div className="post" onClick={post}>POST</div>
-        </div>
+            <div className="write_options_item">
+                <div className="post" onClick={post}>POST</div>
+            </div>
 
-        <div className="hold_repost"></div>
+            <div className="hold_repost"></div>
         
         </div>
 

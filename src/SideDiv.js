@@ -24,6 +24,7 @@ export function open_div(class_name) {
     document.getElementsByClassName("search")[0].style.display = "none";
     document.getElementsByClassName("sign_in")[0].style.display = "none";
     document.getElementsByClassName("repost")[0].style.display = "none";
+    document.getElementsByClassName("comment")[0].style.display = "none";
 
     document.getElementsByClassName(class_name)[0].style.display = "block";
     document.getElementsByClassName(class_name)[0].style.width = "100%";
@@ -33,6 +34,14 @@ export function open_div(class_name) {
         document.getElementsByClassName("write_textarea")[1].style.width = "85%";
         document.getElementsByClassName("write_textarea")[1].placeholder = "say something...";
         document.getElementsByClassName("post")[1].innerHTML = "REPOST";
+    }
+
+    if(class_name === "comment") {
+        document.getElementsByClassName("write_textarea")[2].style.height = "80px";
+        document.getElementsByClassName("write_textarea")[2].style.width = "85%";
+        document.getElementsByClassName("write_textarea")[2].placeholder = "comment...";
+        document.getElementsByClassName("comment")[0].style.bottom = 0;
+        document.getElementsByClassName("post")[2].innerHTML = "COMMENT";
     }
 
     document.getElementsByClassName("show_count")[0].innerHTML = 280;
@@ -63,6 +72,9 @@ function SideDiv() {
                 <SignIn/>
             </div>
             <div className="repost">
+                <Write/>
+            </div>
+            <div className="comment">
                 <Write/>
             </div>
         </div>

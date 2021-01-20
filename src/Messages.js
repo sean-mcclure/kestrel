@@ -26,12 +26,13 @@ export var list_of_messages = messages.map((msg, i) =>
       <div className="icon_wrapper_post">
                 <div><FaComment className="icons_post" color="#3D3D3D" size="1.6em" onClick={(event) => {
                     event.preventDefault();
-                    visible("write");
+                    open_div("comment");
+                    clone_and_append("hold_comment", i);
                 }}/></div>
                 <div><FaRetweet className="icons_post icon_retweet" color="#3D3D3D" size="2em" onClick = {(event) => {
                     event.preventDefault();
                     open_div("repost");
-                    clone_and_append(i);
+                    clone_and_append("hold_repost", i);
                 }}/></div>
                 <div><FaThumbsUp id={"like_icon_" + i.toString()} className="icons_post like_icons" color="#3D3D3D" size="1.5em" onClick={like}/><span className="like_count">0</span></div>
                 <div><FaInfinity className="icons_post icon_thread" color="#3D3D3D" size="1.6em"/></div>
