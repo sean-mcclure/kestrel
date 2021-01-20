@@ -700,12 +700,16 @@ div:nth-child(3)>.options_icons {
     .msg_img {
         width: 98%;
     }
+    .col {
+        height: 70vh !important;
+    }
 }
 
 @media only screen and (max-width: 1000px) {
 	.col {
         max-width: 100%;
-    margin: 0;
+        margin: 0;
+        height: 80vh;
 	}
 	.col2 {
 		display: none;
