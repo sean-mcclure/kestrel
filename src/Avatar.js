@@ -11,6 +11,7 @@ export function Avatar() {
     return (
          <>
          <Close/>
+         <div className="avatar_wrapper">
          <UploadImage></UploadImage>
          <p id="follower_count">217 Followers</p>
          <div className="follow_block_wrapper">
@@ -29,6 +30,7 @@ export function Avatar() {
 
          <div>
              <button className="save_profile">SAVE</button>
+         </div>
          </div>
         </>
   );

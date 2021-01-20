@@ -9,14 +9,6 @@ import SignIn from "./SignIn";
 import {is_mobile} from "./mobile.js";
 
 export function open_div(class_name) {
-    if (is_mobile()) {
-        document.getElementsByClassName("sidediv")[0].style.width = "100%";
-    } else {
-        document.getElementsByClassName("sidediv")[0].style.width = "300px";
-    }
-
-    document.getElementsByClassName("sidediv")[0].style.marginRight = "0px";
-    document.getElementsByClassName("sidediv")[0].style.transition = "0.15s ease-in";
 
     document.getElementsByClassName("write")[0].style.display = "none";
     document.getElementsByClassName("avatar")[0].style.display = "none";
@@ -26,7 +18,19 @@ export function open_div(class_name) {
     document.getElementsByClassName("repost")[0].style.display = "none";
     document.getElementsByClassName("comment")[0].style.display = "none";
 
-    document.getElementsByClassName(class_name)[0].style.display = "block";
+    setTimeout(function() {
+        document.getElementsByClassName(class_name)[0].style.display = "block";
+    }, 300)
+
+    if (is_mobile()) {
+        document.getElementsByClassName("sidediv")[0].style.width = "100%";
+    } else {
+        document.getElementsByClassName("sidediv")[0].style.width = "300px";
+    }
+
+    document.getElementsByClassName("sidediv")[0].style.marginRight = "0px";
+    document.getElementsByClassName("sidediv")[0].style.transition = "0.15s ease-in";
+    
     document.getElementsByClassName(class_name)[0].style.width = "100%";
 
     if(class_name === "repost") {
@@ -42,6 +46,10 @@ export function open_div(class_name) {
         document.getElementsByClassName("write_textarea")[2].placeholder = "comment...";
         document.getElementsByClassName("comment")[0].style.bottom = 0;
         document.getElementsByClassName("post")[2].innerHTML = "COMMENT";
+    }
+
+    if(class_name === "avatar") {
+        document.getElementsByClassName("avatar_wrapper")[0].style.marginLeft = "10px";
     }
 
     document.getElementsByClassName("show_count")[0].innerHTML = 280;

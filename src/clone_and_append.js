@@ -20,23 +20,10 @@ export function clone_and_append(class_name, instance) {
 
     document.getElementsByClassName(class_name)[target_instance].append(clone);
     
-    if(class_name === "hold_repost") {
-        document.getElementsByClassName(class_name)[target_instance].style.position = "absolute";
-        document.getElementsByClassName(class_name)[target_instance].style.top = "50%";
-        document.getElementsByClassName(class_name)[target_instance].style.marginTop = "-40px";
-        document.getElementsByClassName(class_name)[target_instance].style.paddingBottom = "30px";
-    } else {
-        document.getElementsByClassName(class_name)[target_instance].style.position = "absolute";
-        document.getElementsByClassName(class_name)[target_instance].style.top = "10%";
-        document.getElementsByClassName("write_options_wrapper")[2].style.display = "none";
-        var elem = document.getElementsByClassName("write_options_wrapper")[0];
-        var clone = elem.cloneNode(true);
-        clone.id = id + "_write_clone";
-        clone.classList.add("write_options_wrapper_clone");
-        document.getElementsByClassName("comment")[0].append(clone);
-        document.getElementsByClassName("write_options_wrapper_clone")[0].style.top = "50%";
-    }
-
+    document.getElementsByClassName(class_name)[target_instance].style.position = "absolute";
+    document.getElementsByClassName(class_name)[target_instance].style.top = "50%";
+    document.getElementsByClassName(class_name)[target_instance].style.marginTop = "-40px";
+    document.getElementsByClassName(class_name)[target_instance].style.paddingBottom = "30px";
 
     document.getElementsByClassName(class_name)[target_instance].style.background = "#F5F5F5";
     document.getElementsByClassName(class_name)[target_instance].style.width = "90%";
@@ -58,6 +45,5 @@ export function clone_and_append(class_name, instance) {
         document.getElementsByClassName(class_name)[target_instance].style.width = "85%";
         document.getElementsByClassName("msg_wrapper_clone")[0].children[3].style.width = "98%";
     }
-
 
 }
