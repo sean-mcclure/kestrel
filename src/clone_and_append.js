@@ -33,8 +33,8 @@ export function clone_and_append(class_name, instance) {
         var clone = elem.cloneNode(true);
         clone.id = id + "_write_clone";
         clone.classList.add("write_options_wrapper_clone");
-        document.getElementsByClassName(class_name)[target_instance].append(clone);
-        document.getElementsByClassName("write_options_wrapper_clone")[0].style.background = "#3D3D3D";
+        document.getElementsByClassName("comment")[0].append(clone);
+        document.getElementsByClassName("write_options_wrapper_clone")[0].style.top = "50%";
     }
 
 
