@@ -55,8 +55,8 @@ render() {
         <div className="write_options_wrapper">
 
             <div className="write_options_item">
-                <div className="show_count">280</div>
-                <textarea id="write_textarea" className="textarea write_textarea" onChange={(event) => {character_counter("show_count", event)}} maxLength="280"></textarea>
+                <div id="show_count_0" className="show_count">280</div>
+                <textarea id="write_textarea" className="textarea write_textarea" onChange={(event) => {character_counter(event)}} maxLength="280"></textarea>
             </div>
 
             <div className="write_options_item">
@@ -76,18 +76,39 @@ render() {
 
             <div>
                 <div className="make_thread" onClick={(event) => {
-                    event.preventDefault();
+                   event.preventDefault();
+                   document.getElementById("write_textarea").style.marginBottom = "8px";
                    var thread_area = document.createElement("textarea");
-                   thread_area.style.width = "85%";
+                   thread_area.className = "thread_textarea";
+                   thread_area.id = "thread_textarea_" + document.getElementsByClassName("thread_textarea").length;
+
+                   thread_area.style.width = "80%";
                    thread_area.style.height = "100px";
                    thread_area.style.margin = "0 auto";
-                   thread_area.style.marginTop = "10px";
-                   thread_area.style.background = "#4F4434";
+                   thread_area.style.background = "#4f4434";
                    thread_area.style.border = "2px solid goldenrod";
                    thread_area.style.outline = "none";
                    thread_area.style.resize = "none";
-                   document.getElementsByClassName("write_options_item")[0].append(thread_area);
-                   document.getElementsByClassName("sidediv")[0].style.overflowY = "scroll";
+                   thread_area.style.fontFamily = "Roboto";
+                   thread_area.style.color = "whitesmoke";
+                   thread_area.style.fontSize = "20px";
+                   thread_area.style.padding = "10px";
+
+                   thread_area.maxLength="280"
+
+                   thread_area.addEventListener("input", function(event) {
+                      character_counter(event)
+                   }, false)
+
+                var word_count = document.createElement("div");
+                word_count.className = "show_count";
+                word_count.innerText = "280";
+                word_count.style.marginTop = "20px";
+                
+
+                document.getElementsByClassName("write_options_item")[0].append(word_count);
+                document.getElementsByClassName("write_options_item")[0].append(thread_area);
+                document.getElementsByClassName("sidediv")[0].style.overflowY = "scroll";
                    
                 }}><FaPlus/></div>
             </div>
