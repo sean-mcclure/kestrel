@@ -1,49 +1,57 @@
 import {is_mobile} from "./mobile.js";
 
-export function clone_and_append(class_name, instance) {
+export function clone_and_append(from_id, to_class_name, to_instance) {
 
-    if(class_name === "hold_repost") {
-        var target_instance = 1
-    } else {
-        var target_instance = 2
+    if(to_class_name === "hold_repost") {
+        var to_instance = 1
+    }
+    if(to_class_name === "hold_comment") {
+        var to_instance = 2
+    } 
+    if(to_class_name === "hold_thread") {
+        var to_instance = 0
     }
 
-    document.getElementsByClassName(class_name)[target_instance].innerHTML = "";
-
-    var id = document.getElementsByClassName("msg_wrapper")[instance].id;
+    document.getElementsByClassName(to_class_name)[to_instance].innerHTML = "";
     
-    var elem = document.getElementById(id);
+    var elem = document.getElementById(from_id);
     var clone = elem.cloneNode(true);
 
-    clone.id = id + "_clone";
-    clone.classList.add("msg_wrapper_clone");
+    clone.id = from_id + "_clone";
+    clone.classList.add("clone");
 
-    document.getElementsByClassName(class_name)[target_instance].append(clone);
+    document.getElementsByClassName(to_class_name)[to_instance].append(clone);
+
+    if(to_class_name !== "hold_thread") {
     
-    document.getElementsByClassName(class_name)[target_instance].style.position = "absolute";
-    document.getElementsByClassName(class_name)[target_instance].style.top = "50%";
-    document.getElementsByClassName(class_name)[target_instance].style.marginTop = "-40px";
-    document.getElementsByClassName(class_name)[target_instance].style.paddingBottom = "30px";
+    document.getElementsByClassName(to_class_name)[to_instance].style.position = "absolute";
+    document.getElementsByClassName(to_class_name)[to_instance].style.top = "50%";
+    document.getElementsByClassName(to_class_name)[to_instance].style.marginTop = "-40px";
+    document.getElementsByClassName(to_class_name)[to_instance].style.paddingBottom = "30px";
 
-    document.getElementsByClassName(class_name)[target_instance].style.background = "#F5F5F5";
-    document.getElementsByClassName(class_name)[target_instance].style.width = "90%";
-    document.getElementsByClassName(class_name)[target_instance].style.borderRadius = "4px";
-    document.getElementsByClassName(class_name)[target_instance].style.marginLeft = "6px";
-    document.getElementsByClassName("msg_wrapper_clone")[0].style.fontSize = "16px";
+    document.getElementsByClassName(to_class_name)[to_instance].style.background = "#F5F5F5";
+    document.getElementsByClassName(to_class_name)[to_instance].style.width = "90%";
+    document.getElementsByClassName(to_class_name)[to_instance].style.borderRadius = "4px";
+    document.getElementsByClassName(to_class_name)[to_instance].style.marginLeft = "6px";
+    document.getElementsByClassName("clone")[0].style.fontSize = "16px";
     document.getElementsByClassName("sidediv")[0].style.overflowY = "scroll";
 
-    document.getElementsByClassName("msg_wrapper_clone")[0].children[3].style.width = "95%";
-    document.getElementsByClassName("msg_wrapper_clone")[0].children[3].style.marginLeft = "0px";
-    document.getElementsByClassName(class_name)[target_instance].style.boxShadow = "0px 2px 20px black";
+   
+        document.getElementsByClassName("clone")[0].children[3].style.width = "95%";
+        document.getElementsByClassName("clone")[0].children[3].style.marginLeft = "0px";
+        document.getElementsByClassName(to_class_name)[to_instance].style.boxShadow = "0px 2px 20px black";
 
-    document.getElementsByClassName("msg_wrapper_clone")[0].children[4].style.display = "none";
-
+        document.getElementsByClassName("clone")[0].children[4].style.display = "none";
+    } 
+    
     if(is_mobile()) {
-        document.getElementsByClassName(class_name)[target_instance].style.marginTop = "-90px";
-        document.getElementsByClassName(class_name)[target_instance].style.marginLeft = "35px";
-        document.getElementsByClassName(class_name)[target_instance].style.paddingBottom = "100px";
-        document.getElementsByClassName(class_name)[target_instance].style.width = "85%";
-        document.getElementsByClassName("msg_wrapper_clone")[0].children[3].style.width = "98%";
+        document.getElementsByClassName(to_class_name)[to_instance].style.marginTop = "-90px";
+        document.getElementsByClassName(to_class_name)[to_instance].style.marginLeft = "35px";
+        document.getElementsByClassName(to_class_name)[to_instance].style.paddingBottom = "100px";
+        document.getElementsByClassName(to_class_name)[to_instance].style.width = "85%";
+        if(to_class_name !== "hold_thread") {
+            document.getElementsByClassName("clone")[0].children[3].style.width = "98%";
+        }
     }
 
 }

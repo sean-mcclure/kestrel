@@ -1,6 +1,6 @@
 .write_options_wrapper {
     display: grid;
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: 25% 25% 25% 25%;
     grid-auto-rows: auto auto auto;
     gap: 10px;
     align-items: center;
@@ -12,11 +12,11 @@
 .write_textarea {
     display: block;
     margin: 0 auto;
-    width: 85%;
+    width: 80% !important;
 }
 
 .write_options_item:nth-child(1) {
-    grid-column: 1 / span 3;
+    grid-column: 1 / span 4;
     grid-row: 1;
     background: transparent;
     margin-top: 30px;
@@ -33,6 +33,8 @@
 }
 
 .write_options_item:nth-child(4) {
+    display: flex;
+    width: 80px;
     grid-column: 3;
     grid-row: 2;
 }
@@ -55,6 +57,13 @@
     cursor: pointer;
     color: gold;
     margin-top: -5px;
+}
+
+.make_thread {
+    font-size: 20px;
+    margin-left: 20px;
+    margin-right: 30px;
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 600px) {

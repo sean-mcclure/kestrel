@@ -5,11 +5,13 @@ import Close from "./Close";
 import {character_counter} from "./counter.js";
 import {post} from "./post.js";
 import {visible} from "./visible.js"
+import {clone_and_append} from "./clone_and_append.js"
 
 import {
   FaTimes,
   FaCameraRetro,
-  FaPoll
+  FaPoll,
+  FaPlus
 } from "react-icons/fa";
 
 const React = require('react')
@@ -58,11 +60,11 @@ render() {
             </div>
 
             <div className="write_options_item">
-                <FaCameraRetro className="upload_image" size="2em" color="gold" onClick={(e) => {}}/>
+                <FaCameraRetro className="upload_image" size="1.7em" color="gold" onClick={(e) => {}}/>
             </div>
 
             <div className="write_options_item">
-                <FaPoll className="poll" size="2em" color="gold" onClick={(event) => {
+                <FaPoll className="poll" size="1.7em" color="gold" onClick={(event) => {
                         event.preventDefault();
                         visible("poll");
                 }}/>
@@ -72,7 +74,27 @@ render() {
                 <div className="post" onClick={post}>POST</div>
             </div>
 
+            <div>
+                <div className="make_thread" onClick={(event) => {
+                    event.preventDefault();
+                   var thread_area = document.createElement("textarea");
+                   thread_area.style.width = "85%";
+                   thread_area.style.height = "100px";
+                   thread_area.style.margin = "0 auto";
+                   thread_area.style.marginTop = "10px";
+                   thread_area.style.background = "#4F4434";
+                   thread_area.style.border = "2px solid goldenrod";
+                   thread_area.style.outline = "none";
+                   thread_area.style.resize = "none";
+                   document.getElementsByClassName("write_options_item")[0].append(thread_area);
+                   document.getElementsByClassName("sidediv")[0].style.overflowY = "scroll";
+                   
+                }}><FaPlus/></div>
+            </div>
+
             <div className="hold_repost"></div>
+
+            <div className="hold_thread"></div>
         
         </div>
 
