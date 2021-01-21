@@ -1,6 +1,7 @@
 .sidediv {
     width: 0px;
     height: 100vh;
+    overflow-x: hidden;
     right: 0;
     margin-right: -30px;
     position: absolute;
