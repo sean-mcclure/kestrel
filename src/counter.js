@@ -18,4 +18,8 @@ export function character_counter(e) {
         document.getElementById(id).previousElementSibling.style.color = "red";
         document.getElementById(id).previousElementSibling.classList.add("rubberBand_it");
     }
+
+    //document.getElementsByClassName("make_thread")[0].style.opacity = 1;
+    //document.getElementsByClassName("make_thread")[0].style.pointerEvents = "auto";
+
 }
