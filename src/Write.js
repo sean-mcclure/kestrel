@@ -55,7 +55,7 @@ render() {
         <div className="write_options_wrapper">
 
             <div className="write_options_item">
-                <div id="show_count_0" className="show_count">280</div>
+                <div className="show_count">280</div>
                 <textarea id="write_textarea" className="textarea write_textarea" onChange={(event) => {character_counter(event)}} maxLength="280"></textarea>
             </div>
 
@@ -105,7 +105,6 @@ render() {
                 word_count.innerText = "280";
                 word_count.style.marginTop = "20px";
                 
-
                 document.getElementsByClassName("write_options_item")[0].append(word_count);
                 document.getElementsByClassName("write_options_item")[0].append(thread_area);
                 document.getElementsByClassName("sidediv")[0].style.overflowY = "scroll";
