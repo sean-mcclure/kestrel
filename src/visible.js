@@ -59,24 +59,12 @@ export function visible(type) {
         }
     }
     if (type === "poll") {
-        if (viz_cnt % 2 === 0) {
-            document.getElementsByClassName("close_modal")[0].style.display = "none";
-            document.getElementById("textarea_wrapper").style.display = "none";
-            document.getElementById("poll_wrapper").style.display = "block";
-            document.getElementsByClassName("show_count")[0].style.display = "none";
-            document.getElementsByClassName("upload_image")[0].style.pointerEvents = "none";
-            document.getElementsByClassName("upload_image")[0].style.opacity = "0.5";
-            document.getElementsByClassName("thread")[0].style.pointerEvents = "none";
-            document.getElementsByClassName("thread")[0].style.opacity = "0.5";
-        } else {
-            document.getElementsByClassName("close_modal")[0].style.display = "block";
-            document.getElementById("textarea_wrapper").style.display = "block";
-            document.getElementById("poll_wrapper").style.display = "none";
-            document.getElementsByClassName("show_count")[0].style.display = "block";
-            document.getElementsByClassName("upload_image")[0].style.pointerEvents = "auto";
-            document.getElementsByClassName("upload_image")[0].style.opacity = "1";
-            document.getElementsByClassName("thread")[0].style.pointerEvents = "auto";
-            document.getElementsByClassName("thread")[0].style.opacity = "1";
-        }
+            document.getElementsByClassName("write_options_item")[0].style.display = "none";
+            document.getElementsByClassName("write_options_item")[1].style.display = "none";
+            document.getElementsByClassName("write_options_item")[2].style.display = "none";
+            document.getElementsByClassName("write_options_item")[3].style.display = "none";
+            document.getElementsByClassName("make_thread")[0].style.display = "none";
+            document.getElementsByClassName("poll_wrapper")[0].style.display = "block";
+            document.getElementsByClassName("poll_wrapper")[0].innerHTML += "";
     }
 }
