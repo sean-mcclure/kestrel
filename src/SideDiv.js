@@ -33,6 +33,15 @@ export function open_div(class_name) {
     
     document.getElementsByClassName(class_name)[0].style.width = "100%";
 
+    if(class_name === "write") {
+        document.querySelectorAll(".thread_textarea").forEach(e => e.remove());
+        document.querySelectorAll(".show_count").forEach(function (elem, i) {
+            if(i !== 0) {
+                elem.remove()
+            }
+        })
+    }
+
     if(class_name === "repost") {
         document.getElementsByClassName("write_textarea")[1].style.height = "80px";
         document.getElementsByClassName("write_textarea")[1].style.width = "85%";
@@ -53,7 +62,9 @@ export function open_div(class_name) {
     }
 
     document.getElementsByClassName("show_count")[0].innerHTML = 280;
-    document.getElementsByClassName("show_count")[1].innerHTML = 280;
+    if(typeof(document.getElementsByClassName("show_count")[1]) !== "undefined") {
+        document.getElementsByClassName("show_count")[1].innerHTML = 280;
+    }
 
     var close_elems = document.getElementsByClassName("close");
     for(var j=0; j<close_elems.length;j++) {
