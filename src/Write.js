@@ -1,5 +1,6 @@
 import "./Write.css";
 import Poll from "./Poll";
+import {open_div} from "./SideDiv";
 import Close from "./Close";
 
 import {character_counter} from "./counter.js";
@@ -47,8 +48,6 @@ render() {
         <img id="hold_uploaded_img" className="hold_uploaded_img" alt="uploaded_img_preview" style={img_styles}></img>
         <video height="200px" playsInline controls id="hold_uploaded_video" className="hold_uploaded_video" style={img_styles}><source type="video/mp4"></source></video>
         <input id="upload_input" className="upload_input" type="file" style={input_styles}></input>        
-        
-        <Poll/>
 
         <div className="hold_comment"></div>
 
@@ -65,8 +64,8 @@ render() {
 
             <div className="write_options_item">
                 <FaPoll className="poll" size="1.7em" color="gold" onClick={(event) => {
-                        event.preventDefault();
-                        visible("poll");
+                     event.preventDefault();
+                     open_div("poll_show");
                 }}/>
             </div>
 
