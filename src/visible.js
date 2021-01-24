@@ -1,6 +1,9 @@
 import {
     is_mobile
 } from "./mobile.js"
+
+import {open_div} from "./SideDiv";
+
 var viz_cnt = 0;
 export function visible(type) {
     window.recent_img_upload_url = undefined
@@ -21,17 +24,13 @@ export function visible(type) {
         }
     }
     if (type === "avatar_icon") {
-        if ((viz_cnt % 2 === 0)) {
-            document.getElementById("avatar_modal").style.display = "none";
-        } else {
-            document.getElementById("avatar_modal").style.display = "block";
+            open_div("avatar");
             document.getElementsByClassName("camera_icon")[0].style.display = "none";
             document.getElementsByClassName("upload_title")[0].style.display = "none";
             document.getElementsByClassName("upload_title_sub")[0].style.display = "none";
             document.getElementsByClassName("follow_block_wrapper")[0].style.display = "block";
             document.getElementsByClassName("bio")[0].style.pointerEvents = "none";
             document.getElementsByClassName("save_profile")[0].style.display = "none";
-        }
     }
     if (type === "repost") {
         if (viz_cnt % 2 === 0) {

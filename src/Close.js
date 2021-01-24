@@ -19,6 +19,14 @@ export function close_div() {
     document.getElementsByClassName("repost")[0].style.display = "none";
     document.getElementsByClassName("comment")[0].style.display = "none";
 
+    document.getElementsByClassName("camera_icon")[0].style.display = "block";
+    document.getElementsByClassName("upload_title")[0].style.display = "block";
+    document.getElementsByClassName("upload_title_sub")[0].style.display = "block";
+    document.getElementsByClassName("follow_block_wrapper")[0].style.display = "none";
+    document.getElementsByClassName("bio")[0].style.pointerEvents = "block";
+    document.getElementsByClassName("save_profile")[0].style.display = "block";
+    document.getElementsByClassName("save_profile")[0].style.margin = "0 auto";
+
     setTimeout(function() {
         document.getElementsByClassName("sidediv")[0].style.width = "0px";
         document.getElementsByClassName("sidediv")[0].style.marginRight = "-30px";
