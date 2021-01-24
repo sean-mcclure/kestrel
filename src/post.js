@@ -40,8 +40,16 @@ export function post() {
 
     all_threads.unshift(msg)
 
+    var fin = [];
+    all_threads.forEach(function(elem, i) {
+        var use_index = i + 1;
+        fin.push(use_index.toString() + "/" + all_threads.length + "\n" + elem);
+    })
+
+    fin = fin.join("\n.....................\n")
+
     var image_src = window.recent_img_upload_url
-    
+
     var post_id = Math.round(Math.random()*10000000000000, 1)
     var like_id = Math.round(Math.random()*10000000000000, 1)
 
@@ -49,7 +57,7 @@ export function post() {
         
         if(image_src.indexOf("video/mp4") === -1 && image_src.indexOf("video/quicktime") === -1) {
 
-        list_of_messages.unshift(<div className="msg_wrapper" key={post_id}><div><img className="avatar" src={avatar} alt="avatar_img"></img></div><div className="user">John Smith</div><div className="hold_msg">{all_threads}</div>
+        list_of_messages.unshift(<div className="msg_wrapper" key={post_id}><div><img className="avatar" src={avatar} alt="avatar_img"></img></div><div className="user">John Smith</div><div className="hold_msg">{fin}</div>
         <img className="msg_img" src={image_src} alt="kestrel_img"></img>
             <div className="icon_wrapper_post">
                 <div><FaComment className="icons_post" color="#3D3D3D" size="1.6em"/></div>
@@ -64,7 +72,7 @@ export function post() {
             if(document.getElementById("hold_uploaded_video").duration > 30) {
                 alert("video too long")
             }
-            list_of_messages.unshift(<div className="msg_wrapper" key={post_id}><div><img className="avatar" src={avatar} alt="avatar_img"></img></div><div className="user">John Smith</div><div className="hold_msg">{all_threads}</div>
+            list_of_messages.unshift(<div className="msg_wrapper" key={post_id}><div><img className="avatar" src={avatar} alt="avatar_img"></img></div><div className="user">John Smith</div><div className="hold_msg">{fin}</div>
         <video height="200px" playsinline controls id="hold_uploaded_video" className="hold_uploaded_video"><source type="video/mp4" src={image_src}></source></video>
             <div className="icon_wrapper_post">
                 <div><FaComment className="icons_post" color="#3D3D3D" size="1.6em"/></div>
@@ -77,7 +85,7 @@ export function post() {
         uploadFile(image_src)
         }
     } else {
-        list_of_messages.unshift(<div className="msg_wrapper" key={post_id}><div><img className="avatar" src={avatar} alt="avatar_img"></img></div><div className="user">John Smith</div><div className="hold_msg">{all_threads}</div>
+        list_of_messages.unshift(<div className="msg_wrapper" key={post_id}><div><img className="avatar" src={avatar} alt="avatar_img"></img></div><div className="user">John Smith</div><div className="hold_msg">{fin}</div>
             <div className="icon_wrapper_post">
                 <div><FaComment className="icons_post" color="#3D3D3D" size="1.6em"/></div>
                 <div><FaRetweet className="icons_post" color="#3D3D3D" size="2em"/></div>
