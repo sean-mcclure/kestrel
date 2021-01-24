@@ -2,6 +2,8 @@ import "./Poll.css";
 
 import {click_back_poll} from "./utility.js";
 
+import {post} from "./post.js";
+
 import {open_div} from "./SideDiv";
 
 import {
@@ -17,6 +19,10 @@ function Poll() {
                 <div><input className="poll_input poll_input_3" placeholder="Choice 2" spellCheck="true" maxLength="100"></input></div>
                 <div><input className="poll_input poll_input_4" placeholder="Choice 3 (optional)" spellCheck="true" maxLength="100"></input></div>
                 <div><input className="poll_input poll_input_5" placeholder="Choice 4 (optional)" spellCheck="true" maxLength="100"></input></div>
+                <div><button className="post_poll" onClick={(event) => {
+                    window.polling = true;
+                    post();
+                }}>POST POLL</button></div>
                 <div onClick={(event) => {
                      event.preventDefault();
                      open_div("write");

@@ -3,6 +3,7 @@ import {close_div} from "./Close";
 import {like} from "./like.js";
 import avatar from "./avatar.png";
 import {uploadFile} from "./upload_image.js"
+import ReactHtmlParser from 'react-html-parser';
 
 import {
   FaComment,
@@ -13,7 +14,7 @@ import {
 
 export function post() {
 
-    if(document.getElementById("write_textarea").value !== "") {
+    if(document.getElementById("write_textarea").value !== "" || document.getElementsByClassName("poll_input_1")[0].value !== "") {
 
     close_div();
 
@@ -30,7 +31,24 @@ export function post() {
     document.getElementsByClassName("hold_uploaded_video")[0].style.display = "none"
     document.getElementsByClassName("upload_input")[0].value = ""
 
-    var msg = document.getElementById("write_textarea").value
+    if(window.polling) {
+
+        var poll_input_1 = document.getElementsByClassName("poll_input_1")[0].value; 
+        var poll_input_2 = document.getElementsByClassName("poll_input_2")[0].value; 
+        var poll_input_3 = document.getElementsByClassName("poll_input_3")[0].value; 
+        var poll_input_4 = document.getElementsByClassName("poll_input_4")[0].value;
+        
+        fin = [];
+
+        var poll_div = ReactHtmlParser("<div style='background: lightgrey; height: auto; padding: 5px;'>" + poll_input_1 + "</div><div>CHOOSE</div>");
+
+        fin.push(poll_div)
+
+        window.polling = false;
+
+    } else {
+
+    var msg = document.getElementById("write_textarea").value;
 
     var threads = document.getElementsByClassName("thread_textarea");
     var all_threads = [];
@@ -40,13 +58,21 @@ export function post() {
 
     all_threads.unshift(msg)
 
+    if(all_threads.length > 1) {
+
     var fin = [];
     all_threads.forEach(function(elem, i) {
         var use_index = i + 1;
         fin.push(use_index.toString() + "/" + all_threads.length + "\n" + elem);
     })
 
-    fin = fin.join("\n.....................\n")
+    fin = fin.join("\n\n")
+
+    } else {
+        fin = all_threads;
+    }
+
+    } 
 
     var image_src = window.recent_img_upload_url
 
