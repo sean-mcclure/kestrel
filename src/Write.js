@@ -2,6 +2,7 @@ import "./Write.css";
 import Poll from "./Poll";
 import {open_div} from "./SideDiv";
 import Close from "./Close";
+import UploadImageWriting from "./UploadImageWriting";
 
 import {character_counter} from "./counter.js";
 import {post} from "./post.js";
@@ -59,7 +60,9 @@ render() {
             </div>
 
             <div className="write_options_item">
-                <FaCameraRetro className="upload_image" size="1.7em" color="gold" onClick={(e) => {}}/>
+                <FaCameraRetro className="upload_image" size="1.7em" color="gold" onClick={(e) => {
+                    document.getElementsByClassName("input_hide")[0].click()
+                }}/>
             </div>
 
             <div className="write_options_item">
@@ -111,11 +114,16 @@ render() {
                 }}><FaPlus/></div>
             </div>
 
+            <div className="write_options_item"><UploadImageWriting/></div>
+
             <div className="hold_repost"></div>
 
             <div className="hold_thread"></div>
-        
+
         </div>
+
+        
+            
 
         </>
     )

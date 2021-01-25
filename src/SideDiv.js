@@ -36,6 +36,7 @@ export function open_div(class_name) {
     document.getElementsByClassName(class_name)[0].style.width = "100%";
 
     if(class_name === "write") {
+       // document.getElementById("avatar_pic").style.display = "none";
         document.querySelectorAll(".thread_textarea").forEach(e => e.remove());
         document.querySelectorAll(".show_count").forEach(function (elem, i) {
             if(i !== 0) {
