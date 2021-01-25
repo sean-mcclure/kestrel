@@ -106,7 +106,8 @@ export function post() {
         event.preventDefault();
         visible("avatar_icon");
       }}></img></div><div className="user">John Smith</div><div className="hold_msg">{fin}</div>
-        <video height="200px" playsinline controls id="hold_uploaded_video" className="hold_uploaded_video"><source type="video/mp4" src={image_src}></source></video>
+        {/*<video height="200px" playsinline autoPlay controls id="hold_uploaded_video" className="hold_uploaded_video"><source type="video/mp4" src={image_src}></source></video>*/}
+            <img src={image_src}></img>
             <div className="icon_wrapper_post">
                 <div><FaComment className="icons_post" color="#3D3D3D" size="1.6em"/></div>
                 <div><FaRetweet className="icons_post" color="#3D3D3D" size="2em"/></div>
