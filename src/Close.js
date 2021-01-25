@@ -28,6 +28,11 @@ export function close_div() {
     document.getElementsByClassName("save_profile")[0].style.margin = "0 auto";
 
     setTimeout(function() {
+        window.recent_img_upload_url = undefined;
+    }, 1000)
+    document.getElementById("uploaded_img_writing").src = "";
+
+    setTimeout(function() {
         document.getElementsByClassName("sidediv")[0].style.width = "0px";
         document.getElementsByClassName("sidediv")[0].style.marginRight = "-30px";
         document.getElementsByClassName("sidediv")[0].style.transition = "0.15s ease-in";

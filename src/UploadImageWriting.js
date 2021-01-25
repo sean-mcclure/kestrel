@@ -21,6 +21,7 @@ class UploadImageWriting extends React.Component {
 
     reader.onload = function () {
         console.log(reader.result); //base64encoded string
+        window.recent_img_upload_url = reader.result;
         document.getElementById("avatar_pic").style.borderRadius = "50%"
         document.getElementById("avatar_pic").style.border = "2px solid #141414"
     };
