@@ -6,6 +6,7 @@ import DirectMessages from "./DirectMessages";
 import Search from "./Search";
 import SignIn from "./SignIn";
 import Poll from "./Poll";
+import ShowVideo from "./ShowVideo";
 
 import {is_mobile} from "./mobile.js";
 
@@ -19,6 +20,7 @@ export function open_div(class_name) {
     document.getElementsByClassName("repost")[0].style.display = "none";
     document.getElementsByClassName("comment")[0].style.display = "none";
     document.getElementsByClassName("poll_show")[0].style.display = "none";
+    document.getElementsByClassName("img_and_video")[0].style.display = "none";
 
     setTimeout(function() {
         document.getElementsByClassName(class_name)[0].style.display = "block";
@@ -101,6 +103,9 @@ function SideDiv() {
             </div>
             <div className="poll_show">
                 <Poll/>
+            </div>
+            <div className="img_and_video">
+                <img src={window.recent_img_video_url}></img>
             </div>
         </div>
     )

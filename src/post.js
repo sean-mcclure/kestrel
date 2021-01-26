@@ -5,6 +5,7 @@ import avatar from "./avatar.png";
 import {uploadFile} from "./upload_image.js"
 import {visible} from "./visible.js"
 import ReactHtmlParser from 'react-html-parser';
+import {open_div} from "./SideDiv";
 
 import {
   FaComment,
@@ -88,7 +89,10 @@ export function post() {
         event.preventDefault();
         visible("avatar_icon");
       }}></img></div><div className="user">John Smith</div><div className="hold_msg">{fin}</div>
-        <img className="msg_img" src={image_src} alt="kestrel_img"></img>
+        <div onClick={(event) => {
+                window.recent_img_video_url = image_src;
+                open_div("img_and_video");
+            }}><img className="msg_img" src={image_src} alt="kestrel_img"></img></div>
             <div className="icon_wrapper_post">
                 <div><FaComment className="icons_post" color="#3D3D3D" size="1.6em"/></div>
                 <div><FaRetweet className="icons_post" color="#3D3D3D" size="2em"/></div>
@@ -107,7 +111,10 @@ export function post() {
         visible("avatar_icon");
       }}></img></div><div className="user">John Smith</div><div className="hold_msg">{fin}</div>
         {/*<video height="200px" playsinline autoPlay controls id="hold_uploaded_video" className="hold_uploaded_video"><source type="video/mp4" src={image_src}></source></video>*/}
-            <img src={image_src}></img>
+            <div onClick={(event) => {
+                window.recent_img_video_url = image_src;
+                open_div("img_and_video");
+            }}><img src={image_src}></img></div>
             <div className="icon_wrapper_post">
                 <div><FaComment className="icons_post" color="#3D3D3D" size="1.6em"/></div>
                 <div><FaRetweet className="icons_post" color="#3D3D3D" size="2em"/></div>
