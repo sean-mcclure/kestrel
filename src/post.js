@@ -90,9 +90,21 @@ export function post() {
         visible("avatar_icon");
       }}></img></div><div className="user">John Smith</div><div className="hold_msg">{fin}</div>
         <div onClick={(event) => {
-                window.recent_img_video_url = image_src;
                 open_div("img_and_video");
-            }}><img className="msg_img" src={image_src} alt="kestrel_img"></img></div>
+            }}><img className="msg_img" src={image_src} alt="kestrel_img"  onClick={
+          (event) => {
+              if(event.target.src.includes("video")) {
+                  document.getElementById("clicked_img").style.display = "none";
+                  document.getElementById("clicked_video").style.display = "block";
+                 document.getElementById("clicked_video").src = event.target.src;
+              } else {
+                  document.getElementById("clicked_video").style.display = "none";
+                  document.getElementById("clicked_img").style.display = "block";
+                document.getElementById("clicked_img").src = event.target.src;
+              }
+              open_div("img_and_video");
+          }
+      }></img></div>
             <div className="icon_wrapper_post">
                 <div><FaComment className="icons_post" color="#3D3D3D" size="1.6em"/></div>
                 <div><FaRetweet className="icons_post" color="#3D3D3D" size="2em"/></div>
@@ -110,11 +122,22 @@ export function post() {
         event.preventDefault();
         visible("avatar_icon");
       }}></img></div><div className="user">John Smith</div><div className="hold_msg">{fin}</div>
-        {/*<video height="200px" playsinline autoPlay controls id="hold_uploaded_video" className="hold_uploaded_video"><source type="video/mp4" src={image_src}></source></video>*/}
             <div onClick={(event) => {
-                window.recent_img_video_url = image_src;
                 open_div("img_and_video");
-            }}><img src={image_src}></img></div>
+            }}><img src={image_src} onClick={
+          (event) => {
+              if(event.target.src.includes("video")) {
+                  document.getElementById("clicked_img").style.display = "none";
+                  document.getElementById("clicked_video").style.display = "block";
+                 document.getElementById("clicked_video").src = event.target.src;
+              } else {
+                  document.getElementById("clicked_video").style.display = "none";
+                  document.getElementById("clicked_img").style.display = "block";
+                document.getElementById("clicked_img").src = event.target.src;
+              }
+              open_div("img_and_video");
+          }
+      }></img></div>
             <div className="icon_wrapper_post">
                 <div><FaComment className="icons_post" color="#3D3D3D" size="1.6em"/></div>
                 <div><FaRetweet className="icons_post" color="#3D3D3D" size="2em"/></div>

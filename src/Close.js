@@ -29,6 +29,8 @@ export function close_div() {
 
     setTimeout(function() {
         window.recent_img_upload_url = undefined;
+        document.getElementById("clicked_img").src = "";
+        document.getElementById("clicked_video").src = "";
     }, 1000)
     document.getElementById("uploaded_img_writing").src = "";
 

@@ -18,3 +18,16 @@
 	-o-user-select: none;
 	user-select: none;
 }
+
+#clicked_img {
+    margin-top: 10px !important;
+    border-radius: 4px;
+    width: 80%;
+}
+
+#hold_uploaded_video {
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 50px !important;
+}

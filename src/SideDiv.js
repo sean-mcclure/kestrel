@@ -6,7 +6,7 @@ import DirectMessages from "./DirectMessages";
 import Search from "./Search";
 import SignIn from "./SignIn";
 import Poll from "./Poll";
-import ShowVideo from "./ShowVideo";
+import Close from "./Close";
 
 import {is_mobile} from "./mobile.js";
 
@@ -105,7 +105,9 @@ function SideDiv() {
                 <Poll/>
             </div>
             <div className="img_and_video">
-                <img src={window.recent_img_video_url}></img>
+                <div className="close_clicked_img"><Close/></div>
+                <img id="clicked_img"></img>
+                <video height="200px" controls id="hold_uploaded_video"><source id="clicked_video" type="video/mp4"></source></video>
             </div>
         </div>
     )
