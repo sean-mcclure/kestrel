@@ -2,8 +2,6 @@ import {is_mobile} from "./mobile.js";
 
 export function clone_and_append(from_id, to_class_name, to_instance) {
 
-    alert("from_id: " + from_id)
-
     if(to_class_name === "hold_repost") {
         var to_instance = 1
     }
@@ -43,7 +41,10 @@ export function clone_and_append(from_id, to_class_name, to_instance) {
         document.getElementsByClassName("clone")[0].children[3].style.marginLeft = "0px";
         document.getElementsByClassName(to_class_name)[to_instance].style.boxShadow = "0px 2px 20px black";
 
-        document.getElementsByClassName("clone")[0].children[4].style.display = "none";
+        if(typeof(document.getElementsByClassName("clone")[0].children[4]) !== "undefined") {
+            document.getElementsByClassName("clone")[0].children[4].style.display = "none";
+        }
+
     } 
     
     if(is_mobile()) {
