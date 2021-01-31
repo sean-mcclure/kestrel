@@ -2,6 +2,8 @@ import {is_mobile} from "./mobile.js";
 
 export function clone_and_append(from_id, to_class_name, to_instance) {
 
+    alert("from_id: " + from_id)
+
     if(to_class_name === "hold_repost") {
         var to_instance = 1
     }

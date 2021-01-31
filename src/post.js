@@ -7,6 +7,7 @@ import {visible} from "./visible.js"
 import ReactHtmlParser from 'react-html-parser';
 import {open_div} from "./SideDiv";
 import {clone_and_append} from "./clone_and_append.js";
+import {makeid} from "./utility.js";
 
 import {
   FaComment,
@@ -20,6 +21,8 @@ export function post() {
     if(document.getElementById("write_textarea").value !== "" || document.getElementsByClassName("poll_input_1")[0].value !== "") {
 
     close_div();
+
+    const use_msg_class = "msg_wrapper_" + makeid();
 
     setTimeout(function() {
         document.getElementsByClassName("col")[0].scrollTo({top: 0, left: 0, behavior: 'smooth' });
@@ -86,7 +89,7 @@ export function post() {
         
         if(image_src.indexOf("video/mp4") === -1 && image_src.indexOf("video/quicktime") === -1) {
 
-        list_of_messages.unshift(<div className="msg_wrapper" key={post_id}><div><img className="avatar" src={avatar} alt="avatar_img" onClick={(event) => {
+        list_of_messages.unshift(<div className={use_msg_class} id={use_msg_class} key={post_id}><div><img className="avatar" src={avatar} alt="avatar_img" onClick={(event) => {
         event.preventDefault();
         visible("avatar_icon");
       }}></img></div><div className="user">John Smith</div><div className="hold_msg">{fin}</div>
@@ -110,12 +113,13 @@ export function post() {
                 <div><FaComment className="icons_post" color="#3D3D3D" size="1.6em" onClick={(event) => {
                     event.preventDefault();
                     open_div("comment");
-                    clone_and_append("msg_wrapper_0", "hold_comment", 0);
+                    clone_and_append(use_msg_class, "hold_comment", 0);
                 }}/></div>
                 <div><FaRetweet className="icons_post" color="#3D3D3D" size="2em" onClick = {(event) => {
                     event.preventDefault();
                     open_div("repost");
-                    clone_and_append("msg_wrapper_1", "hold_repost", 0);
+                      alert(use_msg_class)
+                    clone_and_append(use_msg_class, "hold_repost", 0);
                 }}/></div>
                 <div><FaThumbsUp id={like_id} className="like_icons" color="#3D3D3D" size="1.6em" onClick={like}/><span className="like_count">0</span></div>
                 <div><FaInfinity className="icons_post icon_thread" color="#3D3D3D" size="1.6em"/></div>
@@ -127,7 +131,7 @@ export function post() {
             if(document.getElementById("hold_uploaded_video").duration > 30) {
                 alert("video too long")
             }
-            list_of_messages.unshift(<div className="msg_wrapper" key={post_id}><div><img className="avatar" src={avatar} alt="avatar_img" onClick={(event) => {
+            list_of_messages.unshift(<div className={use_msg_class} key={post_id}><div><img className="avatar" src={avatar} alt="avatar_img" onClick={(event) => {
         event.preventDefault();
         visible("avatar_icon");
       }}></img></div><div className="user">John Smith</div><div className="hold_msg">{fin}</div>
@@ -151,12 +155,12 @@ export function post() {
                 <div><FaComment className="icons_post" color="#3D3D3D" size="1.6em" onClick={(event) => {
                     event.preventDefault();
                     open_div("comment");
-                    clone_and_append("msg_wrapper_0", "hold_comment", 0);
+                    clone_and_append(use_msg_class, "hold_comment", 0);
                 }}/></div>
                 <div><FaRetweet className="icons_post" color="#3D3D3D" size="2em" onClick = {(event) => {
                     event.preventDefault();
                     open_div("repost");
-                    clone_and_append("msg_wrapper_1", "hold_repost", 0);
+                    clone_and_append(use_msg_class, "hold_repost", 0);
                 }}/></div>
                 <div><FaThumbsUp id={like_id} className="like_icons" color="#3D3D3D" size="1.6em" onClick={like}/><span className="like_count">0</span></div>
                 <div><FaInfinity className="icons_post icon_thread" color="#3D3D3D" size="1.6em"/></div>
@@ -166,7 +170,7 @@ export function post() {
         uploadFile(image_src)
         }
     } else {
-        list_of_messages.unshift(<div className="msg_wrapper" key={post_id}><div><img className="avatar" src={avatar} alt="avatar_img" onClick={(event) => {
+        list_of_messages.unshift(<div className={use_msg_class} key={post_id}><div><img className="avatar" src={avatar} alt="avatar_img" onClick={(event) => {
         event.preventDefault();
         visible("avatar_icon");
       }}></img></div><div className="user">John Smith</div><div className="hold_msg">{fin}</div>
@@ -174,12 +178,12 @@ export function post() {
                 <div><FaComment className="icons_post" color="#3D3D3D" size="1.6em" onClick={(event) => {
                     event.preventDefault();
                     open_div("comment");
-                    clone_and_append("msg_wrapper_0", "hold_comment", 0);
+                    clone_and_append(use_msg_class, "hold_comment", 0);
                 }}/></div>
                 <div><FaRetweet className="icons_post" color="#3D3D3D" size="2em" onClick = {(event) => {
                     event.preventDefault();
                     open_div("repost");
-                    clone_and_append("msg_wrapper_1", "hold_repost", 0);
+                    clone_and_append(use_msg_class, "hold_repost", 0);
                 }}/></div>
                 <div><FaThumbsUp id={like_id} className="like_icons" color="#3D3D3D" size="1.6em" onClick={like}/><span className="like_count">0</span></div>
                 <div><FaInfinity className="icons_post icon_thread" color="#3D3D3D" size="1.6em"/></div>

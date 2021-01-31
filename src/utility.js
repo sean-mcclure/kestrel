@@ -16,3 +16,8 @@ export function click_back_poll(e) {
     document.getElementsByClassName("write_options_item")[3].style.display = "block";
     }
 }
+
+export function makeid() {
+    var res = Math.round(Math.random()*100000000000000, 0);
+    return(res)
+}
