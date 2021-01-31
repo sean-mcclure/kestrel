@@ -41,6 +41,7 @@ export var list_of_messages = messages.map((msg, i) =>
                     event.preventDefault();
                     open_div("repost");
                     clone_and_append("msg_wrapper_1", "hold_repost", i);
+                 
                 }}/></div>
                 <div><FaThumbsUp id={"like_icon_" + i.toString()} className="icons_post like_icons" color="#3D3D3D" size="1.5em" onClick={like}/><span className="like_count">0</span></div>
                 <div><FaInfinity className="icons_post icon_thread" color="#3D3D3D" size="1.6em"/></div>

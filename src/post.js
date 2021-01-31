@@ -18,7 +18,7 @@ import {
 
 export function post() {
 
-    if(document.getElementById("write_textarea").value !== "" || document.getElementsByClassName("poll_input_1")[0].value !== "") {
+    if(document.getElementById("write_textarea").value !== "" || document.getElementsByClassName("write_textarea")[1].value !== "" || document.getElementsByClassName("poll_input_1")[0].value !== "") {
 
     close_div();
 
@@ -125,6 +125,13 @@ export function post() {
             </div>
         </div>
         )
+
+        if(window.repost) {
+            var elem = document.getElementById(window.repost_id);
+            var clone = elem.cloneNode(true);
+            document.getElementById(use_msg_id).append(clone);
+        }
+
         uploadFile(image_src)
         } else {
             if(document.getElementById("hold_uploaded_video").duration > 30) {
