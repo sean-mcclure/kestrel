@@ -16,6 +16,7 @@ export function clone_and_append(from_id, to_class_name, to_instance) {
     document.getElementsByClassName(to_class_name)[to_instance].innerHTML = "";
 
     if(!from_id.toString().includes("msg_wrapper")) {
+        // coming from a REPOST or COMMENT
         from_id = "msg_wrapper_" + from_id;
     }
 
@@ -26,6 +27,7 @@ export function clone_and_append(from_id, to_class_name, to_instance) {
     clone.classList.add("clone");
 
     document.getElementsByClassName(to_class_name)[to_instance].append(clone);
+
     if (to_class_name !== "hold_thread") {
         document.getElementsByClassName(to_class_name)[to_instance].style.position = "absolute";
         document.getElementsByClassName(to_class_name)[to_instance].style.top = "50%";
