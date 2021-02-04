@@ -23,6 +23,11 @@ export function post() {
     if(typeof(document.getElementsByClassName("clone")[0]) !== "undefined") {
         // grab the image URL
         window.recent_img_upload_url = document.getElementsByClassName("msg_wrapper clone")[0].children[3].children[0].src;
+
+        // destroy clone after use 
+        setTimeout(function() {
+            document.getElementsByClassName("msg_wrapper clone")[0].remove();
+        }, 2000)
     }
     
     close_div();
@@ -66,7 +71,6 @@ export function post() {
     if(msg === "") {
         var msg = document.getElementsByClassName("clone")[0].children[2].innerText;
     }
-
 
     var threads = document.getElementsByClassName("thread_textarea");
     var all_threads = [];
