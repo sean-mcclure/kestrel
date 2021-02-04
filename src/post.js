@@ -56,6 +56,12 @@ export function post() {
 
     var msg = document.getElementById("write_textarea").value;
 
+    if(msg === "") {
+        var msg = document.getElementsByClassName("clone")[0].children[2].innerText;
+    }
+
+    
+
     var threads = document.getElementsByClassName("thread_textarea");
     var all_threads = [];
     for(var t=0; t<threads.length; t++) {

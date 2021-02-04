@@ -3,6 +3,10 @@ import {
 } from "./mobile.js";
 
 export function clone_and_append(from_id, to_class_name, to_instance) {
+
+
+
+
     if (to_class_name === "hold_repost") {
         var to_instance = 1
     }
@@ -13,7 +17,13 @@ export function clone_and_append(from_id, to_class_name, to_instance) {
         var to_instance = 0
     }
     document.getElementsByClassName(to_class_name)[to_instance].innerHTML = "";
+
+    if(!from_id.toString().includes("msg_wrapper")) {
+        from_id = "msg_wrapper_" + from_id;
+    }
+
     var elem = document.getElementById(from_id);
+    
     var clone = elem.cloneNode(true);
     clone.id = from_id + "_clone";
     clone.classList.add("clone");
