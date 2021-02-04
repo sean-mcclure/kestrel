@@ -15,7 +15,21 @@ export function Avatar() {
          <UploadImage></UploadImage>
          <p id="follower_count">217 Followers</p>
          <div className="follow_block_wrapper">
-         <button className="follow_block">FOLLOW</button><button className="follow_block">BLOCK</button>
+         <button id="follow_block_1" className="follow_block" onClick={(event) => {
+             var all = document.getElementsByClassName("follow_block");
+             for(var g=0; g<all.length;g++) {
+                 all[g].style.background = "grey";
+             }
+             document.getElementById(event.target.id).style.background = "#F3B32B";
+             document.getElementById(event.target.id).style.color = "#141414";
+         }}>FOLLOW</button><button id="follow_block_2" className="follow_block" onClick={(event) => {
+            var all = document.getElementsByClassName("follow_block");
+             for(var g=0; g<all.length;g++) {
+                 all[g].style.background = "grey";
+             } 
+            document.getElementById(event.target.id).style.background = "#F3B32B";
+            document.getElementById(event.target.id).style.color = "#141414";
+         }}>BLOCK</button>
          </div>
          <FaCamera className="camera_icon" onClick={(event) => {
             document.getElementsByClassName("input_hide")[0].click()
