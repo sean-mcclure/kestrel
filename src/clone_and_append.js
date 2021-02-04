@@ -13,6 +13,9 @@ export function clone_and_append(from_id, to_class_name, to_instance) {
         var to_instance = 0
     }
     document.getElementsByClassName(to_class_name)[to_instance].innerHTML = "";
+    if(!from_id.toString().includes("msg_wrapper_")) {
+        var from_id = "msg_wrapper_" + from_id
+    }
     var elem = document.getElementById(from_id);
     var clone = elem.cloneNode(true);
     clone.id = from_id + "_clone";
@@ -32,6 +35,10 @@ export function clone_and_append(from_id, to_class_name, to_instance) {
         document.getElementsByClassName("clone")[0].children[3].style.width = "95%";
         document.getElementsByClassName("clone")[0].children[3].style.marginLeft = "0px";
         document.getElementsByClassName(to_class_name)[to_instance].style.boxShadow = "0px 2px 20px black";
+        var all_clones = document.getElementsByClassName("clone");
+        for(var c=0; c<all_clones.length; c++) {
+            all_clones[c].children[4].style.display = "none"
+        }
         if (typeof(document.getElementsByClassName("clone")[0].children[4]) !== "undefined") {
             document.getElementsByClassName("clone")[0].children[4].style.display = "none";
         }
